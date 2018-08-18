@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  id_user: 1
+  start_date: 2018-08-15
+  end_date: 2018-08-15
+  state: 1
+
+two:
+  id_user: 1
+  start_date: 2018-08-15
+  end_date: 2018-08-15
+  state: 1

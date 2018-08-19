@@ -1,15 +1,16 @@
+
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Drugfree</title>
+<head>
+    <title>Demo</title>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
+</head>
+<body>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+<%= yield %>
 
-  <body>
-    <%= yield %>
-  </body>
+</body>
 </html>
+

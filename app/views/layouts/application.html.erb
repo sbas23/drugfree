@@ -28,6 +28,11 @@
                 <li class="nav-item">
                   <a class="nav-link" style="color: #A4A4A4" href="/forum">Foro</a>
                 </li>
+                <li class="nav-item" style="color: #A4A4A4; margin-top: 10px;">
+                  <% if current_user %>
+                    <%= current_user.name %>
+                  <% end %>
+                </li>
                 <li class="nav-item" style="margin-top: 5px;">
                   <!-- Login -->
                   <% if current_user %>

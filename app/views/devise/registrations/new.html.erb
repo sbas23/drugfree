@@ -41,6 +41,21 @@
                               </div>
 
                               <div class="form-group">
+                                <%= f.label :'Fundacion' %><br />
+                                <%= f.select :fundation_id, Fundation.all.collect{|p| [p.fundation_name, p.id]}, {:include_blank => "Seleccione"}, class: "form-control form-control-lg rounded-0" %>
+                              </div>
+
+                              <div class="form-group">
+                                <%= f.label :'Rol' %><br />
+                                <%= f.select :role_id, Role.all.collect{|p| [p.description, p.id]}, {:include_blank => "Seleccione"}, class: "form-control form-control-lg rounded-0" %>
+                              </div>
+
+                              <div class="form-group">
+                                <%= f.label :'Estado' %><br />
+                                <%= f.select :state_id, State.all.collect{|p| [p.description, p.id]}, {:include_blank => "Seleccione"}, class: "form-control form-control-lg rounded-0" %>
+                              </div>
+
+                              <div class="form-group">
                                 <%= f.label :'Correo electronico' %><br />
                                 <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control form-control-lg rounded-0" %>
                               </div>

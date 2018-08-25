@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_08_25_004319) do
+ActiveRecord::Schema.define(version: 2018_08_25_015758) do
 
   create_table "calendars", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.integer "id_user"
@@ -74,17 +74,20 @@ ActiveRecord::Schema.define(version: 2018_08_25_004319) do
     t.bigint "document"
     t.bigint "phone"
     t.string "profession"
-    t.integer "id_fundation"
-    t.string "role"
-    t.integer "state"
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
     t.bigint "role_id"
+    t.bigint "state_id"
+    t.bigint "fundation_id"
     t.index ["email"], name: "index_users_on_email", unique: true
+    t.index ["fundation_id"], name: "index_users_on_fundation_id"
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
     t.index ["role_id"], name: "index_users_on_role_id"
+    t.index ["state_id"], name: "index_users_on_state_id"
   end
 
+  add_foreign_key "users", "fundations"
   add_foreign_key "users", "roles"
+  add_foreign_key "users", "states"
 end

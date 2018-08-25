@@ -11,9 +11,9 @@ class AddDeviseToUsers < ActiveRecord::Migration[5.2]
       t.bigint :document
       t.bigint :phone
       t.string :profession
-      t.integer :id_fundation
-      t.string :role
-      t.integer :state
+      #t.integer :id_fundation
+      #t.string :role
+      #t.integer :state
       ## Recoverable
       t.string   :reset_password_token
       t.datetime :reset_password_sent_at

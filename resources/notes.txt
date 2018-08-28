@@ -10,3 +10,6 @@ rails g migration add_fundation_id_to_user fundation:references
 Chat
 https://www.nopio.com/blog/rails-real-time-chat-application-part-1/
 https://www.nopio.com/blog/rails-chat-application-actioncable/
+
+foro
+https://github.com/thredded/thredded

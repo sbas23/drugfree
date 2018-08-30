@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_08_28_002237) do
+ActiveRecord::Schema.define(version: 2018_08_30_023017) do
 
   create_table "calendars", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.integer "id_user"
@@ -21,19 +21,41 @@ ActiveRecord::Schema.define(version: 2018_08_28_002237) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "chat_conversations", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "chat_messages", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.bigint "user_id"
+    t.text "text"
+    t.bigint "conversation_id"
+    t.bigint "session_id"
+    t.string "image_file_name"
+    t.string "image_content_type"
+    t.bigint "image_file_size"
+    t.datetime "image_updated_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["conversation_id"], name: "index_chat_messages_on_conversation_id"
+    t.index ["session_id"], name: "index_chat_messages_on_session_id"
+    t.index ["user_id"], name: "index_chat_messages_on_user_id"
+  end
+
+  create_table "chat_sessions", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.bigint "conversation_id"
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["conversation_id"], name: "index_chat_sessions_on_conversation_id"
+    t.index ["user_id"], name: "index_chat_sessions_on_user_id"
+  end
+
   create_table "chats", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.integer "user"
     t.string "conversation"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-  end
-
-  create_table "conversations", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.integer "recipient_id"
-    t.integer "sender_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["recipient_id", "sender_id"], name: "index_conversations_on_recipient_id_and_sender_id", unique: true
   end
 
   create_table "forums", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -51,16 +73,6 @@ ActiveRecord::Schema.define(version: 2018_08_28_002237) do
     t.string "mail"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-  end
-
-  create_table "messages", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.text "body"
-    t.bigint "user_id"
-    t.bigint "conversation_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["conversation_id"], name: "index_messages_on_conversation_id"
-    t.index ["user_id"], name: "index_messages_on_user_id"
   end
 
   create_table "roles", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -98,6 +110,7 @@ ActiveRecord::Schema.define(version: 2018_08_28_002237) do
     t.bigint "role_id"
     t.bigint "state_id"
     t.bigint "fundation_id"
+    t.string "chat_status", default: "offline"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["fundation_id"], name: "index_users_on_fundation_id"
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
@@ -105,8 +118,6 @@ ActiveRecord::Schema.define(version: 2018_08_28_002237) do
     t.index ["state_id"], name: "index_users_on_state_id"
   end
 
-  add_foreign_key "messages", "conversations"
-  add_foreign_key "messages", "users"
   add_foreign_key "users", "fundations"
   add_foreign_key "users", "roles"
   add_foreign_key "users", "states"

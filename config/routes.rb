@@ -1,18 +1,13 @@
 Rails.application.routes.draw do
+  mount Chat::Engine => "/chat", as: "chat"
   root to: "index#index"
   devise_for :users
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   # get 'login', to: 'login#login' #to: define el controlador y el metodo al que apunta
-  resources :index
+  resources :index, only: [:index]
   resources :fundation
   resources :service
-  resources :chat
+  resources :chat, only: [:index]
   resources :forum
   resources :calendar
-
-  resources :conversations, only: [:create] do
-    member do
-      post :close
-    end
-  end
 end

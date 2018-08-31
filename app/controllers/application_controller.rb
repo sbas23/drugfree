@@ -1,5 +1,4 @@
 class ApplicationController < ActionController::Base
-  helper Chat::Engine.helpers
 	before_action :configure_devise_params, if: :devise_controller?
 
 	def configure_devise_params

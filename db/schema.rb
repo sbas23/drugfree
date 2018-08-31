@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_08_30_023017) do
+ActiveRecord::Schema.define(version: 2018_08_25_015758) do
 
   create_table "calendars", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.integer "id_user"
@@ -19,36 +19,6 @@ ActiveRecord::Schema.define(version: 2018_08_30_023017) do
     t.integer "state"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-  end
-
-  create_table "chat_conversations", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "chat_messages", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.bigint "user_id"
-    t.text "text"
-    t.bigint "conversation_id"
-    t.bigint "session_id"
-    t.string "image_file_name"
-    t.string "image_content_type"
-    t.bigint "image_file_size"
-    t.datetime "image_updated_at"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["conversation_id"], name: "index_chat_messages_on_conversation_id"
-    t.index ["session_id"], name: "index_chat_messages_on_session_id"
-    t.index ["user_id"], name: "index_chat_messages_on_user_id"
-  end
-
-  create_table "chat_sessions", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.bigint "conversation_id"
-    t.bigint "user_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["conversation_id"], name: "index_chat_sessions_on_conversation_id"
-    t.index ["user_id"], name: "index_chat_sessions_on_user_id"
   end
 
   create_table "chats", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -110,7 +80,6 @@ ActiveRecord::Schema.define(version: 2018_08_30_023017) do
     t.bigint "role_id"
     t.bigint "state_id"
     t.bigint "fundation_id"
-    t.string "chat_status", default: "offline"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["fundation_id"], name: "index_users_on_fundation_id"
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true

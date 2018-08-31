@@ -12,11 +12,11 @@ gem 'coffee-rails', '~> 4.2'
 gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 gem 'bootsnap', '>= 1.1.0', require: false
-#Autentication
+
+#Proyecto
 gem 'devise'
 gem 'mysql2'
-gem 'chat'
-gem 'haml-rails'
+gem 'redis', '~> 3.2'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

@@ -13,6 +13,6 @@
 //= require rails-ujs
 //= require activestorage
 //= require turbolinks
-//= require_tree
-//= require chat
+//= require cable
+//= require_tree .
 

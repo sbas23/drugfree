@@ -3,9 +3,9 @@
 one:
   body: MyText
   user: one
-  conversation: one
+  chat_room: one
 
 two:
   body: MyText
   user: two
-  conversation: two
+  chat_room: two

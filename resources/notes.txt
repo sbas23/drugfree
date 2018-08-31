@@ -11,5 +11,7 @@ Chat
 https://www.nopio.com/blog/rails-real-time-chat-application-part-1/
 https://www.nopio.com/blog/rails-chat-application-actioncable/
 
+https://www.sitepoint.com/create-a-chat-app-with-rails-5-actioncable-and-devise/
+
 foro
 https://github.com/thredded/thredded

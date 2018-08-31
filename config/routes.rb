@@ -9,4 +9,5 @@ Rails.application.routes.draw do
   resources :chat, only: [:index]
   resources :forum
   resources :calendar
+  resources :chat_rooms, only: [:new, :create, :show, :index]
 end

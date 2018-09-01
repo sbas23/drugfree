@@ -11,16 +11,19 @@ jQuery(document).on 'turbolinks:load', ->
       },
       connected: ->
         # Called when the subscription is ready for use on the server
+      
 
       disconnected: ->
         # Called when the subscription has been terminated by the server
 
       received: (data) ->
-        messages.append data['message']
+        #messages.append data['message']
+
         messages_to_bottom()
 
       send_message: (message, chat_room_id) ->
         @perform 'send_message', message: message, chat_room_id: chat_room_id
+
 
 
     $('#new_message').submit (e) ->
@@ -28,7 +31,29 @@ jQuery(document).on 'turbolinks:load', ->
       textarea = $this.find('#message_body')
       if $.trim(textarea.val()).length > 1
         App.global_chat.send_message textarea.val(), messages.data('chat-room-id')
+        new_file= $(".card", "#messages").eq(0)
+       
+        today = new Date
+        dd = today.getDate()
+
+        mm = today.getMonth() + 1
+        yyyy = today.getFullYear()
+
+        today = mm + '-' + dd + '-' + yyyy
+        
+        part1= "<span class='text-muted'>"
+        name= $(".current_user").html()
+        part2= today
+        part3= "</span><br>"
+        part4= textarea.val()
+        new_file.find(".card-text").html  part1.concat name.concat " at ".concat part2.concat part3.concat part4
+        #new_file.find(".text-muted").html today
+        console.log $(".current_user").html()
+
+        messages.append new_file
+
         textarea.val('')
+
       e.preventDefault()
       return false
 

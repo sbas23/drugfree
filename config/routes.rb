@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   resources :service
   resources :forum
   resources :calendar
+  resources :messages
   resources :chat_rooms, only: [:new, :create, :show, :index]
 
   mount ActionCable.server => '/cable'

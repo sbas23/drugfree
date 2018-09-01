@@ -49,4 +49,4 @@ User.create([
 		state_id:1,               
 		fundation_id:1
 	}
-])  
+]) 

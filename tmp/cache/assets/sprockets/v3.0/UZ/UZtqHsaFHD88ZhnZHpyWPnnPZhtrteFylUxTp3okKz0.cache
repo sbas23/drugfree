@@ -1,0 +1,54 @@
+I"4(function() {
+  jQuery(document).on('turbolinks:load', function() {
+    var messages, messages_to_bottom;
+    messages = $('#messages');
+    if ($('#messages').length > 0) {
+      messages_to_bottom = function() {
+        return messages.scrollTop(messages.prop("scrollHeight"));
+      };
+      messages_to_bottom();
+      App.global_chat = App.cable.subscriptions.create({
+        channel: "ChatRoomsChannel",
+        chat_room_id: messages.data('chat-room-id')
+      }, {
+        connected: function() {},
+        disconnected: function() {},
+        received: function(data) {
+          return messages_to_bottom();
+        },
+        send_message: function(message, chat_room_id) {
+          return this.perform('send_message', {
+            message: message,
+            chat_room_id: chat_room_id
+          });
+        }
+      });
+      return $('#new_message').submit(function(e) {
+        var $this, dd, mm, new_file, part1, part2, part3, part4, textarea, today, yyyy;
+        $this = $(this);
+        textarea = $this.find('#message_body');
+        if ($.trim(textarea.val()).length > 1) {
+          App.global_chat.send_message(textarea.val(), messages.data('chat-room-id'));
+          new_file = $(".card", "#messages").eq(0);
+          today = new Date;
+          dd = today.getDate();
+          mm = today.getMonth() + 1;
+          yyyy = today.getFullYear();
+          today = mm + '-' + dd + '-' + yyyy;
+          part1 = "<span class='text-muted'>";
+          part2 = today;
+          part3 = "</span><br>";
+          part4 = textarea.val();
+          new_file.find(".card-text").html(part1.concat(part2.concat(part3.concat(part4))));
+          console.log(today);
+          messages.append(new_file);
+          textarea.val('');
+        }
+        e.preventDefault();
+        return false;
+      });
+    }
+  });
+
+}).call(this);
+:ET

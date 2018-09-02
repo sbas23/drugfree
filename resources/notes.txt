@@ -5,12 +5,8 @@ rails g migration add_role_id_to_user role:references
 rails g migration add_state_id_to_user state:references
 rails g migration add_fundation_id_to_user fundation:references
 
-
 *********
 Chat
-https://www.nopio.com/blog/rails-real-time-chat-application-part-1/
-https://www.nopio.com/blog/rails-chat-application-actioncable/
-
 https://www.sitepoint.com/create-a-chat-app-with-rails-5-actioncable-and-devise/
 ********
 foro

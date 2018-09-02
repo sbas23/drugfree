@@ -1,11 +1,24 @@
-// Place all the styles related to the chat_rooms controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
-
 #messages {
-  max-height: 450px;
+
+  max-height: 300px;
+  overflow-x: hidden;
+  background-image: url("chat2.jpg");
   overflow-y: auto;
   .avatar {
-    margin: 0.5rem;
+    margin: 0.3rem;
   }
+}
+
+#message_body{
+   background:#eee;
+   max-height: 40px;
+}
+
+.card-block{
+    padding: 10px 10px 10px 10px;
+}
+
+.card{
+    //opacity: 0.5;
+    //font-weight: bold;
 }

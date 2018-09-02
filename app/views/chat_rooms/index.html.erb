@@ -4,14 +4,13 @@
              <div class="row" style="margin-top: 80px;">
                 <div class="col-md-6 mx-auto">
 
-					<h1>Chat rooms</h1>
+					<h1>Salas disponibles</h1>
 
-					<ul>
-					  <%= render @chat_rooms %>
-					</ul>
+                    <ul class="list-group">
+                       <%= render @chat_rooms %>
+                    </ul>
 
-					<p class="lead"><%= link_to 'New chat room', new_chat_room_path, class: 'btn btn-primary' %></p>
-
+					<p class="lead"><%= link_to 'Nueva sala', new_chat_room_path, class: "btn btn-success" %></p>
 
  				</div>
             </div>

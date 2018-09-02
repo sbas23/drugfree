@@ -5,7 +5,7 @@
                 <div class="col-md-6 mx-auto">
 
 
-					<h1><%= @chat_room.title %></h1>
+					<h4><%= @chat_room.title %></h4>
 
 					<div id="messages" data-chat-room-id="<%= @chat_room.id %>">
 					  <%= render @chat_room.messages %>
@@ -13,12 +13,13 @@
 
 					<%= form_for @message, url: '#' do |f| %>
 					  <div class="form-group">
-					    <%= f.label :body %>
-					    <%= f.text_area :body, class: 'form-control' %>
-					    <small class="text-muted">From 2 to 1000 characters</small>
+					    <%= f.label :Mensaje %>
+					    <%= f.text_area :body, class: 'form-control bodyChat' %>
+					    
+					    <small class="text-muted">De 2 a 1000 caracteres</small>
 					  </div>
 
-					  <%= f.submit "Post", class: 'btn btn-primary btn-lg' %>
+					  <%= f.submit "Enviar", class: "btn btn-success float-right" %>
 					<% end %>
 
  				</div>

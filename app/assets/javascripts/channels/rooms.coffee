@@ -35,23 +35,23 @@ jQuery(document).on 'turbolinks:load', ->
        
         today = new Date
         dd = today.getDate()
-
         mm = today.getMonth() + 1
         yyyy = today.getFullYear()
+        hh = today.getHours()
+        MM = today.getMinutes()
+        ss = today.getSeconds()
 
-        today = mm + '-' + dd + '-' + yyyy
+        today = hh + ':' + MM + ':' + ss + ':' + ' - ' + yyyy + '-' + mm + '-' + dd
         
         part1= "<span class='text-muted'>"
         name= $(".current_user").html()
         part2= today
         part3= "</span><br>"
         part4= textarea.val()
-        new_file.find(".card-text").html  part1.concat name.concat " at ".concat part2.concat part3.concat part4
+        new_file.find(".card-text").html  part1.concat name.concat " a las ".concat part2.concat part3.concat part4
         #new_file.find(".text-muted").html today
-        console.log $(".current_user").html()
 
         messages.append new_file
-
         textarea.val('')
 
       e.preventDefault()

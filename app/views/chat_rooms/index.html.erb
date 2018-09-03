@@ -1,23 +1,16 @@
 <div class="container py-5">
-    <div class="row">
-        <div class="col-md-12">
-             <div class="row" style="margin-top: 80px;">
-                <div class="col-md-6 mx-auto">
+    <div class="row" style="margin-top: 60px;">
+        <div class="col-md-5" style="padding: 0px 20px 0px 30px;">
+    		<h3>Salas disponibles</h3>
 
-					<h1>Salas disponibles</h1>
+            <ul class="list-group">
+               <%= render @chat_rooms %>
+            </ul>
 
-                    <ul class="list-group">
-                       <%= render @chat_rooms %>
-                    </ul>
-
-					<p class="lead"><%= link_to 'Nueva sala', new_chat_room_path, class: "btn btn-success" %></p>
-
- 				</div>
-            </div>
-            <!--/row-->
+    		<p class="lead"><%= link_to 'Nueva sala', new_chat_room_path, class: "btn btn-success" %></p>
+ 		</div>
+        <div class="col-md-7">
+            <h2>Info</h2>
         </div>
-        <!--/col-->
     </div>
-    <!--/row-->
 </div>
-<!--/container-->

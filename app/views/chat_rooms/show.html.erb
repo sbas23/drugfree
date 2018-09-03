@@ -1,33 +1,36 @@
 <div class="container py-5">
-    <div class="row">
-        <div class="col-md-12">
-             <div class="row" style="margin-top: 80px;">
-                <div class="col-md-6 mx-auto">
+    <div class="row" style="margin-top: 60px;">
 
+		<div class="container">
+		  <div class="row">
 
-					<h4><%= @chat_room.title %></h4>
+		    <div class="col-sm">
+		      One of three columns
+		    </div>
 
-					<div id="messages" data-chat-room-id="<%= @chat_room.id %>">
-					  <%= render @chat_room.messages %>
+		    <div class="col-sm">
+		      	<h4><%= @chat_room.title %></h4>
+
+				<div id="messages" data-chat-room-id="<%= @chat_room.id %>">
+				  <%= render @chat_room.messages %>
+				</div>
+				<br>
+
+				<%= form_for @message, url: '#' do |f| %>
+				  <div class="row">
+				  	<div class="col-sm-11">
+				    	<%= f.text_area :body, class: 'form-control bodyChat' %>
+				    	<small class="text-muted">De 2 a 1000 caracteres</small>
 					</div>
+					<div class="col-sm-1">
+						<%= link_to %>
+						  	<i class='fa fa-paper-plane btn btn-success'></i>
+				    </div>
+				  </div>
+				<% end %>
 
-					<%= form_for @message, url: '#' do |f| %>
-					  <div class="form-group">
-					    <%= f.label :Mensaje %>
-					    <%= f.text_area :body, class: 'form-control bodyChat' %>
-					    
-					    <small class="text-muted">De 2 a 1000 caracteres</small>
-					  </div>
+		  </div>
 
-					  <%= f.submit "Enviar", class: "btn btn-success float-right" %>
-					<% end %>
-
- 				</div>
-            </div>
-            <!--/row-->
-        </div>
-        <!--/col-->
+		</div>
     </div>
-    <!--/row-->
 </div>
-<!--/container-->

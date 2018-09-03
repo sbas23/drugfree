@@ -40321,3 +40321,1631 @@ Processing by ForumController#index as HTML
 Completed 200 OK in 60ms (Views: 58.9ms | ActiveRecord: 0.0ms)
 
 
+  [1m[35m (0.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ bin/rails:4
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ bin/rails:4
+  [1m[35m (52.5ms)[0m  [1m[35mDROP DATABASE IF EXISTS `drugfree`[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE DATABASE `drugfree` DEFAULT CHARACTER SET `utf8`[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ bin/rails:4
+  [1m[35m (14.5ms)[0m  [1m[35mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:4
+  [1m[35m (9.9ms)[0m  [1m[35mCREATE TABLE `ar_internal_metadata` (`key` varchar(255) NOT NULL PRIMARY KEY, `value` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL)[0m
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT GET_LOCK('2993449066490098125', 0)[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ bin/rails:4
+Migrating to CreateRoles (20180815140927)
+  [1m[35m (14.6ms)[0m  [1m[35mCREATE TABLE `roles` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `role_name` varchar(255), `description` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL)[0m
+  ↳ db/migrate/20180815140927_create_roles.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20180815140927')[0m
+  ↳ bin/rails:4
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+Migrating to CreateFundations (20180815141917)
+  [1m[35m (22.0ms)[0m  [1m[35mCREATE TABLE `fundations` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `fundation_name` varchar(255), `address` varchar(255), `phone` bigint, `mail` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL)[0m
+  ↳ db/migrate/20180815141917_create_fundations.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::SchemaMigration Create (5.1ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20180815141917')[0m
+  ↳ bin/rails:4
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+Migrating to CreateServices (20180815142152)
+  [1m[35m (20.7ms)[0m  [1m[35mCREATE TABLE `services` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `service_name` varchar(255), `description` varchar(255), `cost` bigint, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL)[0m
+  ↳ db/migrate/20180815142152_create_services.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20180815142152')[0m
+  ↳ bin/rails:4
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+Migrating to CreateForums (20180815143412)
+  [1m[35m (17.5ms)[0m  [1m[35mCREATE TABLE `forums` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `question` varchar(255), `answer` varchar(255), `professional_user` int, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL)[0m
+  ↳ db/migrate/20180815143412_create_forums.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20180815143412')[0m
+  ↳ bin/rails:4
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+Migrating to CreateCalendars (20180815143819)
+  [1m[35m (17.5ms)[0m  [1m[35mCREATE TABLE `calendars` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `id_user` int, `start_date` date, `end_date` date, `state` int, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL)[0m
+  ↳ db/migrate/20180815143819_create_calendars.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20180815143819')[0m
+  ↳ bin/rails:4
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+Migrating to CreateStates (20180815143940)
+  [1m[35m (15.2ms)[0m  [1m[35mCREATE TABLE `states` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `description` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL)[0m
+  ↳ db/migrate/20180815143940_create_states.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20180815143940')[0m
+  ↳ bin/rails:4
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+Migrating to AddDeviseToUsers (20180819034151)
+  [1m[35m (16.4ms)[0m  [1m[35mCREATE TABLE `users` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `email` varchar(255) DEFAULT '' NOT NULL, `encrypted_password` varchar(255) DEFAULT '' NOT NULL, `name` varchar(255), `lastname` varchar(255), `document` bigint, `phone` bigint, `profession` varchar(255), `reset_password_token` varchar(255), `reset_password_sent_at` datetime, `remember_created_at` datetime)[0m
+  ↳ db/migrate/20180819034151_add_devise_to_users.rb:5
+  [1m[35m (9.8ms)[0m  [1m[35mCREATE UNIQUE INDEX `index_users_on_email`  ON `users` (`email`) [0m
+  ↳ db/migrate/20180819034151_add_devise_to_users.rb:22
+  [1m[35m (12.9ms)[0m  [1m[35mCREATE UNIQUE INDEX `index_users_on_reset_password_token`  ON `users` (`reset_password_token`) [0m
+  ↳ db/migrate/20180819034151_add_devise_to_users.rb:23
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20180819034151')[0m
+  ↳ bin/rails:4
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+Migrating to AddRoleIdToUser (20180825004319)
+  [1m[35m (34.9ms)[0m  [1m[35mALTER TABLE `users` ADD `role_id` bigint[0m
+  ↳ db/migrate/20180825004319_add_role_id_to_user.rb:3
+  [1m[35m (10.8ms)[0m  [1m[35mCREATE  INDEX `index_users_on_role_id`  ON `users` (`role_id`) [0m
+  ↳ db/migrate/20180825004319_add_role_id_to_user.rb:3
+  [1m[35m (26.2ms)[0m  [1m[35mALTER TABLE `users` ADD CONSTRAINT `fk_rails_642f17018b`
+FOREIGN KEY (`role_id`)
+  REFERENCES `roles` (`id`)
+[0m
+  ↳ db/migrate/20180825004319_add_role_id_to_user.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20180825004319')[0m
+  ↳ bin/rails:4
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+Migrating to AddStateIdToUser (20180825013539)
+  [1m[35m (32.4ms)[0m  [1m[35mALTER TABLE `users` ADD `state_id` bigint[0m
+  ↳ db/migrate/20180825013539_add_state_id_to_user.rb:3
+  [1m[35m (25.9ms)[0m  [1m[35mCREATE  INDEX `index_users_on_state_id`  ON `users` (`state_id`) [0m
+  ↳ db/migrate/20180825013539_add_state_id_to_user.rb:3
+  [1m[35m (24.1ms)[0m  [1m[35mALTER TABLE `users` ADD CONSTRAINT `fk_rails_606ec65343`
+FOREIGN KEY (`state_id`)
+  REFERENCES `states` (`id`)
+[0m
+  ↳ db/migrate/20180825013539_add_state_id_to_user.rb:3
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20180825013539')[0m
+  ↳ bin/rails:4
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+Migrating to AddFundationIdToUser (20180825015758)
+  [1m[35m (30.5ms)[0m  [1m[35mALTER TABLE `users` ADD `fundation_id` bigint[0m
+  ↳ db/migrate/20180825015758_add_fundation_id_to_user.rb:3
+  [1m[35m (12.1ms)[0m  [1m[35mCREATE  INDEX `index_users_on_fundation_id`  ON `users` (`fundation_id`) [0m
+  ↳ db/migrate/20180825015758_add_fundation_id_to_user.rb:3
+  [1m[35m (39.3ms)[0m  [1m[35mALTER TABLE `users` ADD CONSTRAINT `fk_rails_94a98878aa`
+FOREIGN KEY (`fundation_id`)
+  REFERENCES `fundations` (`id`)
+[0m
+  ↳ db/migrate/20180825015758_add_fundation_id_to_user.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20180825015758')[0m
+  ↳ bin/rails:4
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+Migrating to CreateChatRooms (20180831030127)
+  [1m[35m (16.4ms)[0m  [1m[35mCREATE TABLE `chat_rooms` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `title` varchar(255), `user_id` bigint, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL,  INDEX `index_chat_rooms_on_user_id`  (`user_id`), CONSTRAINT `fk_rails_fb091736d8`
+FOREIGN KEY (`user_id`)
+  REFERENCES `users` (`id`)
+)[0m
+  ↳ db/migrate/20180831030127_create_chat_rooms.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20180831030127')[0m
+  ↳ bin/rails:4
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+Migrating to CreateMessages (20180831031318)
+  [1m[35m (17.6ms)[0m  [1m[35mCREATE TABLE `messages` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `body` text, `user_id` bigint, `chat_room_id` bigint, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL,  INDEX `index_messages_on_user_id`  (`user_id`),  INDEX `index_messages_on_chat_room_id`  (`chat_room_id`), CONSTRAINT `fk_rails_273a25a7a6`
+FOREIGN KEY (`user_id`)
+  REFERENCES `users` (`id`)
+, CONSTRAINT `fk_rails_00aac238e8`
+FOREIGN KEY (`chat_room_id`)
+  REFERENCES `chat_rooms` (`id`)
+)[0m
+  ↳ db/migrate/20180831031318_create_messages.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20180831031318')[0m
+  ↳ bin/rails:4
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+Migrating to CreateEvents (20180903164443)
+  [1m[35m (5.4ms)[0m  [1m[35mCREATE TABLE `events` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `title` varchar(255), `start` date, `end` date, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL)[0m
+  ↳ db/migrate/20180903164443_create_events.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20180903164443')[0m
+  ↳ bin/rails:4
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  ↳ bin/rails:4
+  [1m[35m (2.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::InternalMetadata Create (3.7ms)[0m  [1m[32mINSERT INTO `ar_internal_metadata` (`key`, `value`, `created_at`, `updated_at`) VALUES ('environment', 'development', '2018-09-03 16:44:58', '2018-09-03 16:44:58')[0m
+  ↳ bin/rails:4
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT RELEASE_LOCK('2993449066490098125')[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:1
+  [1m[36mFundation Create (0.2ms)[0m  [1m[32mINSERT INTO `fundations` (`fundation_name`, `address`, `phone`, `mail`, `created_at`, `updated_at`) VALUES ('default', '123', 3124327738, 'juan@aldeamo.com', '2018-09-03 16:45:02', '2018-09-03 16:45:02')[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (9.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:8
+  [1m[36mState Create (0.2ms)[0m  [1m[32mINSERT INTO `states` (`description`, `created_at`, `updated_at`) VALUES ('Activo', '2018-09-03 16:45:02', '2018-09-03 16:45:02')[0m
+  ↳ db/seeds.rb:8
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:8
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:8
+  [1m[36mState Create (3.9ms)[0m  [1m[32mINSERT INTO `states` (`description`, `created_at`, `updated_at`) VALUES ('Inactivo', '2018-09-03 16:45:02', '2018-09-03 16:45:02')[0m
+  ↳ db/seeds.rb:8
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:8
+  [1m[35m (4.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:16
+  [1m[36mRole Create (0.2ms)[0m  [1m[32mINSERT INTO `roles` (`role_name`, `description`, `created_at`, `updated_at`) VALUES ('Administrador', 'Desarrollador', '2018-09-03 16:45:02', '2018-09-03 16:45:02')[0m
+  ↳ db/seeds.rb:16
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:16
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:16
+  [1m[36mRole Create (1.9ms)[0m  [1m[32mINSERT INTO `roles` (`role_name`, `description`, `created_at`, `updated_at`) VALUES ('Profesional', 'Colaborador', '2018-09-03 16:45:02', '2018-09-03 16:45:02')[0m
+  ↳ db/seeds.rb:16
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:16
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:26
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`email` = BINARY 'sbas23@gmail.com' LIMIT 1[0m
+  ↳ db/seeds.rb:26
+  [1m[36mUser Create (7.9ms)[0m  [1m[32mINSERT INTO `users` (`email`, `encrypted_password`, `name`, `lastname`, `document`, `phone`, `profession`, `role_id`, `state_id`, `fundation_id`) VALUES ('sbas23@gmail.com', '$2a$11$XxXt9afx76.NKXda4eDsQeS0.axwaKOhzD2Ch7baS9cVt.44INUam', 'Juan', 'Calderon', 1018433548, 3124327738, 'Desarrollador', 1, 1, 1)[0m
+  ↳ db/seeds.rb:26
+  [1m[35m (3.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:26
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:26
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`email` = BINARY 'jose@gmail.com' LIMIT 1[0m
+  ↳ db/seeds.rb:26
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO `users` (`email`, `encrypted_password`, `name`, `lastname`, `document`, `phone`, `profession`, `role_id`, `state_id`, `fundation_id`) VALUES ('jose@gmail.com', '$2a$11$cn90yBCJoy1e8a5hI6iMUu7.Q7YynG9sdR5RkrxKYfe4CnMq2ahX2', 'Jose', 'Ramos', 1018433533, 3124327111, 'Desarrollador', 1, 1, 1)[0m
+  ↳ db/seeds.rb:26
+  [1m[35m (3.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:26
+Started GET "/index" for 127.0.0.1 at 2018-09-03 11:45:14 -0500
+  [1m[35m (0.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /home/usr001/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /home/usr001/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by IndexController#index as HTML
+  Rendering index/index.html.erb within layouts/application
+  Rendered index/index.html.erb within layouts/application (3.7ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/application.html.erb:32
+Completed 200 OK in 380ms (Views: 370.8ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/index" for 127.0.0.1 at 2018-09-03 11:45:18 -0500
+Processing by IndexController#index as HTML
+  Rendering index/index.html.erb within layouts/application
+  Rendered index/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 92ms (Views: 91.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/chat_rooms" for 127.0.0.1 at 2018-09-03 11:45:19 -0500
+Processing by ChatRoomsController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-09-03 11:45:19 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.7ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 136ms (Views: 134.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/chat_rooms" for 127.0.0.1 at 2018-09-03 11:45:21 -0500
+Processing by ChatRoomsController#index as HTML
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-09-03 11:45:21 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (10.4ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (14.7ms)
+Completed 200 OK in 102ms (Views: 100.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-09-03 11:45:28 -0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RVl6rPV5rqMCDhUesIyLImwdFAoblRIogaLDSHJKvxYbRga1pKs0R/FOxfURnBSzQWX+WAflaBMH2L92ajlX6g==", "user"=>{"email"=>"sbas23@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Inicio"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`email` = 'sbas23@gmail.com' ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ /home/usr001/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/chat_rooms
+Completed 302 Found in 228ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/chat_rooms" for 127.0.0.1 at 2018-09-03 11:45:28 -0500
+Processing by ChatRoomsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ /home/usr001/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering chat_rooms/index.html.erb within layouts/application
+  [1m[36mChatRoom Load (0.7ms)[0m  [1m[34mSELECT `chat_rooms`.* FROM `chat_rooms`[0m
+  ↳ app/views/chat_rooms/index.html.erb:7
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered chat_rooms/index.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 59ms (Views: 45.3ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-09-03 11:46:43 -0500
+  [1m[35m (0.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /home/usr001/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (2.8ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /home/usr001/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by IndexController#index as HTML
+  Rendering index/index.html.erb within layouts/application
+  Rendered index/index.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 246ms (Views: 239.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/chat_rooms" for 127.0.0.1 at 2018-09-03 11:46:49 -0500
+Processing by ChatRoomsController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-09-03 11:46:49 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.9ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (12.7ms)
+Completed 200 OK in 72ms (Views: 54.9ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-09-03 11:46:54 -0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9I0Tu+daVBh7APi4/TGLBIl0USqkdWZZ9LMdFnDg0w6U05NMWog68t24bxfGwlYRIYBja3KARwstyuZ7szEIkw==", "user"=>{"email"=>"sbas23@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Inicio"}
+  [1m[36mUser Load (3.1ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`email` = 'sbas23@gmail.com' ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ /home/usr001/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/chat_rooms
+Completed 302 Found in 160ms (ActiveRecord: 3.1ms)
+
+
+Started GET "/chat_rooms" for 127.0.0.1 at 2018-09-03 11:46:55 -0500
+Processing by ChatRoomsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ /home/usr001/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering chat_rooms/index.html.erb within layouts/application
+  [1m[36mChatRoom Load (0.3ms)[0m  [1m[34mSELECT `chat_rooms`.* FROM `chat_rooms`[0m
+  ↳ app/views/chat_rooms/index.html.erb:7
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered chat_rooms/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 48ms (Views: 42.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/events" for 127.0.0.1 at 2018-09-03 11:47:01 -0500
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT `events`.* FROM `events`[0m
+  ↳ app/views/events/index.html.erb:16
+  Rendered events/index.html.erb within layouts/application (2.4ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/application.html.erb:32
+Completed 200 OK in 36ms (Views: 33.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/events" for 127.0.0.1 at 2018-09-03 11:54:34 -0500
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /home/usr001/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /home/usr001/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT `events`.* FROM `events`[0m
+  ↳ app/views/events/index.html.erb:16
+  Rendered /home/usr001/.rvm/gems/ruby-2.5.1/gems/simple_calendar-2.3.0/app/views/simple_calendar/_month_calendar.html.erb (14.3ms)
+  Rendered events/index.html.erb within layouts/application (20.3ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/application.html.erb:32
+Completed 200 OK in 977ms (Views: 964.0ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/events?start_date=2018-10-01" for 127.0.0.1 at 2018-09-03 11:54:58 -0500
+Processing by EventsController#index as HTML
+  Parameters: {"start_date"=>"2018-10-01"}
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (1.8ms)[0m  [1m[34mSELECT `events`.* FROM `events`[0m
+  ↳ app/views/events/index.html.erb:16
+  Rendered /home/usr001/.rvm/gems/ruby-2.5.1/gems/simple_calendar-2.3.0/app/views/simple_calendar/_month_calendar.html.erb (17.9ms)
+  Rendered events/index.html.erb within layouts/application (22.8ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/application.html.erb:32
+Completed 200 OK in 102ms (Views: 98.5ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/events?start_date=2018-09-30" for 127.0.0.1 at 2018-09-03 11:55:02 -0500
+Processing by EventsController#index as HTML
+  Parameters: {"start_date"=>"2018-09-30"}
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (1.5ms)[0m  [1m[34mSELECT `events`.* FROM `events`[0m
+  ↳ app/views/events/index.html.erb:16
+  Rendered /home/usr001/.rvm/gems/ruby-2.5.1/gems/simple_calendar-2.3.0/app/views/simple_calendar/_month_calendar.html.erb (37.4ms)
+  Rendered events/index.html.erb within layouts/application (45.3ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/application.html.erb:32
+Completed 200 OK in 87ms (Views: 84.6ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/events?start_date=2018-09-30" for 127.0.0.1 at 2018-09-03 11:57:28 -0500
+Processing by EventsController#index as HTML
+  Parameters: {"start_date"=>"2018-09-30"}
+  Rendering events/index.html.erb within layouts/application
+  Rendered /home/usr001/.rvm/gems/ruby-2.5.1/gems/simple_calendar-2.3.0/app/views/simple_calendar/_month_calendar.html.erb (6.1ms)
+  Rendered events/index.html.erb within layouts/application (7.6ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/application.html.erb:32
+Completed 200 OK in 48ms (Views: 46.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/events?start_date=2018-09-30" for 127.0.0.1 at 2018-09-03 11:57:55 -0500
+Processing by EventsController#index as HTML
+  Parameters: {"start_date"=>"2018-09-30"}
+  Rendering events/index.html.erb within layouts/application
+  Rendered /home/usr001/.rvm/gems/ruby-2.5.1/gems/simple_calendar-2.3.0/app/views/simple_calendar/_month_calendar.html.erb (5.9ms)
+  Rendered events/index.html.erb within layouts/application (11.3ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/application.html.erb:32
+Completed 200 OK in 53ms (Views: 52.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/events?start_date=2018-09-30" for 127.0.0.1 at 2018-09-03 11:58:26 -0500
+Processing by EventsController#index as HTML
+  Parameters: {"start_date"=>"2018-09-30"}
+  Rendering events/index.html.erb within layouts/application
+  Rendered /home/usr001/.rvm/gems/ruby-2.5.1/gems/simple_calendar-2.3.0/app/views/simple_calendar/_month_calendar.html.erb (5.5ms)
+  Rendered events/index.html.erb within layouts/application (6.9ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/application.html.erb:32
+Completed 200 OK in 46ms (Views: 44.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/events?start_date=2018-10-01" for 127.0.0.1 at 2018-09-03 11:59:21 -0500
+Processing by EventsController#index as HTML
+  Parameters: {"start_date"=>"2018-10-01"}
+  Rendering events/index.html.erb within layouts/application
+  Rendered /home/usr001/.rvm/gems/ruby-2.5.1/gems/simple_calendar-2.3.0/app/views/simple_calendar/_month_calendar.html.erb (5.2ms)
+  Rendered events/index.html.erb within layouts/application (6.8ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/application.html.erb:32
+Completed 200 OK in 50ms (Views: 49.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/events?start_date=2018-11-05" for 127.0.0.1 at 2018-09-03 11:59:22 -0500
+Processing by EventsController#index as HTML
+  Parameters: {"start_date"=>"2018-11-05"}
+  Rendering events/index.html.erb within layouts/application
+  Rendered /home/usr001/.rvm/gems/ruby-2.5.1/gems/simple_calendar-2.3.0/app/views/simple_calendar/_month_calendar.html.erb (13.1ms)
+  Rendered events/index.html.erb within layouts/application (14.6ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/application.html.erb:32
+Completed 200 OK in 53ms (Views: 52.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/events?start_date=2018-12-03" for 127.0.0.1 at 2018-09-03 11:59:24 -0500
+Processing by EventsController#index as HTML
+  Parameters: {"start_date"=>"2018-12-03"}
+  Rendering events/index.html.erb within layouts/application
+  Rendered /home/usr001/.rvm/gems/ruby-2.5.1/gems/simple_calendar-2.3.0/app/views/simple_calendar/_month_calendar.html.erb (8.6ms)
+  Rendered events/index.html.erb within layouts/application (16.0ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/application.html.erb:32
+Completed 200 OK in 73ms (Views: 71.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/events?start_date=2018-11-25" for 127.0.0.1 at 2018-09-03 11:59:27 -0500
+Processing by EventsController#index as HTML
+  Parameters: {"start_date"=>"2018-11-25"}
+  Rendering events/index.html.erb within layouts/application
+  Rendered /home/usr001/.rvm/gems/ruby-2.5.1/gems/simple_calendar-2.3.0/app/views/simple_calendar/_month_calendar.html.erb (5.1ms)
+  Rendered events/index.html.erb within layouts/application (15.3ms)
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/application.html.erb:32
+Completed 200 OK in 56ms (Views: 54.1ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/events?start_date=2018-10-28" for 127.0.0.1 at 2018-09-03 11:59:28 -0500
+Processing by EventsController#index as HTML
+  Parameters: {"start_date"=>"2018-10-28"}
+  Rendering events/index.html.erb within layouts/application
+  Rendered /home/usr001/.rvm/gems/ruby-2.5.1/gems/simple_calendar-2.3.0/app/views/simple_calendar/_month_calendar.html.erb (9.2ms)
+  Rendered events/index.html.erb within layouts/application (10.6ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/application.html.erb:32
+Completed 200 OK in 48ms (Views: 46.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/events?start_date=2018-09-30" for 127.0.0.1 at 2018-09-03 11:59:28 -0500
+Processing by EventsController#index as HTML
+  Parameters: {"start_date"=>"2018-09-30"}
+  Rendering events/index.html.erb within layouts/application
+  Rendered /home/usr001/.rvm/gems/ruby-2.5.1/gems/simple_calendar-2.3.0/app/views/simple_calendar/_month_calendar.html.erb (13.4ms)
+  Rendered events/index.html.erb within layouts/application (14.9ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/application.html.erb:32
+Completed 200 OK in 92ms (Views: 91.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/events?start_date=2018-09-30" for 127.0.0.1 at 2018-09-03 12:01:39 -0500
+Processing by EventsController#index as HTML
+  Parameters: {"start_date"=>"2018-09-30"}
+  Rendering events/index.html.erb within layouts/application
+  Rendered /home/usr001/.rvm/gems/ruby-2.5.1/gems/simple_calendar-2.3.0/app/views/simple_calendar/_month_calendar.html.erb (4.8ms)
+  Rendered /home/usr001/.rvm/gems/ruby-2.5.1/gems/simple_calendar-2.3.0/app/views/simple_calendar/_month_calendar.html.erb (4.3ms)
+  Rendered events/index.html.erb within layouts/application (12.4ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/application.html.erb:32
+Completed 200 OK in 53ms (Views: 51.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-09-03 12:02:35 -0500
+Processing by IndexController#index as HTML
+  Rendering index/index.html.erb within layouts/application
+  Rendered index/index.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/application.html.erb:32
+Completed 200 OK in 34ms (Views: 32.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/new_event_path" for 127.0.0.1 at 2018-09-03 12:02:38 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/new_event_path"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/events?start_date=2018-09-30" for 127.0.0.1 at 2018-09-03 12:05:47 -0500
+Processing by EventsController#index as HTML
+  Parameters: {"start_date"=>"2018-09-30"}
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT `events`.* FROM `events`[0m
+  ↳ app/views/events/index.html.erb:17
+  Rendered /home/usr001/.rvm/gems/ruby-2.5.1/gems/simple_calendar-2.3.0/app/views/simple_calendar/_month_calendar.html.erb (6.6ms)
+  Rendered events/index.html.erb within layouts/application (14.0ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/application.html.erb:32
+Completed 200 OK in 59ms (Views: 57.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/events/new" for 127.0.0.1 at 2018-09-03 12:06:02 -0500
+Processing by EventsController#new as HTML
+  Rendering events/new.html.erb within layouts/application
+  Rendered events/_form.html.erb (30.7ms)
+  Rendered events/new.html.erb within layouts/application (31.6ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/application.html.erb:32
+Completed 200 OK in 110ms (Views: 103.3ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/events" for 127.0.0.1 at 2018-09-03 12:06:28 -0500
+Processing by EventsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"AHZX/AQmj3c64XUenDZiTB7Y/asrqumQP5OkpkVuwPTxtZDoT39UGmi1cO2QeWxmuQK69FhZt7AY10HoPlqhPw==", "event"=>{"title"=>"primera cita", "start(1i)"=>"2018", "start(2i)"=>"9", "start(3i)"=>"10", "end(1i)"=>"2018", "end(2i)"=>"9", "end(3i)"=>"10"}, "commit"=>"Create Event"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/events_controller.rb:30
+  [1m[36mEvent Create (0.2ms)[0m  [1m[32mINSERT INTO `events` (`title`, `start`, `end`, `created_at`, `updated_at`) VALUES ('primera cita', '2018-09-10', '2018-09-10', '2018-09-03 17:06:28', '2018-09-03 17:06:28')[0m
+  ↳ app/controllers/events_controller.rb:30
+  [1m[35m (3.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/events_controller.rb:30
+Redirected to http://localhost:3000/events/1
+Completed 302 Found in 8ms (ActiveRecord: 4.2ms)
+
+
+Started GET "/events/1" for 127.0.0.1 at 2018-09-03 12:06:28 -0500
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT  `events`.* FROM `events` WHERE `events`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/events_controller.rb:67
+  Rendering events/show.html.erb within layouts/application
+  Rendered events/show.html.erb within layouts/application (0.6ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/application.html.erb:32
+Completed 200 OK in 44ms (Views: 39.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/events" for 127.0.0.1 at 2018-09-03 12:06:35 -0500
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT `events`.* FROM `events`[0m
+  ↳ app/views/events/index.html.erb:17
+  Rendered /home/usr001/.rvm/gems/ruby-2.5.1/gems/simple_calendar-2.3.0/app/views/simple_calendar/_month_calendar.html.erb (3.9ms)
+  Rendered events/index.html.erb within layouts/application (15.1ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/application.html.erb:32
+Completed 200 OK in 77ms (Views: 75.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/events/1" for 127.0.0.1 at 2018-09-03 12:06:44 -0500
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT  `events`.* FROM `events` WHERE `events`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/events_controller.rb:67
+  Rendering events/show.html.erb within layouts/application
+  Rendered events/show.html.erb within layouts/application (0.6ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/application.html.erb:32
+Completed 200 OK in 90ms (Views: 68.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/events" for 127.0.0.1 at 2018-09-03 12:07:20 -0500
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT `events`.* FROM `events`[0m
+  ↳ app/views/events/index.html.erb:17
+  Rendered /home/usr001/.rvm/gems/ruby-2.5.1/gems/simple_calendar-2.3.0/app/views/simple_calendar/_month_calendar.html.erb (3.6ms)
+  Rendered events/index.html.erb within layouts/application (10.0ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/application.html.erb:32
+Completed 200 OK in 59ms (Views: 58.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/events" for 127.0.0.1 at 2018-09-03 12:07:34 -0500
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (2.7ms)[0m  [1m[34mSELECT `events`.* FROM `events`[0m
+  ↳ app/views/events/index.html.erb:17
+  Rendered /home/usr001/.rvm/gems/ruby-2.5.1/gems/simple_calendar-2.3.0/app/views/simple_calendar/_month_calendar.html.erb (3.6ms)
+  Rendered events/index.html.erb within layouts/application (14.5ms)
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/application.html.erb:32
+Completed 200 OK in 89ms (Views: 84.8ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/events" for 127.0.0.1 at 2018-09-03 12:16:11 -0500
+  [1m[35m (0.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /home/usr001/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (1.5ms)[0m  [1m[34mSELECT `events`.* FROM `events`[0m
+  ↳ app/views/events/index.html.erb:17
+  Rendered /home/usr001/.rvm/gems/ruby-2.5.1/gems/simple_calendar-2.3.0/app/views/simple_calendar/_month_calendar.html.erb (4.1ms)
+  Rendered events/index.html.erb within layouts/application (15.8ms)
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/application.html.erb:32
+Completed 200 OK in 71ms (Views: 67.7ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/events" for 127.0.0.1 at 2018-09-03 12:16:30 -0500
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT `events`.* FROM `events`[0m
+  ↳ app/views/events/index.html.erb:17
+  Rendered /home/usr001/.rvm/gems/ruby-2.5.1/gems/simple_calendar-2.3.0/app/views/simple_calendar/_month_calendar.html.erb (4.2ms)
+  Rendered events/index.html.erb within layouts/application (14.8ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/application.html.erb:32
+Completed 200 OK in 62ms (Views: 60.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/events" for 127.0.0.1 at 2018-09-03 12:20:33 -0500
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.8ms)[0m  [1m[34mSELECT `events`.* FROM `events`[0m
+  ↳ app/views/events/index.html.erb:17
+  Rendered events/index.html.erb within layouts/application (23.4ms)
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 0.8ms)
+
+
+  
+ActionView::Template::Error (undefined method `start_time' for #<Event:0x00007fcda1a9d2a8>
+Did you mean?  start?):
+    32: 
+    33: 
+    34:     <div class="col-md-8" style="padding: 0px 20px 0px 30px;">
+    35:       <%= month_calendar events: @events do |date, events| %>
+    36:         <%= date %>
+    37: 
+    38:         <% events.each do |meeting| %>
+  
+app/views/events/index.html.erb:35:in `_app_views_events_index_html_erb__1655948700247426160_70260578707200'
+Started GET "/events" for 127.0.0.1 at 2018-09-03 12:21:24 -0500
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (1.3ms)[0m  [1m[34mSELECT `events`.* FROM `events`[0m
+  ↳ app/views/events/index.html.erb:17
+  [1m[36mCACHE Event Load (0.0ms)[0m  [1m[34mSELECT `events`.* FROM `events`[0m
+  ↳ app/views/events/index.html.erb:35
+  Rendered events/index.html.erb within layouts/application (36.5ms)
+Completed 500 Internal Server Error in 50ms (ActiveRecord: 3.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `start_time' for #<Event:0x000000000403c628>
+Did you mean?  start?):
+    32: 
+    33: 
+    34:     <div class="col-md-8" style="padding: 0px 20px 0px 30px;">
+    35:       <%= month_calendar events: @meetings do |date, meetings| %>
+    36:         <%= date %>
+    37: 
+    38:         <% meetings.each do |meeting| %>
+  
+app/views/events/index.html.erb:35:in `_app_views_events_index_html_erb__1655948700247426160_70260566212280'
+Started GET "/events" for 127.0.0.1 at 2018-09-03 12:37:25 -0500
+  [1m[35m (0.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /home/usr001/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (1.2ms)[0m  [1m[34mSELECT `events`.* FROM `events`[0m
+  ↳ app/views/events/index.html.erb:17
+  [1m[36mCACHE Event Load (0.0ms)[0m  [1m[34mSELECT `events`.* FROM `events`[0m
+  ↳ app/views/events/index.html.erb:35
+  Rendered events/index.html.erb within layouts/application (30.2ms)
+Completed 500 Internal Server Error in 46ms (ActiveRecord: 4.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `my_related_model' for #<Event:0x00007fcda2151e28>):
+    32: 
+    33: 
+    34:     <div class="col-md-8" style="padding: 0px 20px 0px 30px;">
+    35:       <%= month_calendar events: @meetings do |date, meetings| %>
+    36:         <%= date %>
+    37: 
+    38:         <% meetings.each do |meeting| %>
+  
+app/models/event.rb:3:in `start_time'
+app/views/events/index.html.erb:35:in `_app_views_events_index_html_erb__1655948700247426160_70260582511740'
+Started GET "/events" for 127.0.0.1 at 2018-09-03 12:37:53 -0500
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT `events`.* FROM `events`[0m
+  ↳ app/views/events/index.html.erb:17
+  [1m[36mCACHE Event Load (0.0ms)[0m  [1m[34mSELECT `events`.* FROM `events`[0m
+  ↳ app/views/events/index.html.erb:35
+  Rendered events/index.html.erb within layouts/application (22.5ms)
+Completed 500 Internal Server Error in 32ms (ActiveRecord: 1.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `Event' for #<Event:0x00007fcda1846d88>):
+    32: 
+    33: 
+    34:     <div class="col-md-8" style="padding: 0px 20px 0px 30px;">
+    35:       <%= month_calendar events: @meetings do |date, meetings| %>
+    36:         <%= date %>
+    37: 
+    38:         <% meetings.each do |meeting| %>
+  
+app/models/event.rb:3:in `start_time'
+app/views/events/index.html.erb:35:in `_app_views_events_index_html_erb__1655948700247426160_70260578563820'
+Started GET "/events" for 127.0.0.1 at 2018-09-03 12:38:04 -0500
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT `events`.* FROM `events`[0m
+  ↳ app/views/events/index.html.erb:17
+  [1m[36mCACHE Event Load (0.0ms)[0m  [1m[34mSELECT `events`.* FROM `events`[0m
+  ↳ app/views/events/index.html.erb:35
+  Rendered events/index.html.erb within layouts/application (22.2ms)
+Completed 500 Internal Server Error in 28ms (ActiveRecord: 1.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `event' for #<Event:0x00000000040e97d8>):
+    32: 
+    33: 
+    34:     <div class="col-md-8" style="padding: 0px 20px 0px 30px;">
+    35:       <%= month_calendar events: @meetings do |date, meetings| %>
+    36:         <%= date %>
+    37: 
+    38:         <% meetings.each do |meeting| %>
+  
+app/models/event.rb:3:in `start_time'
+app/views/events/index.html.erb:35:in `_app_views_events_index_html_erb__1655948700247426160_70260566924380'
+Started GET "/events" for 127.0.0.1 at 2018-09-03 12:45:00 -0500
+  [1m[35m (0.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /home/usr001/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (1.2ms)[0m  [1m[34mSELECT `events`.* FROM `events`[0m
+  ↳ app/views/events/index.html.erb:17
+  Rendered /home/usr001/.rvm/gems/ruby-2.5.1/gems/simple_calendar-2.3.0/app/views/simple_calendar/_month_calendar.html.erb (6.2ms)
+  Rendered events/index.html.erb within layouts/application (29.6ms)
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/application.html.erb:32
+Completed 200 OK in 187ms (Views: 180.1ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/events" for 127.0.0.1 at 2018-09-03 12:47:12 -0500
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  Rendered events/index.html.erb within layouts/application (1.7ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/usr001/repository/drugfree/app/views/events/index.html.erb:39: syntax error, unexpected tIVAR, expecting keyword_end
+...ar(attribute: :start) @meetings do |date, meetings| @output_...
+...                      ^~~~~~~~~
+/home/usr001/repository/drugfree/app/views/events/index.html.erb:39: syntax error, unexpected '|', expecting '='
+...) @meetings do |date, meetings| @output_buffer.safe_append='
+...                              ^
+/home/usr001/repository/drugfree/app/views/events/index.html.erb:54: syntax error, unexpected keyword_ensure, expecting end-of-input
+          ensure
+          ^~~~~~):
+  
+app/views/events/index.html.erb:39: syntax error, unexpected tIVAR, expecting keyword_end
+app/views/events/index.html.erb:39: syntax error, unexpected '|', expecting '='
+app/views/events/index.html.erb:54: syntax error, unexpected keyword_ensure, expecting end-of-input
+Started GET "/events" for 127.0.0.1 at 2018-09-03 12:47:49 -0500
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT `events`.* FROM `events`[0m
+  ↳ app/views/events/index.html.erb:17
+  Rendered /home/usr001/.rvm/gems/ruby-2.5.1/gems/simple_calendar-2.3.0/app/views/simple_calendar/_month_calendar.html.erb (4.1ms)
+  Rendered /home/usr001/.rvm/gems/ruby-2.5.1/gems/simple_calendar-2.3.0/app/views/simple_calendar/_month_calendar.html.erb (3.2ms)
+  Rendered events/index.html.erb within layouts/application (15.8ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/application.html.erb:32
+Completed 200 OK in 65ms (Views: 63.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/events" for 127.0.0.1 at 2018-09-03 12:51:14 -0500
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  Rendered events/index.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/usr001/repository/drugfree/app/views/events/index.html.erb:39: syntax error, unexpected tIVAR, expecting keyword_end
+...ndar(attribute: :start) @events do |date, events| @output_bu...
+...                        ^~~~~~~
+/home/usr001/repository/drugfree/app/views/events/index.html.erb:39: syntax error, unexpected '|', expecting '='
+...tart) @events do |date, events| @output_buffer.safe_append='
+...                              ^
+/home/usr001/repository/drugfree/app/views/events/index.html.erb:54: syntax error, unexpected keyword_ensure, expecting end-of-input
+          ensure
+          ^~~~~~):
+  
+app/views/events/index.html.erb:39: syntax error, unexpected tIVAR, expecting keyword_end
+app/views/events/index.html.erb:39: syntax error, unexpected '|', expecting '='
+app/views/events/index.html.erb:54: syntax error, unexpected keyword_ensure, expecting end-of-input
+Started GET "/events" for 127.0.0.1 at 2018-09-03 12:53:42 -0500
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (1.8ms)[0m  [1m[34mSELECT `events`.* FROM `events`[0m
+  ↳ app/views/events/index.html.erb:17
+  Rendered /home/usr001/.rvm/gems/ruby-2.5.1/gems/simple_calendar-2.3.0/app/views/simple_calendar/_month_calendar.html.erb (9.6ms)
+  Rendered events/index.html.erb within layouts/application (42.2ms)
+Completed 500 Internal Server Error in 49ms (ActiveRecord: 1.8ms)
+
+
+  
+ActionView::Template::Error (undefined method `start_time' for #<Event:0x00007fcda2152620>
+Did you mean?  start?):
+    36:         <%= date %>
+    37:       <% end %>
+    38: 
+    39:       <%= month_calendar events: @events do |date, events| %>
+    40:         <%= date %>
+    41: 
+    42:         <% events.each do |event| %>
+  
+app/views/events/index.html.erb:39:in `_app_views_events_index_html_erb__1655948700247426160_70260582259140'
+Started GET "/events" for 127.0.0.1 at 2018-09-03 12:58:47 -0500
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT `events`.* FROM `events`[0m
+  ↳ app/views/events/index.html.erb:17
+  Rendered /home/usr001/.rvm/gems/ruby-2.5.1/gems/simple_calendar-2.3.0/app/views/simple_calendar/_month_calendar.html.erb (9.7ms)
+  Rendered events/index.html.erb within layouts/application (37.7ms)
+Completed 500 Internal Server Error in 56ms (ActiveRecord: 1.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `my_related_model' for #<Event:0x00007fcda131fb20>):
+    36:         <%= date %>
+    37:       <% end %>
+    38: 
+    39:       <%= month_calendar events: @events do |date, events| %>
+    40:         <%= date %>
+    41: 
+    42:         <% events.each do |event| %>
+  
+app/models/event.rb:3:in `start_time'
+app/views/events/index.html.erb:39:in `_app_views_events_index_html_erb__1655948700247426160_70260575597720'
+  [1m[35m (9.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ bin/rails:4
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ bin/rails:4
+  [1m[35m (65.3ms)[0m  [1m[35mDROP DATABASE IF EXISTS `drugfree`[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE DATABASE `drugfree` DEFAULT CHARACTER SET `utf8`[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ bin/rails:4
+  [1m[35m (22.7ms)[0m  [1m[35mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:4
+  [1m[35m (4.1ms)[0m  [1m[35mCREATE TABLE `ar_internal_metadata` (`key` varchar(255) NOT NULL PRIMARY KEY, `value` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL)[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT GET_LOCK('2993449066490098125', 0)[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ bin/rails:4
+Migrating to CreateRoles (20180815140927)
+  [1m[35m (12.2ms)[0m  [1m[35mCREATE TABLE `roles` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `role_name` varchar(255), `description` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL)[0m
+  ↳ db/migrate/20180815140927_create_roles.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20180815140927')[0m
+  ↳ bin/rails:4
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+Migrating to CreateFundations (20180815141917)
+  [1m[35m (13.9ms)[0m  [1m[35mCREATE TABLE `fundations` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `fundation_name` varchar(255), `address` varchar(255), `phone` bigint, `mail` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL)[0m
+  ↳ db/migrate/20180815141917_create_fundations.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::SchemaMigration Create (1.3ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20180815141917')[0m
+  ↳ bin/rails:4
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+Migrating to CreateServices (20180815142152)
+  [1m[35m (11.2ms)[0m  [1m[35mCREATE TABLE `services` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `service_name` varchar(255), `description` varchar(255), `cost` bigint, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL)[0m
+  ↳ db/migrate/20180815142152_create_services.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20180815142152')[0m
+  ↳ bin/rails:4
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+Migrating to CreateForums (20180815143412)
+  [1m[35m (5.6ms)[0m  [1m[35mCREATE TABLE `forums` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `question` varchar(255), `answer` varchar(255), `professional_user` int, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL)[0m
+  ↳ db/migrate/20180815143412_create_forums.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20180815143412')[0m
+  ↳ bin/rails:4
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+Migrating to CreateCalendars (20180815143819)
+  [1m[35m (5.4ms)[0m  [1m[35mCREATE TABLE `calendars` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `id_user` int, `start_date` date, `end_date` date, `state` int, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL)[0m
+  ↳ db/migrate/20180815143819_create_calendars.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20180815143819')[0m
+  ↳ bin/rails:4
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+Migrating to CreateStates (20180815143940)
+  [1m[35m (4.7ms)[0m  [1m[35mCREATE TABLE `states` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `description` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL)[0m
+  ↳ db/migrate/20180815143940_create_states.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20180815143940')[0m
+  ↳ bin/rails:4
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+Migrating to AddDeviseToUsers (20180819034151)
+  [1m[35m (4.5ms)[0m  [1m[35mCREATE TABLE `users` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `email` varchar(255) DEFAULT '' NOT NULL, `encrypted_password` varchar(255) DEFAULT '' NOT NULL, `name` varchar(255), `lastname` varchar(255), `document` bigint, `phone` bigint, `profession` varchar(255), `reset_password_token` varchar(255), `reset_password_sent_at` datetime, `remember_created_at` datetime)[0m
+  ↳ db/migrate/20180819034151_add_devise_to_users.rb:5
+  [1m[35m (6.6ms)[0m  [1m[35mCREATE UNIQUE INDEX `index_users_on_email`  ON `users` (`email`) [0m
+  ↳ db/migrate/20180819034151_add_devise_to_users.rb:22
+  [1m[35m (8.6ms)[0m  [1m[35mCREATE UNIQUE INDEX `index_users_on_reset_password_token`  ON `users` (`reset_password_token`) [0m
+  ↳ db/migrate/20180819034151_add_devise_to_users.rb:23
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20180819034151')[0m
+  ↳ bin/rails:4
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+Migrating to AddRoleIdToUser (20180825004319)
+  [1m[35m (10.8ms)[0m  [1m[35mALTER TABLE `users` ADD `role_id` bigint[0m
+  ↳ db/migrate/20180825004319_add_role_id_to_user.rb:3
+  [1m[35m (8.3ms)[0m  [1m[35mCREATE  INDEX `index_users_on_role_id`  ON `users` (`role_id`) [0m
+  ↳ db/migrate/20180825004319_add_role_id_to_user.rb:3
+  [1m[35m (23.3ms)[0m  [1m[35mALTER TABLE `users` ADD CONSTRAINT `fk_rails_642f17018b`
+FOREIGN KEY (`role_id`)
+  REFERENCES `roles` (`id`)
+[0m
+  ↳ db/migrate/20180825004319_add_role_id_to_user.rb:3
+  [1m[35m (1.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20180825004319')[0m
+  ↳ bin/rails:4
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+Migrating to AddStateIdToUser (20180825013539)
+  [1m[35m (14.2ms)[0m  [1m[35mALTER TABLE `users` ADD `state_id` bigint[0m
+  ↳ db/migrate/20180825013539_add_state_id_to_user.rb:3
+  [1m[35m (8.4ms)[0m  [1m[35mCREATE  INDEX `index_users_on_state_id`  ON `users` (`state_id`) [0m
+  ↳ db/migrate/20180825013539_add_state_id_to_user.rb:3
+  [1m[35m (20.1ms)[0m  [1m[35mALTER TABLE `users` ADD CONSTRAINT `fk_rails_606ec65343`
+FOREIGN KEY (`state_id`)
+  REFERENCES `states` (`id`)
+[0m
+  ↳ db/migrate/20180825013539_add_state_id_to_user.rb:3
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20180825013539')[0m
+  ↳ bin/rails:4
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+Migrating to AddFundationIdToUser (20180825015758)
+  [1m[35m (13.1ms)[0m  [1m[35mALTER TABLE `users` ADD `fundation_id` bigint[0m
+  ↳ db/migrate/20180825015758_add_fundation_id_to_user.rb:3
+  [1m[35m (7.7ms)[0m  [1m[35mCREATE  INDEX `index_users_on_fundation_id`  ON `users` (`fundation_id`) [0m
+  ↳ db/migrate/20180825015758_add_fundation_id_to_user.rb:3
+  [1m[35m (21.1ms)[0m  [1m[35mALTER TABLE `users` ADD CONSTRAINT `fk_rails_94a98878aa`
+FOREIGN KEY (`fundation_id`)
+  REFERENCES `fundations` (`id`)
+[0m
+  ↳ db/migrate/20180825015758_add_fundation_id_to_user.rb:3
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20180825015758')[0m
+  ↳ bin/rails:4
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+Migrating to CreateChatRooms (20180831030127)
+  [1m[35m (5.4ms)[0m  [1m[35mCREATE TABLE `chat_rooms` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `title` varchar(255), `user_id` bigint, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL,  INDEX `index_chat_rooms_on_user_id`  (`user_id`), CONSTRAINT `fk_rails_fb091736d8`
+FOREIGN KEY (`user_id`)
+  REFERENCES `users` (`id`)
+)[0m
+  ↳ db/migrate/20180831030127_create_chat_rooms.rb:3
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20180831030127')[0m
+  ↳ bin/rails:4
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+Migrating to CreateMessages (20180831031318)
+  [1m[35m (7.3ms)[0m  [1m[35mCREATE TABLE `messages` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `body` text, `user_id` bigint, `chat_room_id` bigint, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL,  INDEX `index_messages_on_user_id`  (`user_id`),  INDEX `index_messages_on_chat_room_id`  (`chat_room_id`), CONSTRAINT `fk_rails_273a25a7a6`
+FOREIGN KEY (`user_id`)
+  REFERENCES `users` (`id`)
+, CONSTRAINT `fk_rails_00aac238e8`
+FOREIGN KEY (`chat_room_id`)
+  REFERENCES `chat_rooms` (`id`)
+)[0m
+  ↳ db/migrate/20180831031318_create_messages.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20180831031318')[0m
+  ↳ bin/rails:4
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+Migrating to CreateEvents (20180903164443)
+  [1m[35m (31.2ms)[0m  [1m[35mCREATE TABLE `events` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `title` varchar(255), `start_time` datetime, `end_time` datetime, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL)[0m
+  ↳ db/migrate/20180903164443_create_events.rb:3
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20180903164443')[0m
+  ↳ bin/rails:4
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  ↳ bin/rails:4
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::InternalMetadata Create (4.0ms)[0m  [1m[32mINSERT INTO `ar_internal_metadata` (`key`, `value`, `created_at`, `updated_at`) VALUES ('environment', 'development', '2018-09-03 22:04:36', '2018-09-03 22:04:36')[0m
+  ↳ bin/rails:4
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK('2993449066490098125')[0m
+  ↳ bin/rails:4
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:1
+  [1m[36mFundation Create (0.2ms)[0m  [1m[32mINSERT INTO `fundations` (`fundation_name`, `address`, `phone`, `mail`, `created_at`, `updated_at`) VALUES ('default', '123', 3124327738, 'juan@aldeamo.com', '2018-09-03 22:04:42', '2018-09-03 22:04:42')[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (2.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:8
+  [1m[36mState Create (0.3ms)[0m  [1m[32mINSERT INTO `states` (`description`, `created_at`, `updated_at`) VALUES ('Activo', '2018-09-03 22:04:42', '2018-09-03 22:04:42')[0m
+  ↳ db/seeds.rb:8
+  [1m[35m (2.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:8
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:8
+  [1m[36mState Create (0.3ms)[0m  [1m[32mINSERT INTO `states` (`description`, `created_at`, `updated_at`) VALUES ('Inactivo', '2018-09-03 22:04:42', '2018-09-03 22:04:42')[0m
+  ↳ db/seeds.rb:8
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:8
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:16
+  [1m[36mRole Create (0.2ms)[0m  [1m[32mINSERT INTO `roles` (`role_name`, `description`, `created_at`, `updated_at`) VALUES ('Administrador', 'Desarrollador', '2018-09-03 22:04:42', '2018-09-03 22:04:42')[0m
+  ↳ db/seeds.rb:16
+  [1m[35m (2.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:16
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:16
+  [1m[36mRole Create (3.2ms)[0m  [1m[32mINSERT INTO `roles` (`role_name`, `description`, `created_at`, `updated_at`) VALUES ('Profesional', 'Colaborador', '2018-09-03 22:04:42', '2018-09-03 22:04:42')[0m
+  ↳ db/seeds.rb:16
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:16
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:26
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`email` = BINARY 'sbas23@gmail.com' LIMIT 1[0m
+  ↳ db/seeds.rb:26
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO `users` (`email`, `encrypted_password`, `name`, `lastname`, `document`, `phone`, `profession`, `role_id`, `state_id`, `fundation_id`) VALUES ('sbas23@gmail.com', '$2a$11$EhSWWTDt/k9gxUuVWb4U5.OIRCYKyFgv4kgsMQUP/6u7xi5OG9Ot6', 'Juan', 'Calderon', 1018433548, 3124327738, 'Desarrollador', 1, 1, 1)[0m
+  ↳ db/seeds.rb:26
+  [1m[35m (5.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:26
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:26
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`email` = BINARY 'jose@gmail.com' LIMIT 1[0m
+  ↳ db/seeds.rb:26
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO `users` (`email`, `encrypted_password`, `name`, `lastname`, `document`, `phone`, `profession`, `role_id`, `state_id`, `fundation_id`) VALUES ('jose@gmail.com', '$2a$11$ab/zYiGkIYn36LcNjZA5IulsqZsa9DFxQjn.z5flwC2gYa7sE2I02', 'Jose', 'Ramos', 1018433533, 3124327111, 'Desarrollador', 1, 1, 1)[0m
+  ↳ db/seeds.rb:26
+  [1m[35m (4.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:26
+Started GET "/" for 127.0.0.1 at 2018-09-03 17:04:58 -0500
+  [1m[35m (0.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /home/usr001/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /home/usr001/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by IndexController#index as HTML
+  Rendering index/index.html.erb within layouts/application
+  Rendered index/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 419ms (Views: 404.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/events" for 127.0.0.1 at 2018-09-03 17:05:01 -0500
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT `events`.* FROM `events`[0m
+  ↳ app/views/events/index.html.erb:17
+  Rendered /home/usr001/.rvm/gems/ruby-2.5.1/gems/simple_calendar-2.3.0/app/views/simple_calendar/_month_calendar.html.erb (8.2ms)
+  Rendered /home/usr001/.rvm/gems/ruby-2.5.1/gems/simple_calendar-2.3.0/app/views/simple_calendar/_month_calendar.html.erb (2.9ms)
+  Rendered events/index.html.erb within layouts/application (26.7ms)
+Completed 200 OK in 81ms (Views: 77.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/events" for 127.0.0.1 at 2018-09-03 17:06:06 -0500
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT `events`.* FROM `events`[0m
+  ↳ app/views/events/index.html.erb:17
+  Rendered /home/usr001/.rvm/gems/ruby-2.5.1/gems/simple_calendar-2.3.0/app/views/simple_calendar/_month_calendar.html.erb (6.7ms)
+  Rendered events/index.html.erb within layouts/application (11.9ms)
+Completed 200 OK in 52ms (Views: 51.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/events/new" for 127.0.0.1 at 2018-09-03 17:06:10 -0500
+Processing by EventsController#new as HTML
+  Rendering events/new.html.erb within layouts/application
+  Rendered events/_form.html.erb (22.7ms)
+  Rendered events/new.html.erb within layouts/application (28.5ms)
+Completed 200 OK in 75ms (Views: 66.9ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/events" for 127.0.0.1 at 2018-09-03 17:06:21 -0500
+Processing by EventsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"TvEJlNpVuNoaBZQsWRRoTeWvd696UZPZM2MPXcs68isAOZ7WZhyzY79ITjAh9zUii06O5gl2ACCjrgD5wgLBmA==", "event"=>{"title"=>"consulta", "start(1i)"=>"2018", "start(2i)"=>"9", "start(3i)"=>"10", "end(1i)"=>"2018", "end(2i)"=>"9", "end(3i)"=>"10"}, "commit"=>"Create Event"}
+Unpermitted parameters: :start(1i), :start(2i), :start(3i), :end(1i), :end(2i), :end(3i)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/events_controller.rb:30
+  [1m[36mEvent Create (0.2ms)[0m  [1m[32mINSERT INTO `events` (`title`, `created_at`, `updated_at`) VALUES ('consulta', '2018-09-03 22:06:21', '2018-09-03 22:06:21')[0m
+  ↳ app/controllers/events_controller.rb:30
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/events_controller.rb:30
+Redirected to http://localhost:3000/events/1
+Completed 302 Found in 6ms (ActiveRecord: 2.2ms)
+
+
+Started GET "/events/1" for 127.0.0.1 at 2018-09-03 17:06:21 -0500
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT  `events`.* FROM `events` WHERE `events`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/events_controller.rb:67
+  Rendering events/show.html.erb within layouts/application
+  Rendered events/show.html.erb within layouts/application (5.3ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `start' for #<Event:0x00007f6299b61518>):
+     7: 
+     8: <p>
+     9:   <strong>Start:</strong>
+    10:   <%= @event.start %>
+    11: </p>
+    12: 
+    13: <p>
+  
+app/views/events/show.html.erb:10:in `_app_views_events_show_html_erb__128289872758819489_70030731170760'
+  [1m[35m (0.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ bin/rails:4
+  [1m[35m (24.3ms)[0m  [1m[35mDROP DATABASE IF EXISTS `drugfree`[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ bin/rails:4
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE DATABASE `drugfree` DEFAULT CHARACTER SET `utf8`[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ bin/rails:4
+  [1m[35m (10.3ms)[0m  [1m[35mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:4
+  [1m[35m (4.6ms)[0m  [1m[35mCREATE TABLE `ar_internal_metadata` (`key` varchar(255) NOT NULL PRIMARY KEY, `value` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL)[0m
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT GET_LOCK('2993449066490098125', 0)[0m
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ bin/rails:4
+Migrating to CreateRoles (20180815140927)
+  [1m[35m (5.1ms)[0m  [1m[35mCREATE TABLE `roles` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `role_name` varchar(255), `description` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL)[0m
+  ↳ db/migrate/20180815140927_create_roles.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20180815140927')[0m
+  ↳ bin/rails:4
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+Migrating to CreateFundations (20180815141917)
+  [1m[35m (4.7ms)[0m  [1m[35mCREATE TABLE `fundations` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `fundation_name` varchar(255), `address` varchar(255), `phone` bigint, `mail` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL)[0m
+  ↳ db/migrate/20180815141917_create_fundations.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::SchemaMigration Create (1.3ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20180815141917')[0m
+  ↳ bin/rails:4
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+Migrating to CreateServices (20180815142152)
+  [1m[35m (5.7ms)[0m  [1m[35mCREATE TABLE `services` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `service_name` varchar(255), `description` varchar(255), `cost` bigint, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL)[0m
+  ↳ db/migrate/20180815142152_create_services.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20180815142152')[0m
+  ↳ bin/rails:4
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+Migrating to CreateForums (20180815143412)
+  [1m[35m (4.5ms)[0m  [1m[35mCREATE TABLE `forums` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `question` varchar(255), `answer` varchar(255), `professional_user` int, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL)[0m
+  ↳ db/migrate/20180815143412_create_forums.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20180815143412')[0m
+  ↳ bin/rails:4
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+Migrating to CreateCalendars (20180815143819)
+  [1m[35m (4.9ms)[0m  [1m[35mCREATE TABLE `calendars` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `id_user` int, `start_date` date, `end_date` date, `state` int, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL)[0m
+  ↳ db/migrate/20180815143819_create_calendars.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20180815143819')[0m
+  ↳ bin/rails:4
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+Migrating to CreateStates (20180815143940)
+  [1m[35m (4.2ms)[0m  [1m[35mCREATE TABLE `states` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `description` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL)[0m
+  ↳ db/migrate/20180815143940_create_states.rb:3
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20180815143940')[0m
+  ↳ bin/rails:4
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+Migrating to AddDeviseToUsers (20180819034151)
+  [1m[35m (9.5ms)[0m  [1m[35mCREATE TABLE `users` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `email` varchar(255) DEFAULT '' NOT NULL, `encrypted_password` varchar(255) DEFAULT '' NOT NULL, `name` varchar(255), `lastname` varchar(255), `document` bigint, `phone` bigint, `profession` varchar(255), `reset_password_token` varchar(255), `reset_password_sent_at` datetime, `remember_created_at` datetime)[0m
+  ↳ db/migrate/20180819034151_add_devise_to_users.rb:5
+  [1m[35m (4.8ms)[0m  [1m[35mCREATE UNIQUE INDEX `index_users_on_email`  ON `users` (`email`) [0m
+  ↳ db/migrate/20180819034151_add_devise_to_users.rb:22
+  [1m[35m (8.1ms)[0m  [1m[35mCREATE UNIQUE INDEX `index_users_on_reset_password_token`  ON `users` (`reset_password_token`) [0m
+  ↳ db/migrate/20180819034151_add_devise_to_users.rb:23
+  [1m[35m (0.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20180819034151')[0m
+  ↳ bin/rails:4
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+Migrating to AddRoleIdToUser (20180825004319)
+  [1m[35m (18.5ms)[0m  [1m[35mALTER TABLE `users` ADD `role_id` bigint[0m
+  ↳ db/migrate/20180825004319_add_role_id_to_user.rb:3
+  [1m[35m (7.5ms)[0m  [1m[35mCREATE  INDEX `index_users_on_role_id`  ON `users` (`role_id`) [0m
+  ↳ db/migrate/20180825004319_add_role_id_to_user.rb:3
+  [1m[35m (15.8ms)[0m  [1m[35mALTER TABLE `users` ADD CONSTRAINT `fk_rails_642f17018b`
+FOREIGN KEY (`role_id`)
+  REFERENCES `roles` (`id`)
+[0m
+  ↳ db/migrate/20180825004319_add_role_id_to_user.rb:3
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20180825004319')[0m
+  ↳ bin/rails:4
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+Migrating to AddStateIdToUser (20180825013539)
+  [1m[35m (13.6ms)[0m  [1m[35mALTER TABLE `users` ADD `state_id` bigint[0m
+  ↳ db/migrate/20180825013539_add_state_id_to_user.rb:3
+  [1m[35m (7.1ms)[0m  [1m[35mCREATE  INDEX `index_users_on_state_id`  ON `users` (`state_id`) [0m
+  ↳ db/migrate/20180825013539_add_state_id_to_user.rb:3
+  [1m[35m (23.5ms)[0m  [1m[35mALTER TABLE `users` ADD CONSTRAINT `fk_rails_606ec65343`
+FOREIGN KEY (`state_id`)
+  REFERENCES `states` (`id`)
+[0m
+  ↳ db/migrate/20180825013539_add_state_id_to_user.rb:3
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20180825013539')[0m
+  ↳ bin/rails:4
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+Migrating to AddFundationIdToUser (20180825015758)
+  [1m[35m (17.1ms)[0m  [1m[35mALTER TABLE `users` ADD `fundation_id` bigint[0m
+  ↳ db/migrate/20180825015758_add_fundation_id_to_user.rb:3
+  [1m[35m (10.0ms)[0m  [1m[35mCREATE  INDEX `index_users_on_fundation_id`  ON `users` (`fundation_id`) [0m
+  ↳ db/migrate/20180825015758_add_fundation_id_to_user.rb:3
+  [1m[35m (19.2ms)[0m  [1m[35mALTER TABLE `users` ADD CONSTRAINT `fk_rails_94a98878aa`
+FOREIGN KEY (`fundation_id`)
+  REFERENCES `fundations` (`id`)
+[0m
+  ↳ db/migrate/20180825015758_add_fundation_id_to_user.rb:3
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20180825015758')[0m
+  ↳ bin/rails:4
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+Migrating to CreateChatRooms (20180831030127)
+  [1m[35m (4.9ms)[0m  [1m[35mCREATE TABLE `chat_rooms` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `title` varchar(255), `user_id` bigint, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL,  INDEX `index_chat_rooms_on_user_id`  (`user_id`), CONSTRAINT `fk_rails_fb091736d8`
+FOREIGN KEY (`user_id`)
+  REFERENCES `users` (`id`)
+)[0m
+  ↳ db/migrate/20180831030127_create_chat_rooms.rb:3
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20180831030127')[0m
+  ↳ bin/rails:4
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+Migrating to CreateMessages (20180831031318)
+  [1m[35m (5.6ms)[0m  [1m[35mCREATE TABLE `messages` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `body` text, `user_id` bigint, `chat_room_id` bigint, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL,  INDEX `index_messages_on_user_id`  (`user_id`),  INDEX `index_messages_on_chat_room_id`  (`chat_room_id`), CONSTRAINT `fk_rails_273a25a7a6`
+FOREIGN KEY (`user_id`)
+  REFERENCES `users` (`id`)
+, CONSTRAINT `fk_rails_00aac238e8`
+FOREIGN KEY (`chat_room_id`)
+  REFERENCES `chat_rooms` (`id`)
+)[0m
+  ↳ db/migrate/20180831031318_create_messages.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20180831031318')[0m
+  ↳ bin/rails:4
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+Migrating to CreateEvents (20180903220930)
+  [1m[35m (8.9ms)[0m  [1m[35mCREATE TABLE `events` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `title` varchar(255), `start_time` datetime, `end_time` datetime, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL)[0m
+  ↳ db/migrate/20180903220930_create_events.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20180903220930')[0m
+  ↳ bin/rails:4
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO `ar_internal_metadata` (`key`, `value`, `created_at`, `updated_at`) VALUES ('environment', 'development', '2018-09-03 22:09:55', '2018-09-03 22:09:55')[0m
+  ↳ bin/rails:4
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK('2993449066490098125')[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:1
+  [1m[36mFundation Create (0.2ms)[0m  [1m[32mINSERT INTO `fundations` (`fundation_name`, `address`, `phone`, `mail`, `created_at`, `updated_at`) VALUES ('default', '123', 3124327738, 'juan@aldeamo.com', '2018-09-03 22:10:00', '2018-09-03 22:10:00')[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (9.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:8
+  [1m[36mState Create (0.2ms)[0m  [1m[32mINSERT INTO `states` (`description`, `created_at`, `updated_at`) VALUES ('Activo', '2018-09-03 22:10:00', '2018-09-03 22:10:00')[0m
+  ↳ db/seeds.rb:8
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:8
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:8
+  [1m[36mState Create (0.2ms)[0m  [1m[32mINSERT INTO `states` (`description`, `created_at`, `updated_at`) VALUES ('Inactivo', '2018-09-03 22:10:00', '2018-09-03 22:10:00')[0m
+  ↳ db/seeds.rb:8
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:8
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:16
+  [1m[36mRole Create (0.2ms)[0m  [1m[32mINSERT INTO `roles` (`role_name`, `description`, `created_at`, `updated_at`) VALUES ('Administrador', 'Desarrollador', '2018-09-03 22:10:00', '2018-09-03 22:10:00')[0m
+  ↳ db/seeds.rb:16
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:16
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:16
+  [1m[36mRole Create (1.8ms)[0m  [1m[32mINSERT INTO `roles` (`role_name`, `description`, `created_at`, `updated_at`) VALUES ('Profesional', 'Colaborador', '2018-09-03 22:10:00', '2018-09-03 22:10:00')[0m
+  ↳ db/seeds.rb:16
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:16
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:26
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`email` = BINARY 'sbas23@gmail.com' LIMIT 1[0m
+  ↳ db/seeds.rb:26
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO `users` (`email`, `encrypted_password`, `name`, `lastname`, `document`, `phone`, `profession`, `role_id`, `state_id`, `fundation_id`) VALUES ('sbas23@gmail.com', '$2a$11$HJKan1ZFlPQIl/vJhreFbOB07MlQHO67xA.d3SpcWue9IWRQSV0eu', 'Juan', 'Calderon', 1018433548, 3124327738, 'Desarrollador', 1, 1, 1)[0m
+  ↳ db/seeds.rb:26
+  [1m[35m (5.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:26
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:26
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`email` = BINARY 'jose@gmail.com' LIMIT 1[0m
+  ↳ db/seeds.rb:26
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO `users` (`email`, `encrypted_password`, `name`, `lastname`, `document`, `phone`, `profession`, `role_id`, `state_id`, `fundation_id`) VALUES ('jose@gmail.com', '$2a$11$s7jQgxRnZMBoKfSc01f.Ju6/BkMjPtmEmfOR7Z/A3TTc1psg3qzze', 'Jose', 'Ramos', 1018433533, 3124327111, 'Desarrollador', 1, 1, 1)[0m
+  ↳ db/seeds.rb:26
+  [1m[35m (4.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:26
+Started GET "/" for 127.0.0.1 at 2018-09-03 17:11:05 -0500
+  [1m[35m (0.7ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /home/usr001/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /home/usr001/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by IndexController#index as HTML
+  Rendering index/index.html.erb within layouts/application
+  Rendered index/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 199ms (Views: 191.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/events" for 127.0.0.1 at 2018-09-03 17:11:08 -0500
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT `events`.* FROM `events`[0m
+  ↳ app/views/events/index.html.erb:16
+  Rendered /home/usr001/.rvm/gems/ruby-2.5.1/gems/simple_calendar-2.3.0/app/views/simple_calendar/_month_calendar.html.erb (8.3ms)
+  Rendered events/index.html.erb within layouts/application (17.2ms)
+Completed 200 OK in 90ms (Views: 87.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/events/new" for 127.0.0.1 at 2018-09-03 17:11:10 -0500
+Processing by EventsController#new as HTML
+  Rendering events/new.html.erb within layouts/application
+  Rendered events/_form.html.erb (14.5ms)
+  Rendered events/new.html.erb within layouts/application (17.8ms)
+Completed 200 OK in 116ms (Views: 107.8ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/events" for 127.0.0.1 at 2018-09-03 17:11:49 -0500
+Processing by EventsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VW+7jyRdq1uz6bm+rJ/vGNGdw/3wytGPlDy0vO+KafkbpyzNmBSg4hakY6LUfLJ3v3w6tIPtQnYE8bsY5rJaSg==", "event"=>{"title"=>"consulta", "start_time(1i)"=>"2018", "start_time(2i)"=>"9", "start_time(3i)"=>"10", "start_time(4i)"=>"10", "start_time(5i)"=>"00", "end_time(1i)"=>"2018", "end_time(2i)"=>"9", "end_time(3i)"=>"10", "end_time(4i)"=>"12", "end_time(5i)"=>"00"}, "commit"=>"Create Event"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/events_controller.rb:30
+  [1m[36mEvent Create (0.2ms)[0m  [1m[32mINSERT INTO `events` (`title`, `start_time`, `end_time`, `created_at`, `updated_at`) VALUES ('consulta', '2018-09-10 10:00:00', '2018-09-10 12:00:00', '2018-09-03 22:11:49', '2018-09-03 22:11:49')[0m
+  ↳ app/controllers/events_controller.rb:30
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/events_controller.rb:30
+Redirected to http://localhost:3000/events/1
+Completed 302 Found in 7ms (ActiveRecord: 1.8ms)
+
+
+Started GET "/events/1" for 127.0.0.1 at 2018-09-03 17:11:49 -0500
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEvent Load (0.7ms)[0m  [1m[34mSELECT  `events`.* FROM `events` WHERE `events`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/events_controller.rb:67
+  Rendering events/show.html.erb within layouts/application
+  Rendered events/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 90ms (Views: 85.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/events" for 127.0.0.1 at 2018-09-03 17:11:52 -0500
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT `events`.* FROM `events`[0m
+  ↳ app/views/events/index.html.erb:16
+  Rendered events/index.html.erb within layouts/application (7.2ms)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `start' for #<Event:0x00007fde3c0ebab0>):
+    16:             <% @events.each do |event| %>
+    17:               <tr>
+    18:                 <td><%= event.title %></td>
+    19:                 <td><%= event.start %></td>
+    20:                 <td><%= event.end %></td>
+    21:                 <td><%= link_to 'Show', event %></td>
+    22:                 <td><%= link_to 'Edit', edit_event_path(event) %></td>
+  
+app/views/events/index.html.erb:19:in `block in _app_views_events_index_html_erb__3633341883062434833_70296233584360'
+app/views/events/index.html.erb:16:in `_app_views_events_index_html_erb__3633341883062434833_70296233584360'
+Started GET "/events" for 127.0.0.1 at 2018-09-03 17:13:03 -0500
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT `events`.* FROM `events`[0m
+  ↳ app/views/events/index.html.erb:16
+  Rendered /home/usr001/.rvm/gems/ruby-2.5.1/gems/simple_calendar-2.3.0/app/views/simple_calendar/_month_calendar.html.erb (7.1ms)
+  Rendered events/index.html.erb within layouts/application (14.4ms)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `name' for #<Event:0x00000000044dde48>):
+    22:               <% if defined?(Haml) && respond_to?(:block_is_haml?) && block_is_haml?(block) %>
+    23:                 <% capture_haml(day, sorted_events.fetch(day, []), &block) %>
+    24:               <% else %>
+    25:                 <% block.call day, sorted_events.fetch(day, []) %>
+    26:               <% end %>
+    27:             <% end %>
+    28:           <% end %>
+  
+app/views/events/index.html.erb:39:in `block (2 levels) in _app_views_events_index_html_erb__3633341883062434833_36407060'
+app/views/events/index.html.erb:37:in `each'
+app/views/events/index.html.erb:37:in `block in _app_views_events_index_html_erb__3633341883062434833_36407060'
+app/views/events/index.html.erb:34:in `_app_views_events_index_html_erb__3633341883062434833_36407060'
+Started GET "/events" for 127.0.0.1 at 2018-09-03 17:13:28 -0500
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT `events`.* FROM `events`[0m
+  ↳ app/views/events/index.html.erb:16
+  Rendered /home/usr001/.rvm/gems/ruby-2.5.1/gems/simple_calendar-2.3.0/app/views/simple_calendar/_month_calendar.html.erb (4.3ms)
+  Rendered events/index.html.erb within layouts/application (11.9ms)
+Completed 200 OK in 55ms (Views: 53.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/chat_rooms" for 127.0.0.1 at 2018-09-03 17:19:36 -0500
+  [1m[35m (0.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /home/usr001/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by ChatRoomsController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-09-03 17:19:37 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.9ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 55ms (Views: 44.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/index" for 127.0.0.1 at 2018-09-03 17:19:38 -0500
+Processing by IndexController#index as HTML
+  Rendering index/index.html.erb within layouts/application
+  Rendered index/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 79ms (Views: 77.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/chat_rooms" for 127.0.0.1 at 2018-09-03 17:19:38 -0500
+Processing by ChatRoomsController#index as HTML
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-09-03 17:19:38 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.9ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 85ms (Views: 83.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/events" for 127.0.0.1 at 2018-09-03 17:19:39 -0500
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT `events`.* FROM `events`[0m
+  ↳ app/views/events/index.html.erb:16
+  Rendered /home/usr001/.rvm/gems/ruby-2.5.1/gems/simple_calendar-2.3.0/app/views/simple_calendar/_month_calendar.html.erb (6.0ms)
+  Rendered events/index.html.erb within layouts/application (13.9ms)
+Completed 200 OK in 85ms (Views: 82.8ms | ActiveRecord: 0.3ms)
+
+

@@ -1,0 +1,7 @@
+I"Ž(function() {
+  $(document).on("click", ".openModal", function() {});
+
+  $(".modal-body-content").load($(this).data('href'));
+
+}).call(this);
+:ET

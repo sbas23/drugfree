@@ -1,0 +1,12 @@
+I"B(function() {
+  jQuery(document).on('turbolinks:load', function() {
+    console.log("document");
+    return $(document).on("click", ".openModal", function() {
+      console.log($(this).attr('href'));
+      $(".modal-body-content").load($(this).attr('href'));
+      return console.log("fin");
+    });
+  });
+
+}).call(this);
+:ET

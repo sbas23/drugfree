@@ -1,4 +1,5 @@
 jQuery(document).on 'turbolinks:load', ->
+
   messages = $('#messages')
   if $('#messages').length > 0
     messages_to_bottom = -> messages.scrollTop(messages.prop("scrollHeight"))
@@ -31,7 +32,7 @@ jQuery(document).on 'turbolinks:load', ->
       textarea = $this.find('#message_body')
       if $.trim(textarea.val()).length > 1
         App.global_chat.send_message textarea.val(), messages.data('chat-room-id')
-        new_file= $(".card", "#messages").eq(0)
+        new_file= $(".card", "#messages").eq(0).clone()
        
         today = new Date
         dd = today.getDate()

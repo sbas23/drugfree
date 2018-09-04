@@ -1,0 +1,8 @@
+I"Ô(function() {
+  jQuery(document).on('turbolinks:load', function() {
+    $(document).on("click", ".openModal", function() {});
+    return $(".modal-body-content").load($(this).data('href'));
+  });
+
+}).call(this);
+:ET

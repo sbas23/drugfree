@@ -47758,3 +47758,1865 @@ Processing by EventsController#index as HTML
 Completed 200 OK in 51ms (Views: 49.5ms | ActiveRecord: 0.3ms)
 
 
+Started GET "/" for 127.0.0.1 at 2018-09-04 21:13:31 -0500
+  [1m[35m (46.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /home/usr001/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /home/usr001/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.2.1) lib/active_record/migration.rb:579:in `check_pending!'
+activerecord (5.2.1) lib/active_record/migration.rb:556:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+  [1m[35m (3.6ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  ↳ bin/rails:4
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ bin/rails:4
+  [1m[35m (125.8ms)[0m  [1m[35mDROP DATABASE IF EXISTS `drugfree`[0m
+  ↳ bin/rails:4
+  [1m[35m (2.7ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE DATABASE `drugfree` DEFAULT CHARACTER SET `utf8`[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ bin/rails:4
+  [1m[35m (51.4ms)[0m  [1m[35mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:4
+  [1m[35m (16.8ms)[0m  [1m[35mCREATE TABLE `ar_internal_metadata` (`key` varchar(255) NOT NULL PRIMARY KEY, `value` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL)[0m
+  ↳ bin/rails:4
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT GET_LOCK('2993449066490098125', 0)[0m
+  ↳ bin/rails:4
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ bin/rails:4
+Migrating to CreateRoles (20180815140927)
+  [1m[35m (20.1ms)[0m  [1m[35mCREATE TABLE `roles` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `role_name` varchar(255), `description` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL)[0m
+  ↳ db/migrate/20180815140927_create_roles.rb:3
+  [1m[35m (4.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::SchemaMigration Create (14.8ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20180815140927')[0m
+  ↳ bin/rails:4
+  [1m[35m (42.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+Migrating to CreateFundations (20180815141917)
+  [1m[35m (22.9ms)[0m  [1m[35mCREATE TABLE `fundations` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `fundation_name` varchar(255), `address` varchar(255), `phone` bigint, `mail` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL)[0m
+  ↳ db/migrate/20180815141917_create_fundations.rb:3
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::SchemaMigration Create (2.9ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20180815141917')[0m
+  ↳ bin/rails:4
+  [1m[35m (4.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+Migrating to CreateServices (20180815142152)
+  [1m[35m (18.9ms)[0m  [1m[35mCREATE TABLE `services` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `service_name` varchar(255), `description` varchar(255), `cost` bigint, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL)[0m
+  ↳ db/migrate/20180815142152_create_services.rb:3
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20180815142152')[0m
+  ↳ bin/rails:4
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+Migrating to CreateForums (20180815143412)
+  [1m[35m (26.0ms)[0m  [1m[35mCREATE TABLE `forums` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `question` varchar(255), `answer` varchar(255), `professional_user` int, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL)[0m
+  ↳ db/migrate/20180815143412_create_forums.rb:3
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20180815143412')[0m
+  ↳ bin/rails:4
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+Migrating to CreateCalendars (20180815143819)
+  [1m[35m (18.1ms)[0m  [1m[35mCREATE TABLE `calendars` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `id_user` int, `start_date` date, `end_date` date, `state` int, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL)[0m
+  ↳ db/migrate/20180815143819_create_calendars.rb:3
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20180815143819')[0m
+  ↳ bin/rails:4
+  [1m[35m (5.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+Migrating to CreateStates (20180815143940)
+  [1m[35m (25.4ms)[0m  [1m[35mCREATE TABLE `states` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `description` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL)[0m
+  ↳ db/migrate/20180815143940_create_states.rb:3
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20180815143940')[0m
+  ↳ bin/rails:4
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+Migrating to AddDeviseToUsers (20180819034151)
+  [1m[35m (29.8ms)[0m  [1m[35mCREATE TABLE `users` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `email` varchar(255) DEFAULT '' NOT NULL, `encrypted_password` varchar(255) DEFAULT '' NOT NULL, `name` varchar(255), `lastname` varchar(255), `document` bigint, `phone` bigint, `profession` varchar(255), `reset_password_token` varchar(255), `reset_password_sent_at` datetime, `remember_created_at` datetime)[0m
+  ↳ db/migrate/20180819034151_add_devise_to_users.rb:5
+  [1m[35m (26.7ms)[0m  [1m[35mCREATE UNIQUE INDEX `index_users_on_email`  ON `users` (`email`) [0m
+  ↳ db/migrate/20180819034151_add_devise_to_users.rb:22
+  [1m[35m (16.2ms)[0m  [1m[35mCREATE UNIQUE INDEX `index_users_on_reset_password_token`  ON `users` (`reset_password_token`) [0m
+  ↳ db/migrate/20180819034151_add_devise_to_users.rb:23
+  [1m[35m (2.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20180819034151')[0m
+  ↳ bin/rails:4
+  [1m[35m (2.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+Migrating to AddRoleIdToUser (20180825004319)
+  [1m[35m (41.1ms)[0m  [1m[35mALTER TABLE `users` ADD `role_id` bigint[0m
+  ↳ db/migrate/20180825004319_add_role_id_to_user.rb:3
+  [1m[35m (19.5ms)[0m  [1m[35mCREATE  INDEX `index_users_on_role_id`  ON `users` (`role_id`) [0m
+  ↳ db/migrate/20180825004319_add_role_id_to_user.rb:3
+  [1m[35m (46.5ms)[0m  [1m[35mALTER TABLE `users` ADD CONSTRAINT `fk_rails_642f17018b`
+FOREIGN KEY (`role_id`)
+  REFERENCES `roles` (`id`)
+[0m
+  ↳ db/migrate/20180825004319_add_role_id_to_user.rb:3
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20180825004319')[0m
+  ↳ bin/rails:4
+  [1m[35m (3.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+Migrating to AddStateIdToUser (20180825013539)
+  [1m[35m (40.1ms)[0m  [1m[35mALTER TABLE `users` ADD `state_id` bigint[0m
+  ↳ db/migrate/20180825013539_add_state_id_to_user.rb:3
+  [1m[35m (11.5ms)[0m  [1m[35mCREATE  INDEX `index_users_on_state_id`  ON `users` (`state_id`) [0m
+  ↳ db/migrate/20180825013539_add_state_id_to_user.rb:3
+  [1m[35m (37.8ms)[0m  [1m[35mALTER TABLE `users` ADD CONSTRAINT `fk_rails_606ec65343`
+FOREIGN KEY (`state_id`)
+  REFERENCES `states` (`id`)
+[0m
+  ↳ db/migrate/20180825013539_add_state_id_to_user.rb:3
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20180825013539')[0m
+  ↳ bin/rails:4
+  [1m[35m (2.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+Migrating to AddFundationIdToUser (20180825015758)
+  [1m[35m (39.3ms)[0m  [1m[35mALTER TABLE `users` ADD `fundation_id` bigint[0m
+  ↳ db/migrate/20180825015758_add_fundation_id_to_user.rb:3
+  [1m[35m (10.6ms)[0m  [1m[35mCREATE  INDEX `index_users_on_fundation_id`  ON `users` (`fundation_id`) [0m
+  ↳ db/migrate/20180825015758_add_fundation_id_to_user.rb:3
+  [1m[35m (49.1ms)[0m  [1m[35mALTER TABLE `users` ADD CONSTRAINT `fk_rails_94a98878aa`
+FOREIGN KEY (`fundation_id`)
+  REFERENCES `fundations` (`id`)
+[0m
+  ↳ db/migrate/20180825015758_add_fundation_id_to_user.rb:3
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20180825015758')[0m
+  ↳ bin/rails:4
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+Migrating to CreateChatRooms (20180831030127)
+  [1m[35m (29.3ms)[0m  [1m[35mCREATE TABLE `chat_rooms` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `title` varchar(255), `user_id` bigint, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL,  INDEX `index_chat_rooms_on_user_id`  (`user_id`), CONSTRAINT `fk_rails_fb091736d8`
+FOREIGN KEY (`user_id`)
+  REFERENCES `users` (`id`)
+)[0m
+  ↳ db/migrate/20180831030127_create_chat_rooms.rb:3
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20180831030127')[0m
+  ↳ bin/rails:4
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+Migrating to CreateMessages (20180831031318)
+  [1m[35m (40.8ms)[0m  [1m[35mCREATE TABLE `messages` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `body` text, `user_id` bigint, `chat_room_id` bigint, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL,  INDEX `index_messages_on_user_id`  (`user_id`),  INDEX `index_messages_on_chat_room_id`  (`chat_room_id`), CONSTRAINT `fk_rails_273a25a7a6`
+FOREIGN KEY (`user_id`)
+  REFERENCES `users` (`id`)
+, CONSTRAINT `fk_rails_00aac238e8`
+FOREIGN KEY (`chat_room_id`)
+  REFERENCES `chat_rooms` (`id`)
+)[0m
+  ↳ db/migrate/20180831031318_create_messages.rb:3
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20180831031318')[0m
+  ↳ bin/rails:4
+  [1m[35m (2.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+Migrating to CreateEvents (20180903220930)
+  [1m[35m (30.3ms)[0m  [1m[35mCREATE TABLE `events` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `title` varchar(255), `start_time` datetime, `end_time` datetime, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL)[0m
+  ↳ db/migrate/20180903220930_create_events.rb:3
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20180903220930')[0m
+  ↳ bin/rails:4
+  [1m[35m (4.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  ↳ bin/rails:4
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::InternalMetadata Create (2.5ms)[0m  [1m[32mINSERT INTO `ar_internal_metadata` (`key`, `value`, `created_at`, `updated_at`) VALUES ('environment', 'development', '2018-09-05 02:14:02', '2018-09-05 02:14:02')[0m
+  ↳ bin/rails:4
+  [1m[35m (2.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT RELEASE_LOCK('2993449066490098125')[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (2.7ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ bin/rails:4
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:1
+  [1m[36mFundation Create (0.3ms)[0m  [1m[32mINSERT INTO `fundations` (`fundation_name`, `address`, `phone`, `mail`, `created_at`, `updated_at`) VALUES ('default', '123', 3124327738, 'juan@aldeamo.com', '2018-09-05 02:14:08', '2018-09-05 02:14:08')[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (5.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:8
+  [1m[36mState Create (0.2ms)[0m  [1m[32mINSERT INTO `states` (`description`, `created_at`, `updated_at`) VALUES ('Activo', '2018-09-05 02:14:08', '2018-09-05 02:14:08')[0m
+  ↳ db/seeds.rb:8
+  [1m[35m (2.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:8
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:8
+  [1m[36mState Create (0.2ms)[0m  [1m[32mINSERT INTO `states` (`description`, `created_at`, `updated_at`) VALUES ('Inactivo', '2018-09-05 02:14:08', '2018-09-05 02:14:08')[0m
+  ↳ db/seeds.rb:8
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:8
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:16
+  [1m[36mRole Create (0.2ms)[0m  [1m[32mINSERT INTO `roles` (`role_name`, `description`, `created_at`, `updated_at`) VALUES ('Administrador', 'Desarrollador', '2018-09-05 02:14:08', '2018-09-05 02:14:08')[0m
+  ↳ db/seeds.rb:16
+  [1m[35m (10.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:16
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:16
+  [1m[36mRole Create (3.0ms)[0m  [1m[32mINSERT INTO `roles` (`role_name`, `description`, `created_at`, `updated_at`) VALUES ('Profesional', 'Colaborador', '2018-09-05 02:14:08', '2018-09-05 02:14:08')[0m
+  ↳ db/seeds.rb:16
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:16
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:26
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`email` = BINARY 'sbas23@gmail.com' LIMIT 1[0m
+  ↳ db/seeds.rb:26
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO `users` (`email`, `encrypted_password`, `name`, `lastname`, `document`, `phone`, `profession`, `role_id`, `state_id`, `fundation_id`) VALUES ('sbas23@gmail.com', '$2a$11$0TxVJltF3osBzbCzhSXx3Ol1fFZV84TP3ps7a0muXKMeq1WWzVGVK', 'Juan', 'Calderon', 1018433548, 3124327738, 'Desarrollador', 1, 1, 1)[0m
+  ↳ db/seeds.rb:26
+  [1m[35m (2.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:26
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:26
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`email` = BINARY 'jose@gmail.com' LIMIT 1[0m
+  ↳ db/seeds.rb:26
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO `users` (`email`, `encrypted_password`, `name`, `lastname`, `document`, `phone`, `profession`, `role_id`, `state_id`, `fundation_id`) VALUES ('jose@gmail.com', '$2a$11$iZcZzKnGVWKotORfl3a53u7T3Ge1M2USY2yRLe4gytBnkno5a/DaO', 'Jose', 'Ramos', 1018433533, 3124327111, 'Desarrollador', 1, 1, 1)[0m
+  ↳ db/seeds.rb:26
+  [1m[35m (2.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:26
+Started GET "/" for 127.0.0.1 at 2018-09-04 21:15:05 -0500
+  [1m[35m (0.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /home/usr001/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /home/usr001/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by IndexController#index as HTML
+  Rendering index/index.html.erb within layouts/application
+  Rendered index/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 620ms (Views: 611.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/index" for 127.0.0.1 at 2018-09-04 21:15:09 -0500
+Processing by IndexController#index as HTML
+  Rendering index/index.html.erb within layouts/application
+  Rendered index/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 147ms (Views: 146.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/chat_rooms" for 127.0.0.1 at 2018-09-04 21:15:11 -0500
+Processing by ChatRoomsController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-09-04 21:15:11 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.9ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 73ms (Views: 47.0ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/events" for 127.0.0.1 at 2018-09-04 21:15:12 -0500
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (2.0ms)[0m  [1m[34mSELECT `events`.* FROM `events`[0m
+  ↳ app/views/events/index.html.erb:16
+  Rendered /home/usr001/.rvm/gems/ruby-2.5.1/gems/simple_calendar-2.3.0/app/views/simple_calendar/_month_calendar.html.erb (11.9ms)
+  Rendered events/index.html.erb within layouts/application (17.3ms)
+Completed 200 OK in 116ms (Views: 112.1ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/events" for 127.0.0.1 at 2018-09-04 21:19:26 -0500
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (1.0ms)[0m  [1m[34mSELECT `events`.* FROM `events`[0m
+  ↳ app/views/events/index.html.erb:16
+  Rendered /home/usr001/.rvm/gems/ruby-2.5.1/gems/simple_calendar-2.3.0/app/views/simple_calendar/_month_calendar.html.erb (4.7ms)
+  Rendered events/index.html.erb within layouts/application (11.3ms)
+Completed 200 OK in 80ms (Views: 78.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/events" for 127.0.0.1 at 2018-09-04 21:21:09 -0500
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (4.2ms)[0m  [1m[34mSELECT `events`.* FROM `events`[0m
+  ↳ app/views/events/index.html.erb:16
+  Rendered /home/usr001/.rvm/gems/ruby-2.5.1/gems/simple_calendar-2.3.0/app/views/simple_calendar/_month_calendar.html.erb (7.7ms)
+  Rendered events/index.html.erb within layouts/application (15.2ms)
+Completed 200 OK in 73ms (Views: 67.6ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/events" for 127.0.0.1 at 2018-09-04 21:21:11 -0500
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT `events`.* FROM `events`[0m
+  ↳ app/views/events/index.html.erb:16
+  Rendered /home/usr001/.rvm/gems/ruby-2.5.1/gems/simple_calendar-2.3.0/app/views/simple_calendar/_month_calendar.html.erb (11.2ms)
+  Rendered events/index.html.erb within layouts/application (15.5ms)
+Completed 200 OK in 71ms (Views: 69.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/events" for 127.0.0.1 at 2018-09-04 21:22:18 -0500
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT `events`.* FROM `events`[0m
+  ↳ app/views/events/index.html.erb:16
+  Rendered /home/usr001/.rvm/gems/ruby-2.5.1/gems/simple_calendar-2.3.0/app/views/simple_calendar/_month_calendar.html.erb (4.4ms)
+  Rendered events/index.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 70ms (Views: 68.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/events" for 127.0.0.1 at 2018-09-04 21:22:46 -0500
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT `events`.* FROM `events`[0m
+  ↳ app/views/events/index.html.erb:16
+  Rendered /home/usr001/.rvm/gems/ruby-2.5.1/gems/simple_calendar-2.3.0/app/views/simple_calendar/_month_calendar.html.erb (10.1ms)
+  Rendered events/index.html.erb within layouts/application (15.8ms)
+Completed 200 OK in 71ms (Views: 69.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/events" for 127.0.0.1 at 2018-09-04 21:24:16 -0500
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT `events`.* FROM `events`[0m
+  ↳ app/views/events/index.html.erb:16
+  Rendered /home/usr001/.rvm/gems/ruby-2.5.1/gems/simple_calendar-2.3.0/app/views/simple_calendar/_month_calendar.html.erb (15.7ms)
+  Rendered events/index.html.erb within layouts/application (19.6ms)
+Completed 200 OK in 64ms (Views: 62.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/events" for 127.0.0.1 at 2018-09-04 21:24:24 -0500
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.8ms)[0m  [1m[34mSELECT `events`.* FROM `events`[0m
+  ↳ app/views/events/index.html.erb:16
+  Rendered /home/usr001/.rvm/gems/ruby-2.5.1/gems/simple_calendar-2.3.0/app/views/simple_calendar/_month_calendar.html.erb (7.7ms)
+  Rendered events/index.html.erb within layouts/application (13.6ms)
+Completed 200 OK in 64ms (Views: 62.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/events" for 127.0.0.1 at 2018-09-04 21:24:35 -0500
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT `events`.* FROM `events`[0m
+  ↳ app/views/events/index.html.erb:16
+  Rendered /home/usr001/.rvm/gems/ruby-2.5.1/gems/simple_calendar-2.3.0/app/views/simple_calendar/_month_calendar.html.erb (16.5ms)
+  Rendered events/index.html.erb within layouts/application (20.0ms)
+Completed 200 OK in 93ms (Views: 92.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/events" for 127.0.0.1 at 2018-09-04 21:25:28 -0500
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT `events`.* FROM `events`[0m
+  ↳ app/views/events/index.html.erb:16
+  Rendered /home/usr001/.rvm/gems/ruby-2.5.1/gems/simple_calendar-2.3.0/app/views/simple_calendar/_month_calendar.html.erb (9.3ms)
+  Rendered events/index.html.erb within layouts/application (14.7ms)
+Completed 200 OK in 85ms (Views: 84.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/events" for 127.0.0.1 at 2018-09-04 21:25:44 -0500
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT `events`.* FROM `events`[0m
+  ↳ app/views/events/index.html.erb:16
+  Rendered /home/usr001/.rvm/gems/ruby-2.5.1/gems/simple_calendar-2.3.0/app/views/simple_calendar/_month_calendar.html.erb (12.0ms)
+  Rendered events/index.html.erb within layouts/application (16.4ms)
+Completed 200 OK in 71ms (Views: 69.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/index" for 127.0.0.1 at 2018-09-04 21:25:54 -0500
+Processing by IndexController#index as HTML
+  Rendering index/index.html.erb within layouts/application
+  Rendered index/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 58ms (Views: 57.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/chat_rooms" for 127.0.0.1 at 2018-09-04 21:25:56 -0500
+Processing by ChatRoomsController#index as HTML
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-09-04 21:25:56 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.8ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 119ms (Views: 117.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/events" for 127.0.0.1 at 2018-09-04 21:25:58 -0500
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (2.3ms)[0m  [1m[34mSELECT `events`.* FROM `events`[0m
+  ↳ app/views/events/index.html.erb:16
+  Rendered /home/usr001/.rvm/gems/ruby-2.5.1/gems/simple_calendar-2.3.0/app/views/simple_calendar/_month_calendar.html.erb (4.3ms)
+  Rendered events/index.html.erb within layouts/application (17.7ms)
+Completed 200 OK in 113ms (Views: 109.7ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/forum" for 127.0.0.1 at 2018-09-04 21:25:59 -0500
+Processing by ForumController#index as HTML
+  Rendering forum/index.html.erb within layouts/application
+  Rendered forum/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 101ms (Views: 98.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/events" for 127.0.0.1 at 2018-09-04 21:27:11 -0500
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (1.7ms)[0m  [1m[34mSELECT `events`.* FROM `events`[0m
+  ↳ app/views/events/index.html.erb:16
+  Rendered /home/usr001/.rvm/gems/ruby-2.5.1/gems/simple_calendar-2.3.0/app/views/simple_calendar/_month_calendar.html.erb (8.9ms)
+  Rendered events/index.html.erb within layouts/application (14.5ms)
+Completed 200 OK in 80ms (Views: 77.2ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/events" for 127.0.0.1 at 2018-09-04 21:27:34 -0500
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT `events`.* FROM `events`[0m
+  ↳ app/views/events/index.html.erb:16
+  Rendered /home/usr001/.rvm/gems/ruby-2.5.1/gems/simple_calendar-2.3.0/app/views/simple_calendar/_month_calendar.html.erb (9.8ms)
+  Rendered events/index.html.erb within layouts/application (18.8ms)
+Completed 200 OK in 80ms (Views: 78.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/events" for 127.0.0.1 at 2018-09-04 21:27:58 -0500
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT `events`.* FROM `events`[0m
+  ↳ app/views/events/index.html.erb:16
+  Rendered /home/usr001/.rvm/gems/ruby-2.5.1/gems/simple_calendar-2.3.0/app/views/simple_calendar/_month_calendar.html.erb (4.1ms)
+  Rendered events/index.html.erb within layouts/application (13.5ms)
+Completed 200 OK in 110ms (Views: 108.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/events" for 127.0.0.1 at 2018-09-04 21:29:17 -0500
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT `events`.* FROM `events`[0m
+  ↳ app/views/events/index.html.erb:16
+  Rendered /home/usr001/.rvm/gems/ruby-2.5.1/gems/simple_calendar-2.3.0/app/views/simple_calendar/_month_calendar.html.erb (17.6ms)
+  Rendered events/index.html.erb within layouts/application (20.5ms)
+Completed 200 OK in 81ms (Views: 79.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/index" for 127.0.0.1 at 2018-09-04 21:29:20 -0500
+Processing by IndexController#index as HTML
+  Rendering index/index.html.erb within layouts/application
+  Rendered index/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 88ms (Views: 87.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/index" for 127.0.0.1 at 2018-09-04 21:29:23 -0500
+Processing by IndexController#index as HTML
+  Rendering index/index.html.erb within layouts/application
+  Rendered index/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 71ms (Views: 69.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/index" for 127.0.0.1 at 2018-09-04 21:29:29 -0500
+Processing by IndexController#index as HTML
+  Rendering index/index.html.erb within layouts/application
+  Rendered index/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 48ms (Views: 47.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/chat_rooms" for 127.0.0.1 at 2018-09-04 21:29:30 -0500
+Processing by ChatRoomsController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-09-04 21:29:30 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (17.0ms)
+Completed 200 OK in 79ms (Views: 78.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/index" for 127.0.0.1 at 2018-09-04 21:29:32 -0500
+Processing by IndexController#index as HTML
+  Rendering index/index.html.erb within layouts/application
+  Rendered index/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 94ms (Views: 93.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/chat_rooms" for 127.0.0.1 at 2018-09-04 21:29:37 -0500
+Processing by ChatRoomsController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-09-04 21:29:37 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.7ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 66ms (Views: 65.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/events" for 127.0.0.1 at 2018-09-04 21:29:37 -0500
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (1.2ms)[0m  [1m[34mSELECT `events`.* FROM `events`[0m
+  ↳ app/views/events/index.html.erb:16
+  Rendered /home/usr001/.rvm/gems/ruby-2.5.1/gems/simple_calendar-2.3.0/app/views/simple_calendar/_month_calendar.html.erb (7.5ms)
+  Rendered events/index.html.erb within layouts/application (18.8ms)
+Completed 200 OK in 129ms (Views: 126.7ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/forum" for 127.0.0.1 at 2018-09-04 21:29:38 -0500
+Processing by ForumController#index as HTML
+  Rendering forum/index.html.erb within layouts/application
+  Rendered forum/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 131ms (Views: 130.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/events" for 127.0.0.1 at 2018-09-04 21:30:29 -0500
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT `events`.* FROM `events`[0m
+  ↳ app/views/events/index.html.erb:16
+  Rendered /home/usr001/.rvm/gems/ruby-2.5.1/gems/simple_calendar-2.3.0/app/views/simple_calendar/_month_calendar.html.erb (17.1ms)
+  Rendered events/index.html.erb within layouts/application (22.2ms)
+Completed 200 OK in 156ms (Views: 152.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/events" for 127.0.0.1 at 2018-09-04 21:31:01 -0500
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT `events`.* FROM `events`[0m
+  ↳ app/views/events/index.html.erb:16
+  Rendered /home/usr001/.rvm/gems/ruby-2.5.1/gems/simple_calendar-2.3.0/app/views/simple_calendar/_month_calendar.html.erb (9.2ms)
+  Rendered events/index.html.erb within layouts/application (13.1ms)
+Completed 200 OK in 80ms (Views: 78.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/events" for 127.0.0.1 at 2018-09-04 21:31:36 -0500
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT `events`.* FROM `events`[0m
+  ↳ app/views/events/index.html.erb:16
+  Rendered /home/usr001/.rvm/gems/ruby-2.5.1/gems/simple_calendar-2.3.0/app/views/simple_calendar/_month_calendar.html.erb (6.5ms)
+  Rendered events/index.html.erb within layouts/application (14.0ms)
+Completed 200 OK in 75ms (Views: 73.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/events" for 127.0.0.1 at 2018-09-04 21:31:50 -0500
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT `events`.* FROM `events`[0m
+  ↳ app/views/events/index.html.erb:16
+  Rendered /home/usr001/.rvm/gems/ruby-2.5.1/gems/simple_calendar-2.3.0/app/views/simple_calendar/_month_calendar.html.erb (5.8ms)
+  Rendered events/index.html.erb within layouts/application (13.9ms)
+Completed 200 OK in 65ms (Views: 64.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/events" for 127.0.0.1 at 2018-09-04 21:36:18 -0500
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT `events`.* FROM `events`[0m
+  ↳ app/views/events/index.html.erb:4
+  Rendered /home/usr001/.rvm/gems/ruby-2.5.1/gems/simple_calendar-2.3.0/app/views/simple_calendar/_month_calendar.html.erb (7.7ms)
+  Rendered events/index.html.erb within layouts/application (11.5ms)
+Completed 200 OK in 68ms (Views: 66.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/events" for 127.0.0.1 at 2018-09-04 21:37:58 -0500
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT `events`.* FROM `events`[0m
+  ↳ app/views/events/index.html.erb:4
+  Rendered /home/usr001/.rvm/gems/ruby-2.5.1/gems/simple_calendar-2.3.0/app/views/simple_calendar/_month_calendar.html.erb (10.2ms)
+  Rendered events/index.html.erb within layouts/application (15.1ms)
+Completed 200 OK in 73ms (Views: 71.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/events" for 127.0.0.1 at 2018-09-04 21:38:25 -0500
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT `events`.* FROM `events`[0m
+  ↳ app/views/events/index.html.erb:4
+  Rendered /home/usr001/.rvm/gems/ruby-2.5.1/gems/simple_calendar-2.3.0/app/views/simple_calendar/_month_calendar.html.erb (17.5ms)
+  Rendered events/index.html.erb within layouts/application (27.3ms)
+Completed 200 OK in 103ms (Views: 101.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/chat_rooms" for 127.0.0.1 at 2018-09-04 21:38:26 -0500
+Processing by ChatRoomsController#index as HTML
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-09-04 21:38:26 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.7ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 75ms (Views: 73.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/index" for 127.0.0.1 at 2018-09-04 21:38:28 -0500
+Processing by IndexController#index as HTML
+  Rendering index/index.html.erb within layouts/application
+  Rendered index/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 121ms (Views: 120.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/chat_rooms" for 127.0.0.1 at 2018-09-04 21:38:29 -0500
+Processing by ChatRoomsController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-09-04 21:38:29 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.6ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 91ms (Views: 89.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/chat_rooms" for 127.0.0.1 at 2018-09-04 21:39:29 -0500
+Processing by ChatRoomsController#index as HTML
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-09-04 21:39:29 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.4ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 60ms (Views: 58.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2018-09-04 21:39:36 -0500
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  [1m[36mFundation Load (0.4ms)[0m  [1m[34mSELECT `fundations`.* FROM `fundations`[0m
+  ↳ app/views/devise/registrations/new.html.erb:45
+  [1m[36mRole Load (0.3ms)[0m  [1m[34mSELECT `roles`.* FROM `roles`[0m
+  ↳ app/views/devise/registrations/new.html.erb:50
+  [1m[36mState Load (0.3ms)[0m  [1m[34mSELECT `states`.* FROM `states`[0m
+  ↳ app/views/devise/registrations/new.html.erb:55
+  Rendered devise/shared/_links.html.erb (0.8ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (26.1ms)
+Completed 200 OK in 86ms (Views: 81.8ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-09-04 21:40:03 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.7ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 135ms (Views: 134.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/password/new" for 127.0.0.1 at 2018-09-04 21:40:04 -0500
+Processing by Devise::PasswordsController#new as HTML
+  Rendering devise/passwords/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (6.1ms)
+  Rendered devise/passwords/new.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 116ms (Views: 111.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/password/new" for 127.0.0.1 at 2018-09-04 21:40:41 -0500
+Processing by Devise::PasswordsController#new as HTML
+  Rendering devise/passwords/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.9ms)
+  Rendered devise/passwords/new.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 75ms (Views: 73.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/chat_rooms" for 127.0.0.1 at 2018-09-04 21:40:53 -0500
+Processing by ChatRoomsController#index as HTML
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-09-04 21:40:53 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.7ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 67ms (Views: 66.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/index" for 127.0.0.1 at 2018-09-04 21:40:55 -0500
+Processing by IndexController#index as HTML
+  Rendering index/index.html.erb within layouts/application
+  Rendered index/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 71ms (Views: 69.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/chat_rooms" for 127.0.0.1 at 2018-09-04 21:40:56 -0500
+Processing by ChatRoomsController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-09-04 21:40:56 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.7ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 67ms (Views: 65.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/chat_rooms" for 127.0.0.1 at 2018-09-04 21:41:04 -0500
+Processing by ChatRoomsController#index as HTML
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-09-04 21:41:04 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.7ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 75ms (Views: 73.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-09-04 21:41:12 -0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"N1LwL9kwv5aXVefaFwFirBb0hraJP0SN0c9UDbrsu6fEh7UhmMaO4HkizRJ4/0SuPj9mJF8G41V8/NQLSNmxRQ==", "user"=>{"email"=>"sbas23@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Inicio"}
+  [1m[36mUser Load (7.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`email` = 'sbas23@gmail.com' ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ /home/usr001/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/chat_rooms
+Completed 302 Found in 185ms (ActiveRecord: 7.2ms)
+
+
+Started GET "/chat_rooms" for 127.0.0.1 at 2018-09-04 21:41:12 -0500
+Processing by ChatRoomsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ /home/usr001/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering chat_rooms/index.html.erb within layouts/application
+  [1m[36mChatRoom Load (0.5ms)[0m  [1m[34mSELECT `chat_rooms`.* FROM `chat_rooms`[0m
+  ↳ app/views/chat_rooms/index.html.erb:7
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered chat_rooms/index.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 75ms (Views: 55.2ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/chat_rooms/new" for 127.0.0.1 at 2018-09-04 21:41:15 -0500
+Processing by ChatRoomsController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ /home/usr001/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering chat_rooms/new.html.erb within layouts/application
+  Rendered chat_rooms/new.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 85ms (Views: 76.9ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/chat_rooms" for 127.0.0.1 at 2018-09-04 21:41:20 -0500
+Processing by ChatRoomsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SarqwJvkz7Pk5YsCq8/K1r+YwRMqUYcMR8F5MEBjfRYrT3nrTCEIyw0UeCGVe+x3q81crQZX4LvKgpnotYF7ug==", "chat_room"=>{"title"=>"consulta"}, "commit"=>"Agregar!"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ /home/usr001/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/chat_rooms_controller.rb:15
+  [1m[36mChatRoom Create (0.5ms)[0m  [1m[32mINSERT INTO `chat_rooms` (`title`, `user_id`, `created_at`, `updated_at`) VALUES ('consulta', 1, '2018-09-05 02:41:20', '2018-09-05 02:41:20')[0m
+  ↳ app/controllers/chat_rooms_controller.rb:15
+  [1m[35m (4.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/chat_rooms_controller.rb:15
+Redirected to http://localhost:3000/chat_rooms
+Completed 302 Found in 34ms (ActiveRecord: 6.2ms)
+
+
+Started GET "/chat_rooms" for 127.0.0.1 at 2018-09-04 21:41:20 -0500
+Processing by ChatRoomsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ /home/usr001/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering chat_rooms/index.html.erb within layouts/application
+  [1m[36mChatRoom Load (2.9ms)[0m  [1m[34mSELECT `chat_rooms`.* FROM `chat_rooms`[0m
+  ↳ app/views/chat_rooms/index.html.erb:7
+  Rendered collection of chat_rooms/_chat_room.html.erb [1 times] (2.7ms)
+  Rendered chat_rooms/index.html.erb within layouts/application (44.4ms)
+Completed 200 OK in 185ms (Views: 165.9ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/chat_rooms/1" for 127.0.0.1 at 2018-09-04 21:41:22 -0500
+Processing by ChatRoomsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ /home/usr001/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mChatRoom Load (0.2ms)[0m  [1m[34mSELECT  `chat_rooms`.* FROM `chat_rooms` WHERE `chat_rooms`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/chat_rooms_controller.rb:24
+  [1m[36mMessage Load (0.5ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`chat_room_id` = 1[0m
+  ↳ app/controllers/chat_rooms_controller.rb:24
+  Rendering chat_rooms/show.html.erb within layouts/application
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered chat_rooms/show.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 137ms (Views: 66.1ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/cable" for 127.0.0.1 at 2018-09-04 21:41:23 -0500
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2018-09-04 21:41:23 -0500
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: keep-alive, Upgrade, HTTP_UPGRADE: websocket)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/channels/application_cable/connection.rb:13
+[ActionCable] [sbas23@gmail.com] Registered connection (Z2lkOi8vZHJ1Z2ZyZWUvVXNlci8x)
+[ActionCable] [sbas23@gmail.com] ChatRoomsChannel is transmitting the subscription confirmation
+[ActionCable] [sbas23@gmail.com] ChatRoomsChannel is streaming from chat_rooms_1_channel
+[ActionCable] [sbas23@gmail.com] ChatRoomsChannel#send_message({"message"=>"hola", "chat_room_id"=>1})
+[ActionCable] [sbas23@gmail.com]   [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+[ActionCable] [sbas23@gmail.com]   ↳ app/channels/chat_rooms_channel.rb:11
+[ActionCable] [sbas23@gmail.com]   [1m[36mChatRoom Load (4.2ms)[0m  [1m[34mSELECT  `chat_rooms`.* FROM `chat_rooms` WHERE `chat_rooms`.`id` = 1 LIMIT 1[0m
+[ActionCable] [sbas23@gmail.com]   ↳ app/channels/chat_rooms_channel.rb:11
+[ActionCable] [sbas23@gmail.com]   [1m[36mMessage Create (1.9ms)[0m  [1m[32mINSERT INTO `messages` (`body`, `user_id`, `chat_room_id`, `created_at`, `updated_at`) VALUES ('hola', 1, 1, '2018-09-05 02:41:27', '2018-09-05 02:41:27')[0m
+[ActionCable] [sbas23@gmail.com]   ↳ app/channels/chat_rooms_channel.rb:11
+[ActionCable] [sbas23@gmail.com]   [1m[35m (138.7ms)[0m  [1m[35mCOMMIT[0m
+[ActionCable] [sbas23@gmail.com]   ↳ app/channels/chat_rooms_channel.rb:11
+[ActionCable] [sbas23@gmail.com] [ActiveJob] Enqueued MessageBroadcastJob (Job ID: 79116648-534a-4a92-a300-b161a65a1615) to Async(default) with arguments: #<GlobalID:0x00007f47a119d828 @uri=#<URI::GID gid://drugfree/Message/1>>
+  [1m[36mMessage Load (0.4ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`id` = 1 LIMIT 1[0m
+  ↳ /home/usr001/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+[ActiveJob] [MessageBroadcastJob] [79116648-534a-4a92-a300-b161a65a1615] Performing MessageBroadcastJob (Job ID: 79116648-534a-4a92-a300-b161a65a1615) from Async(default) with arguments: #<GlobalID:0x00007f47a113c140 @uri=#<URI::GID gid://drugfree/Message/1>>
+[ActiveJob] [MessageBroadcastJob] [79116648-534a-4a92-a300-b161a65a1615]   [1m[36mChatRoom Load (0.2ms)[0m  [1m[34mSELECT  `chat_rooms`.* FROM `chat_rooms` WHERE `chat_rooms`.`id` = 1 LIMIT 1[0m
+[ActiveJob] [MessageBroadcastJob] [79116648-534a-4a92-a300-b161a65a1615]   ↳ app/jobs/message_broadcast_job.rb:5
+[ActiveJob] [MessageBroadcastJob] [79116648-534a-4a92-a300-b161a65a1615] [ActionCable] Broadcasting to chat_rooms_1_channel: {:message=>"MESSAGE_HTML"}
+[ActiveJob] [MessageBroadcastJob] [79116648-534a-4a92-a300-b161a65a1615] Performed MessageBroadcastJob (Job ID: 79116648-534a-4a92-a300-b161a65a1615) from Async(default) in 1.5ms
+[ActionCable] [sbas23@gmail.com] ChatRoomsChannel transmitting {"message"=>"MESSAGE_HTML"} (via streamed from chat_rooms_1_channel)
+[ActionCable] [sbas23@gmail.com] Finished "/cable/" [WebSocket] for 127.0.0.1 at 2018-09-04 21:41:29 -0500
+[ActionCable] [sbas23@gmail.com] ChatRoomsChannel stopped streaming from chat_rooms_1_channel
+Started GET "/chat_rooms/1" for 127.0.0.1 at 2018-09-04 21:41:29 -0500
+Processing by ChatRoomsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ /home/usr001/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mChatRoom Load (0.3ms)[0m  [1m[34mSELECT  `chat_rooms`.* FROM `chat_rooms` WHERE `chat_rooms`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/chat_rooms_controller.rb:24
+  [1m[36mMessage Load (0.2ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`chat_room_id` = 1[0m
+  ↳ app/controllers/chat_rooms_controller.rb:24
+  Rendering chat_rooms/show.html.erb within layouts/application
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/views/messages/_message.html.erb:6
+  Rendered collection of messages/_message.html.erb [1 times] (5.8ms)
+  Rendered chat_rooms/show.html.erb within layouts/application (8.8ms)
+Completed 200 OK in 88ms (Views: 77.8ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/cable" for 127.0.0.1 at 2018-09-04 21:41:30 -0500
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2018-09-04 21:41:30 -0500
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: keep-alive, Upgrade, HTTP_UPGRADE: websocket)
+  [1m[36mUser Load (3.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/channels/application_cable/connection.rb:13
+[ActionCable] [sbas23@gmail.com] Registered connection (Z2lkOi8vZHJ1Z2ZyZWUvVXNlci8x)
+[ActionCable] [sbas23@gmail.com] ChatRoomsChannel is transmitting the subscription confirmation
+[ActionCable] [sbas23@gmail.com] ChatRoomsChannel is streaming from chat_rooms_1_channel
+[ActionCable] [sbas23@gmail.com] ChatRoomsChannel#send_message({"message"=>"como estan", "chat_room_id"=>1})
+[ActionCable] [sbas23@gmail.com]   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+[ActionCable] [sbas23@gmail.com]   ↳ app/channels/chat_rooms_channel.rb:11
+[ActionCable] [sbas23@gmail.com]   [1m[36mChatRoom Load (0.3ms)[0m  [1m[34mSELECT  `chat_rooms`.* FROM `chat_rooms` WHERE `chat_rooms`.`id` = 1 LIMIT 1[0m
+[ActionCable] [sbas23@gmail.com]   ↳ app/channels/chat_rooms_channel.rb:11
+[ActionCable] [sbas23@gmail.com]   [1m[36mMessage Create (0.9ms)[0m  [1m[32mINSERT INTO `messages` (`body`, `user_id`, `chat_room_id`, `created_at`, `updated_at`) VALUES ('como estan', 1, 1, '2018-09-05 02:41:36', '2018-09-05 02:41:36')[0m
+[ActionCable] [sbas23@gmail.com]   ↳ app/channels/chat_rooms_channel.rb:11
+[ActionCable] [sbas23@gmail.com]   [1m[35m (2.4ms)[0m  [1m[35mCOMMIT[0m
+[ActionCable] [sbas23@gmail.com]   ↳ app/channels/chat_rooms_channel.rb:11
+  [1m[36mMessage Load (0.4ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`id` = 2 LIMIT 1[0m
+  ↳ /home/usr001/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+[ActiveJob] [MessageBroadcastJob] [af92a7cd-edf2-4028-9800-243083ede63d] Performing MessageBroadcastJob (Job ID: af92a7cd-edf2-4028-9800-243083ede63d) from Async(default) with arguments: #<GlobalID:0x00000000028724c0 @uri=#<URI::GID gid://drugfree/Message/2>>
+[ActiveJob] [MessageBroadcastJob] [af92a7cd-edf2-4028-9800-243083ede63d]   [1m[36mChatRoom Load (3.2ms)[0m  [1m[34mSELECT  `chat_rooms`.* FROM `chat_rooms` WHERE `chat_rooms`.`id` = 1 LIMIT 1[0m
+[ActiveJob] [MessageBroadcastJob] [af92a7cd-edf2-4028-9800-243083ede63d]   ↳ app/jobs/message_broadcast_job.rb:5
+[ActiveJob] [MessageBroadcastJob] [af92a7cd-edf2-4028-9800-243083ede63d] [ActionCable] Broadcasting to chat_rooms_1_channel: {:message=>"MESSAGE_HTML"}
+[ActiveJob] [MessageBroadcastJob] [af92a7cd-edf2-4028-9800-243083ede63d] Performed MessageBroadcastJob (Job ID: af92a7cd-edf2-4028-9800-243083ede63d) from Async(default) in 4.62ms
+[ActionCable] [sbas23@gmail.com] [ActiveJob] Enqueued MessageBroadcastJob (Job ID: af92a7cd-edf2-4028-9800-243083ede63d) to Async(default) with arguments: #<GlobalID:0x0000000002a272c0 @uri=#<URI::GID gid://drugfree/Message/2>>
+[ActionCable] [sbas23@gmail.com] ChatRoomsChannel transmitting {"message"=>"MESSAGE_HTML"} (via streamed from chat_rooms_1_channel)
+Started GET "/chat_rooms" for 127.0.0.1 at 2018-09-04 21:41:42 -0500
+Processing by ChatRoomsController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ /home/usr001/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering chat_rooms/index.html.erb within layouts/application
+  [1m[36mChatRoom Load (0.2ms)[0m  [1m[34mSELECT `chat_rooms`.* FROM `chat_rooms`[0m
+  ↳ app/views/chat_rooms/index.html.erb:7
+  Rendered collection of chat_rooms/_chat_room.html.erb [1 times] (13.1ms)
+  Rendered chat_rooms/index.html.erb within layouts/application (15.1ms)
+Completed 200 OK in 74ms (Views: 70.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/events" for 127.0.0.1 at 2018-09-04 21:41:43 -0500
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT `events`.* FROM `events`[0m
+  ↳ app/views/events/index.html.erb:4
+  Rendered /home/usr001/.rvm/gems/ruby-2.5.1/gems/simple_calendar-2.3.0/app/views/simple_calendar/_month_calendar.html.erb (7.3ms)
+  Rendered events/index.html.erb within layouts/application (10.8ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/application.html.erb:30
+Completed 200 OK in 70ms (Views: 68.7ms | ActiveRecord: 0.6ms)
+
+
+[ActionCable] [sbas23@gmail.com] Finished "/cable/" [WebSocket] for 127.0.0.1 at 2018-09-04 21:41:54 -0500
+[ActionCable] [sbas23@gmail.com] ChatRoomsChannel stopped streaming from chat_rooms_1_channel
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2018-09-04 21:41:54 -0500
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Q0+3Wsv0PIYKRzh1N8QZ1bdspgBnJK5+wedQDFRJi0e5GRXBHU1RRPKY2psMfluG9GgW6TGV4+jgCArcIdqlhg=="}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ /home/usr001/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/usr001/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/usr001/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 27ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-09-04 21:41:54 -0500
+Processing by IndexController#index as HTML
+  Rendering index/index.html.erb within layouts/application
+  Rendered index/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 55ms (Views: 54.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/events" for 127.0.0.1 at 2018-09-04 21:43:46 -0500
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (3.1ms)[0m  [1m[34mSELECT `events`.* FROM `events`[0m
+  ↳ app/views/events/index.html.erb:4
+  Rendered /home/usr001/.rvm/gems/ruby-2.5.1/gems/simple_calendar-2.3.0/app/views/simple_calendar/_month_calendar.html.erb (9.7ms)
+  Rendered events/index.html.erb within layouts/application (15.7ms)
+Completed 200 OK in 113ms (Views: 108.9ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/events/new" for 127.0.0.1 at 2018-09-04 21:43:56 -0500
+Processing by EventsController#new as HTML
+  Rendering events/new.html.erb within layouts/application
+  Rendered events/_form.html.erb (14.9ms)
+  Rendered events/new.html.erb within layouts/application (18.0ms)
+Completed 200 OK in 84ms (Views: 71.7ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/events" for 127.0.0.1 at 2018-09-04 21:44:20 -0500
+Processing by EventsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"c+Px3cFwQIf0ONMjfSATXTssBi3l5m9rJrP4bteMTBvzOWLUe3ie20XywDVgxWVsf0FTf4IsPc0t577yvFH6kA==", "event"=>{"title"=>"consulta", "start_time(1i)"=>"2018", "start_time(2i)"=>"9", "start_time(3i)"=>"6", "start_time(4i)"=>"02", "start_time(5i)"=>"43", "end_time(1i)"=>"2018", "end_time(2i)"=>"9", "end_time(3i)"=>"6", "end_time(4i)"=>"08", "end_time(5i)"=>"43"}, "commit"=>"Create Event"}
+  [1m[35m (1.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/events_controller.rb:31
+  [1m[36mEvent Create (0.3ms)[0m  [1m[32mINSERT INTO `events` (`title`, `start_time`, `end_time`, `created_at`, `updated_at`) VALUES ('consulta', '2018-09-06 02:43:00', '2018-09-06 08:43:00', '2018-09-05 02:44:20', '2018-09-05 02:44:20')[0m
+  ↳ app/controllers/events_controller.rb:31
+  [1m[35m (6.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/events_controller.rb:31
+Redirected to http://localhost:3000/events/1
+Completed 302 Found in 12ms (ActiveRecord: 8.1ms)
+
+
+Started GET "/events/1" for 127.0.0.1 at 2018-09-04 21:44:20 -0500
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT  `events`.* FROM `events` WHERE `events`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/events_controller.rb:68
+  Rendering events/show.html.erb within layouts/application
+  Rendered events/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 74ms (Views: 71.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/events" for 127.0.0.1 at 2018-09-04 21:44:23 -0500
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (2.4ms)[0m  [1m[34mSELECT `events`.* FROM `events`[0m
+  ↳ app/views/events/index.html.erb:4
+  Rendered /home/usr001/.rvm/gems/ruby-2.5.1/gems/simple_calendar-2.3.0/app/views/simple_calendar/_month_calendar.html.erb (29.4ms)
+  Rendered events/index.html.erb within layouts/application (36.7ms)
+Completed 200 OK in 154ms (Views: 151.1ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/events?start_date=2018-10-01" for 127.0.0.1 at 2018-09-04 21:45:46 -0500
+Processing by EventsController#index as HTML
+  Parameters: {"start_date"=>"2018-10-01"}
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (3.1ms)[0m  [1m[34mSELECT `events`.* FROM `events`[0m
+  ↳ app/views/events/index.html.erb:4
+  Rendered /home/usr001/.rvm/gems/ruby-2.5.1/gems/simple_calendar-2.3.0/app/views/simple_calendar/_month_calendar.html.erb (13.7ms)
+  Rendered events/index.html.erb within layouts/application (32.0ms)
+Completed 200 OK in 116ms (Views: 111.8ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/events?start_date=2018-09-30" for 127.0.0.1 at 2018-09-04 21:45:47 -0500
+Processing by EventsController#index as HTML
+  Parameters: {"start_date"=>"2018-09-30"}
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT `events`.* FROM `events`[0m
+  ↳ app/views/events/index.html.erb:4
+  Rendered /home/usr001/.rvm/gems/ruby-2.5.1/gems/simple_calendar-2.3.0/app/views/simple_calendar/_month_calendar.html.erb (6.0ms)
+  Rendered events/index.html.erb within layouts/application (18.5ms)
+Completed 200 OK in 108ms (Views: 107.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/events?start_date=2018-08-26" for 127.0.0.1 at 2018-09-04 21:45:48 -0500
+Processing by EventsController#index as HTML
+  Parameters: {"start_date"=>"2018-08-26"}
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT `events`.* FROM `events`[0m
+  ↳ app/views/events/index.html.erb:4
+  Rendered /home/usr001/.rvm/gems/ruby-2.5.1/gems/simple_calendar-2.3.0/app/views/simple_calendar/_month_calendar.html.erb (10.2ms)
+  Rendered events/index.html.erb within layouts/application (14.3ms)
+Completed 200 OK in 68ms (Views: 66.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/events?start_date=2018-09-03" for 127.0.0.1 at 2018-09-04 21:45:49 -0500
+Processing by EventsController#index as HTML
+  Parameters: {"start_date"=>"2018-09-03"}
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT `events`.* FROM `events`[0m
+  ↳ app/views/events/index.html.erb:4
+  Rendered /home/usr001/.rvm/gems/ruby-2.5.1/gems/simple_calendar-2.3.0/app/views/simple_calendar/_month_calendar.html.erb (9.2ms)
+  Rendered events/index.html.erb within layouts/application (15.8ms)
+Completed 200 OK in 74ms (Views: 72.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/events?start_date=2018-09-03" for 127.0.0.1 at 2018-09-04 21:47:13 -0500
+Processing by EventsController#index as HTML
+  Parameters: {"start_date"=>"2018-09-03"}
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT `events`.* FROM `events`[0m
+  ↳ app/views/events/index.html.erb:4
+  Rendered /home/usr001/.rvm/gems/ruby-2.5.1/gems/simple_calendar-2.3.0/app/views/simple_calendar/_month_calendar.html.erb (10.2ms)
+  Rendered events/index.html.erb within layouts/application (19.7ms)
+Completed 200 OK in 79ms (Views: 77.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/events?start_date=2018-09-03" for 127.0.0.1 at 2018-09-04 21:48:27 -0500
+Processing by EventsController#index as HTML
+  Parameters: {"start_date"=>"2018-09-03"}
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT `events`.* FROM `events`[0m
+  ↳ app/views/events/index.html.erb:15
+  Rendered /home/usr001/.rvm/gems/ruby-2.5.1/gems/simple_calendar-2.3.0/app/views/simple_calendar/_month_calendar.html.erb (8.8ms)
+  Rendered events/index.html.erb within layouts/application (13.1ms)
+Completed 200 OK in 77ms (Views: 75.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/events?start_date=2018-09-03" for 127.0.0.1 at 2018-09-04 21:50:06 -0500
+Processing by EventsController#index as HTML
+  Parameters: {"start_date"=>"2018-09-03"}
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT `events`.* FROM `events`[0m
+  ↳ app/views/events/index.html.erb:15
+  Rendered /home/usr001/.rvm/gems/ruby-2.5.1/gems/simple_calendar-2.3.0/app/views/simple_calendar/_month_calendar.html.erb (22.1ms)
+  Rendered events/index.html.erb within layouts/application (27.9ms)
+Completed 200 OK in 84ms (Views: 83.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/events?start_date=2018-09-03" for 127.0.0.1 at 2018-09-04 21:51:07 -0500
+Processing by EventsController#index as HTML
+  Parameters: {"start_date"=>"2018-09-03"}
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT `events`.* FROM `events`[0m
+  ↳ app/views/events/index.html.erb:15
+  Rendered /home/usr001/.rvm/gems/ruby-2.5.1/gems/simple_calendar-2.3.0/app/views/simple_calendar/_month_calendar.html.erb (14.2ms)
+  Rendered events/index.html.erb within layouts/application (17.4ms)
+Completed 200 OK in 69ms (Views: 68.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/events?start_date=2018-09-03" for 127.0.0.1 at 2018-09-04 21:55:43 -0500
+Processing by EventsController#index as HTML
+  Parameters: {"start_date"=>"2018-09-03"}
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (1.6ms)[0m  [1m[34mSELECT `events`.* FROM `events`[0m
+  ↳ app/views/events/index.html.erb:15
+  Rendered /home/usr001/.rvm/gems/ruby-2.5.1/gems/simple_calendar-2.3.0/app/views/simple_calendar/_month_calendar.html.erb (6.9ms)
+  Rendered events/index.html.erb within layouts/application (18.2ms)
+Completed 200 OK in 87ms (Views: 84.9ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/events?start_date=2018-09-03" for 127.0.0.1 at 2018-09-04 21:59:51 -0500
+Processing by EventsController#index as HTML
+  Parameters: {"start_date"=>"2018-09-03"}
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT `events`.* FROM `events`[0m
+  ↳ app/views/events/index.html.erb:15
+  Rendered /home/usr001/.rvm/gems/ruby-2.5.1/gems/simple_calendar-2.3.0/app/views/simple_calendar/_month_calendar.html.erb (6.5ms)
+  Rendered events/index.html.erb within layouts/application (10.6ms)
+Completed 200 OK in 70ms (Views: 68.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/events?start_date=2018-09-03" for 127.0.0.1 at 2018-09-04 22:01:23 -0500
+Processing by EventsController#index as HTML
+  Parameters: {"start_date"=>"2018-09-03"}
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.5ms)[0m  [1m[34mSELECT `events`.* FROM `events`[0m
+  ↳ app/views/events/index.html.erb:15
+  Rendered /home/usr001/.rvm/gems/ruby-2.5.1/gems/simple_calendar-2.3.0/app/views/simple_calendar/_month_calendar.html.erb (20.9ms)
+  Rendered events/index.html.erb within layouts/application (32.0ms)
+Completed 200 OK in 152ms (Views: 149.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/events?start_date=2018-09-03" for 127.0.0.1 at 2018-09-04 22:03:23 -0500
+Processing by EventsController#index as HTML
+  Parameters: {"start_date"=>"2018-09-03"}
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT `events`.* FROM `events`[0m
+  ↳ app/views/events/index.html.erb:15
+  Rendered /home/usr001/.rvm/gems/ruby-2.5.1/gems/simple_calendar-2.3.0/app/views/simple_calendar/_month_calendar.html.erb (15.3ms)
+  Rendered events/index.html.erb within layouts/application (18.8ms)
+Completed 200 OK in 86ms (Views: 84.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/events?start_date=2018-09-03" for 127.0.0.1 at 2018-09-04 22:05:46 -0500
+Processing by EventsController#index as HTML
+  Parameters: {"start_date"=>"2018-09-03"}
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT `events`.* FROM `events`[0m
+  ↳ app/views/events/index.html.erb:15
+  Rendered /home/usr001/.rvm/gems/ruby-2.5.1/gems/simple_calendar-2.3.0/app/views/simple_calendar/_month_calendar.html.erb (9.0ms)
+  Rendered events/index.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 68ms (Views: 67.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/events?start_date=2018-09-03" for 127.0.0.1 at 2018-09-04 22:07:37 -0500
+Processing by EventsController#index as HTML
+  Parameters: {"start_date"=>"2018-09-03"}
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT `events`.* FROM `events`[0m
+  ↳ app/views/events/index.html.erb:15
+  Rendered /home/usr001/.rvm/gems/ruby-2.5.1/gems/simple_calendar-2.3.0/app/views/simple_calendar/_month_calendar.html.erb (12.4ms)
+  Rendered events/index.html.erb within layouts/application (19.7ms)
+Completed 200 OK in 80ms (Views: 79.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/events?start_date=2018-09-03" for 127.0.0.1 at 2018-09-04 22:09:35 -0500
+Processing by EventsController#index as HTML
+  Parameters: {"start_date"=>"2018-09-03"}
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (1.4ms)[0m  [1m[34mSELECT `events`.* FROM `events`[0m
+  ↳ app/views/events/index.html.erb:15
+  Rendered /home/usr001/.rvm/gems/ruby-2.5.1/gems/simple_calendar-2.3.0/app/views/simple_calendar/_month_calendar.html.erb (14.3ms)
+  Rendered events/index.html.erb within layouts/application (18.9ms)
+Completed 200 OK in 86ms (Views: 84.2ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/events?start_date=2018-09-03" for 127.0.0.1 at 2018-09-04 22:10:46 -0500
+Processing by EventsController#index as HTML
+  Parameters: {"start_date"=>"2018-09-03"}
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT `events`.* FROM `events`[0m
+  ↳ app/views/events/index.html.erb:15
+  Rendered /home/usr001/.rvm/gems/ruby-2.5.1/gems/simple_calendar-2.3.0/app/views/simple_calendar/_month_calendar.html.erb (15.1ms)
+  Rendered events/index.html.erb within layouts/application (18.8ms)
+Completed 200 OK in 71ms (Views: 70.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/events?start_date=2018-09-03" for 127.0.0.1 at 2018-09-04 22:12:02 -0500
+Processing by EventsController#index as HTML
+  Parameters: {"start_date"=>"2018-09-03"}
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT `events`.* FROM `events`[0m
+  ↳ app/views/events/index.html.erb:15
+  Rendered /home/usr001/.rvm/gems/ruby-2.5.1/gems/simple_calendar-2.3.0/app/views/simple_calendar/_month_calendar.html.erb (16.0ms)
+  Rendered events/index.html.erb within layouts/application (19.9ms)
+Completed 200 OK in 82ms (Views: 81.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/events?start_date=2018-09-03" for 127.0.0.1 at 2018-09-04 22:14:44 -0500
+Processing by EventsController#index as HTML
+  Parameters: {"start_date"=>"2018-09-03"}
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT `events`.* FROM `events`[0m
+  ↳ app/views/events/index.html.erb:15
+  Rendered /home/usr001/.rvm/gems/ruby-2.5.1/gems/simple_calendar-2.3.0/app/views/simple_calendar/_month_calendar.html.erb (11.0ms)
+  Rendered events/index.html.erb within layouts/application (18.4ms)
+Completed 200 OK in 87ms (Views: 86.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/events?start_date=2018-10-01" for 127.0.0.1 at 2018-09-04 22:14:58 -0500
+Processing by EventsController#index as HTML
+  Parameters: {"start_date"=>"2018-10-01"}
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (2.3ms)[0m  [1m[34mSELECT `events`.* FROM `events`[0m
+  ↳ app/views/events/index.html.erb:15
+  Rendered /home/usr001/.rvm/gems/ruby-2.5.1/gems/simple_calendar-2.3.0/app/views/simple_calendar/_month_calendar.html.erb (15.9ms)
+  Rendered events/index.html.erb within layouts/application (26.5ms)
+Completed 200 OK in 109ms (Views: 105.4ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/events?start_date=2018-11-05" for 127.0.0.1 at 2018-09-04 22:15:01 -0500
+Processing by EventsController#index as HTML
+  Parameters: {"start_date"=>"2018-11-05"}
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (1.4ms)[0m  [1m[34mSELECT `events`.* FROM `events`[0m
+  ↳ app/views/events/index.html.erb:15
+  Rendered /home/usr001/.rvm/gems/ruby-2.5.1/gems/simple_calendar-2.3.0/app/views/simple_calendar/_month_calendar.html.erb (6.2ms)
+  Rendered events/index.html.erb within layouts/application (20.3ms)
+Completed 200 OK in 119ms (Views: 116.8ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/events?start_date=2018-10-28" for 127.0.0.1 at 2018-09-04 22:15:04 -0500
+Processing by EventsController#index as HTML
+  Parameters: {"start_date"=>"2018-10-28"}
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT `events`.* FROM `events`[0m
+  ↳ app/views/events/index.html.erb:15
+  Rendered /home/usr001/.rvm/gems/ruby-2.5.1/gems/simple_calendar-2.3.0/app/views/simple_calendar/_month_calendar.html.erb (16.5ms)
+  Rendered events/index.html.erb within layouts/application (26.0ms)
+Completed 200 OK in 161ms (Views: 159.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/events?start_date=2018-09-30" for 127.0.0.1 at 2018-09-04 22:15:18 -0500
+Processing by EventsController#index as HTML
+  Parameters: {"start_date"=>"2018-09-30"}
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (1.6ms)[0m  [1m[34mSELECT `events`.* FROM `events`[0m
+  ↳ app/views/events/index.html.erb:15
+  Rendered /home/usr001/.rvm/gems/ruby-2.5.1/gems/simple_calendar-2.3.0/app/views/simple_calendar/_month_calendar.html.erb (29.4ms)
+  Rendered events/index.html.erb within layouts/application (37.3ms)
+Completed 200 OK in 127ms (Views: 124.2ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/events?start_date=2018-09-30" for 127.0.0.1 at 2018-09-04 22:18:14 -0500
+Processing by EventsController#index as HTML
+  Parameters: {"start_date"=>"2018-09-30"}
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT `events`.* FROM `events`[0m
+  ↳ app/views/events/index.html.erb:15
+  Rendered /home/usr001/.rvm/gems/ruby-2.5.1/gems/simple_calendar-2.3.0/app/views/simple_calendar/_month_calendar.html.erb (10.9ms)
+  Rendered events/index.html.erb within layouts/application (23.3ms)
+Completed 200 OK in 87ms (Views: 86.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/events/new" for 127.0.0.1 at 2018-09-04 22:18:19 -0500
+Processing by EventsController#new as HTML
+  Rendering events/new.html.erb within layouts/application
+  Rendered events/_form.html.erb (10.4ms)
+  Rendered events/new.html.erb within layouts/application (14.7ms)
+Completed 200 OK in 134ms (Views: 133.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/events/1" for 127.0.0.1 at 2018-09-04 22:20:21 -0500
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT  `events`.* FROM `events` WHERE `events`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/events_controller.rb:68
+  Rendering events/show.html.erb within layouts/application
+  Rendered events/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 93ms (Views: 88.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/events?start_date=2018-09-30" for 127.0.0.1 at 2018-09-04 22:27:27 -0500
+  [1m[35m (0.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /home/usr001/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by EventsController#index as HTML
+  Parameters: {"start_date"=>"2018-09-30"}
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.5ms)[0m  [1m[34mSELECT `events`.* FROM `events`[0m
+  ↳ app/views/events/index.html.erb:24
+  Rendered /home/usr001/.rvm/gems/ruby-2.5.1/gems/simple_calendar-2.3.0/app/views/simple_calendar/_month_calendar.html.erb (6.5ms)
+  Rendered events/index.html.erb within layouts/application (19.0ms)
+Completed 200 OK in 81ms (Views: 79.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/events?start_date=2018-09-30" for 127.0.0.1 at 2018-09-04 22:27:53 -0500
+Processing by EventsController#index as HTML
+  Parameters: {"start_date"=>"2018-09-30"}
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT `events`.* FROM `events`[0m
+  ↳ app/views/events/index.html.erb:24
+  Rendered /home/usr001/.rvm/gems/ruby-2.5.1/gems/simple_calendar-2.3.0/app/views/simple_calendar/_month_calendar.html.erb (6.4ms)
+  Rendered events/index.html.erb within layouts/application (10.7ms)
+Completed 200 OK in 63ms (Views: 61.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/events?start_date=2018-09-30" for 127.0.0.1 at 2018-09-04 22:28:20 -0500
+Processing by EventsController#index as HTML
+  Parameters: {"start_date"=>"2018-09-30"}
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT `events`.* FROM `events`[0m
+  ↳ app/views/events/index.html.erb:24
+  Rendered /home/usr001/.rvm/gems/ruby-2.5.1/gems/simple_calendar-2.3.0/app/views/simple_calendar/_month_calendar.html.erb (10.5ms)
+  Rendered events/index.html.erb within layouts/application (20.7ms)
+Completed 200 OK in 77ms (Views: 76.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/events?start_date=2018-09-30" for 127.0.0.1 at 2018-09-04 22:29:39 -0500
+Processing by EventsController#index as HTML
+  Parameters: {"start_date"=>"2018-09-30"}
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT `events`.* FROM `events`[0m
+  ↳ app/views/events/index.html.erb:31
+  Rendered /home/usr001/.rvm/gems/ruby-2.5.1/gems/simple_calendar-2.3.0/app/views/simple_calendar/_month_calendar.html.erb (6.4ms)
+  Rendered events/index.html.erb within layouts/application (10.6ms)
+Completed 200 OK in 67ms (Views: 65.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/events?start_date=2018-09-30" for 127.0.0.1 at 2018-09-04 22:30:53 -0500
+Processing by EventsController#index as HTML
+  Parameters: {"start_date"=>"2018-09-30"}
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT `events`.* FROM `events`[0m
+  ↳ app/views/events/index.html.erb:27
+  Rendered /home/usr001/.rvm/gems/ruby-2.5.1/gems/simple_calendar-2.3.0/app/views/simple_calendar/_month_calendar.html.erb (25.3ms)
+  Rendered events/index.html.erb within layouts/application (41.8ms)
+Completed 200 OK in 170ms (Views: 168.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/events/new" for 127.0.0.1 at 2018-09-04 22:31:01 -0500
+Processing by EventsController#new as HTML
+  Rendering events/new.html.erb within layouts/application
+  Rendered events/_form.html.erb (4.3ms)
+  Rendered events/new.html.erb within layouts/application (11.9ms)
+Completed 200 OK in 111ms (Views: 110.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/events?start_date=2018-09-30" for 127.0.0.1 at 2018-09-04 22:36:47 -0500
+  [1m[35m (0.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /home/usr001/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by EventsController#index as HTML
+  Parameters: {"start_date"=>"2018-09-30"}
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT `events`.* FROM `events`[0m
+  ↳ app/views/events/index.html.erb:32
+  Rendered /home/usr001/.rvm/gems/ruby-2.5.1/gems/simple_calendar-2.3.0/app/views/simple_calendar/_month_calendar.html.erb (6.5ms)
+  Rendered events/index.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 80ms (Views: 77.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/events?start_date=2018-09-30" for 127.0.0.1 at 2018-09-04 22:37:35 -0500
+Processing by EventsController#index as HTML
+  Parameters: {"start_date"=>"2018-09-30"}
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT `events`.* FROM `events`[0m
+  ↳ app/views/events/index.html.erb:26
+  Rendered /home/usr001/.rvm/gems/ruby-2.5.1/gems/simple_calendar-2.3.0/app/views/simple_calendar/_month_calendar.html.erb (9.8ms)
+  Rendered events/index.html.erb within layouts/application (14.1ms)
+Completed 200 OK in 77ms (Views: 75.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/events?start_date=2018-09-30" for 127.0.0.1 at 2018-09-04 22:38:45 -0500
+Processing by EventsController#index as HTML
+  Parameters: {"start_date"=>"2018-09-30"}
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.5ms)[0m  [1m[34mSELECT `events`.* FROM `events`[0m
+  ↳ app/views/events/index.html.erb:26
+  Rendered /home/usr001/.rvm/gems/ruby-2.5.1/gems/simple_calendar-2.3.0/app/views/simple_calendar/_month_calendar.html.erb (10.6ms)
+  Rendered events/index.html.erb within layouts/application (14.2ms)
+Completed 200 OK in 69ms (Views: 67.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/events?start_date=2018-09-30" for 127.0.0.1 at 2018-09-04 22:43:48 -0500
+Processing by EventsController#index as HTML
+  Parameters: {"start_date"=>"2018-09-30"}
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (2.2ms)[0m  [1m[34mSELECT `events`.* FROM `events`[0m
+  ↳ app/views/events/index.html.erb:26
+  Rendered /home/usr001/.rvm/gems/ruby-2.5.1/gems/simple_calendar-2.3.0/app/views/simple_calendar/_month_calendar.html.erb (15.1ms)
+  Rendered events/index.html.erb within layouts/application (20.6ms)
+Completed 200 OK in 109ms (Views: 105.6ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/events?start_date=2018-09-30" for 127.0.0.1 at 2018-09-04 22:46:00 -0500
+Processing by EventsController#index as HTML
+  Parameters: {"start_date"=>"2018-09-30"}
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (2.8ms)[0m  [1m[34mSELECT `events`.* FROM `events`[0m
+  ↳ app/views/events/index.html.erb:26
+  Rendered /home/usr001/.rvm/gems/ruby-2.5.1/gems/simple_calendar-2.3.0/app/views/simple_calendar/_month_calendar.html.erb (10.6ms)
+  Rendered events/index.html.erb within layouts/application (19.1ms)
+Completed 200 OK in 3793ms (Views: 3789.4ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/events?start_date=2018-09-30" for 127.0.0.1 at 2018-09-04 22:46:56 -0500
+Processing by EventsController#index as HTML
+  Parameters: {"start_date"=>"2018-09-30"}
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (3.5ms)[0m  [1m[34mSELECT `events`.* FROM `events`[0m
+  ↳ app/views/events/index.html.erb:26
+  Rendered /home/usr001/.rvm/gems/ruby-2.5.1/gems/simple_calendar-2.3.0/app/views/simple_calendar/_month_calendar.html.erb (6.2ms)
+  Rendered events/index.html.erb within layouts/application (19.0ms)
+Completed 200 OK in 2183ms (Views: 2178.5ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/events?start_date=2018-09-30" for 127.0.0.1 at 2018-09-04 22:48:09 -0500
+Processing by EventsController#index as HTML
+  Parameters: {"start_date"=>"2018-09-30"}
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT `events`.* FROM `events`[0m
+  ↳ app/views/events/index.html.erb:26
+  Rendered /home/usr001/.rvm/gems/ruby-2.5.1/gems/simple_calendar-2.3.0/app/views/simple_calendar/_month_calendar.html.erb (13.5ms)
+  Rendered events/index.html.erb within layouts/application (19.9ms)
+Completed 200 OK in 2207ms (Views: 2205.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/events?start_date=2018-09-30" for 127.0.0.1 at 2018-09-04 22:49:27 -0500
+Processing by EventsController#index as HTML
+  Parameters: {"start_date"=>"2018-09-30"}
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT `events`.* FROM `events`[0m
+  ↳ app/views/events/index.html.erb:15
+  Rendered /home/usr001/.rvm/gems/ruby-2.5.1/gems/simple_calendar-2.3.0/app/views/simple_calendar/_month_calendar.html.erb (10.1ms)
+  Rendered events/index.html.erb within layouts/application (18.7ms)
+Completed 200 OK in 76ms (Views: 74.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/events?start_date=2018-09-30" for 127.0.0.1 at 2018-09-04 22:55:12 -0500
+  [1m[35m (0.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /home/usr001/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by EventsController#index as HTML
+  Parameters: {"start_date"=>"2018-09-30"}
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT `events`.* FROM `events`[0m
+  ↳ app/views/events/index.html.erb:16
+  Rendered /home/usr001/.rvm/gems/ruby-2.5.1/gems/simple_calendar-2.3.0/app/views/simple_calendar/_month_calendar.html.erb (11.5ms)
+  Rendered events/index.html.erb within layouts/application (15.0ms)
+Completed 200 OK in 80ms (Views: 78.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/events/1" for 127.0.0.1 at 2018-09-04 22:55:17 -0500
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT  `events`.* FROM `events` WHERE `events`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/events_controller.rb:68
+  Rendering events/show.html.erb within layouts/application
+  Rendered events/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 48ms (Views: 45.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/events?start_date=2018-09-30" for 127.0.0.1 at 2018-09-04 22:55:54 -0500
+Processing by EventsController#index as HTML
+  Parameters: {"start_date"=>"2018-09-30"}
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT `events`.* FROM `events`[0m
+  ↳ app/views/events/index.html.erb:16
+  Rendered /home/usr001/.rvm/gems/ruby-2.5.1/gems/simple_calendar-2.3.0/app/views/simple_calendar/_month_calendar.html.erb (14.1ms)
+  Rendered events/index.html.erb within layouts/application (26.8ms)
+Completed 200 OK in 85ms (Views: 81.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/events?start_date=2018-09-30" for 127.0.0.1 at 2018-09-04 22:56:14 -0500
+Processing by EventsController#index as HTML
+  Parameters: {"start_date"=>"2018-09-30"}
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT `events`.* FROM `events`[0m
+  ↳ app/views/events/index.html.erb:16
+  Rendered /home/usr001/.rvm/gems/ruby-2.5.1/gems/simple_calendar-2.3.0/app/views/simple_calendar/_month_calendar.html.erb (9.2ms)
+  Rendered events/index.html.erb within layouts/application (17.7ms)
+Completed 200 OK in 76ms (Views: 74.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/events?start_date=2018-09-30" for 127.0.0.1 at 2018-09-04 22:56:36 -0500
+Processing by EventsController#index as HTML
+  Parameters: {"start_date"=>"2018-09-30"}
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (1.5ms)[0m  [1m[34mSELECT `events`.* FROM `events`[0m
+  ↳ app/views/events/index.html.erb:16
+  Rendered /home/usr001/.rvm/gems/ruby-2.5.1/gems/simple_calendar-2.3.0/app/views/simple_calendar/_month_calendar.html.erb (13.5ms)
+  Rendered events/index.html.erb within layouts/application (19.2ms)
+Completed 200 OK in 90ms (Views: 87.6ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/events?start_date=2018-09-30" for 127.0.0.1 at 2018-09-04 22:57:01 -0500
+Processing by EventsController#index as HTML
+  Parameters: {"start_date"=>"2018-09-30"}
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT `events`.* FROM `events`[0m
+  ↳ app/views/events/index.html.erb:16
+  Rendered /home/usr001/.rvm/gems/ruby-2.5.1/gems/simple_calendar-2.3.0/app/views/simple_calendar/_month_calendar.html.erb (15.5ms)
+  Rendered events/index.html.erb within layouts/application (20.0ms)
+Completed 200 OK in 118ms (Views: 116.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/events?start_date=2018-09-30" for 127.0.0.1 at 2018-09-04 22:57:59 -0500
+Processing by EventsController#index as HTML
+  Parameters: {"start_date"=>"2018-09-30"}
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT `events`.* FROM `events`[0m
+  ↳ app/views/events/index.html.erb:16
+  Rendered /home/usr001/.rvm/gems/ruby-2.5.1/gems/simple_calendar-2.3.0/app/views/simple_calendar/_month_calendar.html.erb (10.5ms)
+  Rendered events/index.html.erb within layouts/application (19.3ms)
+Completed 200 OK in 124ms (Views: 122.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/events?start_date=2018-09-30" for 127.0.0.1 at 2018-09-04 22:58:15 -0500
+Processing by EventsController#index as HTML
+  Parameters: {"start_date"=>"2018-09-30"}
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (6.8ms)[0m  [1m[34mSELECT `events`.* FROM `events`[0m
+  ↳ app/views/events/index.html.erb:16
+  Rendered /home/usr001/.rvm/gems/ruby-2.5.1/gems/simple_calendar-2.3.0/app/views/simple_calendar/_month_calendar.html.erb (18.1ms)
+  Rendered events/index.html.erb within layouts/application (35.0ms)
+Completed 200 OK in 134ms (Views: 126.6ms | ActiveRecord: 6.8ms)
+
+
+Started GET "/events?start_date=2018-09-30" for 127.0.0.1 at 2018-09-04 23:10:23 -0500
+  [1m[35m (0.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /home/usr001/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by EventsController#index as HTML
+  Parameters: {"start_date"=>"2018-09-30"}
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT `events`.* FROM `events`[0m
+  ↳ app/views/events/index.html.erb:16
+  Rendered /home/usr001/.rvm/gems/ruby-2.5.1/gems/simple_calendar-2.3.0/app/views/simple_calendar/_month_calendar.html.erb (19.0ms)
+  Rendered events/index.html.erb within layouts/application (32.7ms)
+Completed 200 OK in 2096ms (Views: 2094.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/events?start_date=2018-09-30" for 127.0.0.1 at 2018-09-04 23:11:18 -0500
+Processing by EventsController#index as HTML
+  Parameters: {"start_date"=>"2018-09-30"}
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.7ms)[0m  [1m[34mSELECT `events`.* FROM `events`[0m
+  ↳ app/views/events/index.html.erb:16
+  Rendered /home/usr001/.rvm/gems/ruby-2.5.1/gems/simple_calendar-2.3.0/app/views/simple_calendar/_month_calendar.html.erb (17.3ms)
+  Rendered events/index.html.erb within layouts/application (24.2ms)
+Completed 200 OK in 141ms (Views: 139.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/events?start_date=2018-09-30" for 127.0.0.1 at 2018-09-04 23:11:48 -0500
+Processing by EventsController#index as HTML
+  Parameters: {"start_date"=>"2018-09-30"}
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.5ms)[0m  [1m[34mSELECT `events`.* FROM `events`[0m
+  ↳ app/views/events/index.html.erb:16
+  Rendered /home/usr001/.rvm/gems/ruby-2.5.1/gems/simple_calendar-2.3.0/app/views/simple_calendar/_month_calendar.html.erb (13.0ms)
+  Rendered events/index.html.erb within layouts/application (20.4ms)
+Completed 200 OK in 2199ms (Views: 2197.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/events/new" for 127.0.0.1 at 2018-09-04 23:12:13 -0500
+Processing by EventsController#new as HTML
+  Rendering events/new.html.erb within layouts/application
+  Rendered events/_form.html.erb (11.2ms)
+  Rendered events/new.html.erb within layouts/application (12.4ms)
+Completed 200 OK in 2086ms (Views: 2085.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/forum" for 127.0.0.1 at 2018-09-04 23:12:23 -0500
+Processing by ForumController#index as HTML
+  Rendering forum/index.html.erb within layouts/application
+  Rendered forum/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 74ms (Views: 73.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/forum" for 127.0.0.1 at 2018-09-04 23:12:27 -0500
+Processing by ForumController#index as HTML
+  Rendering forum/index.html.erb within layouts/application
+  Rendered forum/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 125ms (Views: 123.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/forum" for 127.0.0.1 at 2018-09-04 23:12:29 -0500
+Processing by ForumController#index as HTML
+  Rendering forum/index.html.erb within layouts/application
+  Rendered forum/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 71ms (Views: 70.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/forum" for 127.0.0.1 at 2018-09-04 23:12:29 -0500
+Processing by ForumController#index as HTML
+  Rendering forum/index.html.erb within layouts/application
+  Rendered forum/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 62ms (Views: 60.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/forum" for 127.0.0.1 at 2018-09-04 23:12:31 -0500
+Processing by ForumController#index as HTML
+  Rendering forum/index.html.erb within layouts/application
+  Rendered forum/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 132ms (Views: 130.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/events?start_date=2018-09-30" for 127.0.0.1 at 2018-09-04 23:14:28 -0500
+Processing by EventsController#index as HTML
+  Parameters: {"start_date"=>"2018-09-30"}
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT `events`.* FROM `events`[0m
+  ↳ app/views/events/index.html.erb:16
+  Rendered /home/usr001/.rvm/gems/ruby-2.5.1/gems/simple_calendar-2.3.0/app/views/simple_calendar/_month_calendar.html.erb (13.9ms)
+  Rendered events/index.html.erb within layouts/application (17.3ms)
+Completed 200 OK in 70ms (Views: 68.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/forum" for 127.0.0.1 at 2018-09-04 23:14:32 -0500
+Processing by ForumController#index as HTML
+  Rendering forum/index.html.erb within layouts/application
+  Rendered forum/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 93ms (Views: 92.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/events" for 127.0.0.1 at 2018-09-04 23:14:33 -0500
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (2.6ms)[0m  [1m[34mSELECT `events`.* FROM `events`[0m
+  ↳ app/views/events/index.html.erb:16
+  Rendered /home/usr001/.rvm/gems/ruby-2.5.1/gems/simple_calendar-2.3.0/app/views/simple_calendar/_month_calendar.html.erb (20.6ms)
+  Rendered events/index.html.erb within layouts/application (29.2ms)
+Completed 200 OK in 120ms (Views: 116.4ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/chat_rooms" for 127.0.0.1 at 2018-09-04 23:14:34 -0500
+Processing by ChatRoomsController#index as HTML
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-09-04 23:14:34 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.8ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 79ms (Views: 78.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/index" for 127.0.0.1 at 2018-09-04 23:14:35 -0500
+Processing by IndexController#index as HTML
+  Rendering index/index.html.erb within layouts/application
+  Rendered index/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 111ms (Views: 109.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/chat_rooms" for 127.0.0.1 at 2018-09-04 23:14:36 -0500
+Processing by ChatRoomsController#index as HTML
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-09-04 23:14:36 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 135ms (Views: 133.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/events" for 127.0.0.1 at 2018-09-04 23:14:37 -0500
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (1.3ms)[0m  [1m[34mSELECT `events`.* FROM `events`[0m
+  ↳ app/views/events/index.html.erb:16
+  Rendered /home/usr001/.rvm/gems/ruby-2.5.1/gems/simple_calendar-2.3.0/app/views/simple_calendar/_month_calendar.html.erb (6.6ms)
+  Rendered events/index.html.erb within layouts/application (17.7ms)
+Completed 200 OK in 131ms (Views: 125.0ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/forum" for 127.0.0.1 at 2018-09-04 23:14:38 -0500
+Processing by ForumController#index as HTML
+  Rendering forum/index.html.erb within layouts/application
+  Rendered forum/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 113ms (Views: 109.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/index" for 127.0.0.1 at 2018-09-04 23:14:40 -0500
+Processing by IndexController#index as HTML
+  Rendering index/index.html.erb within layouts/application
+  Rendered index/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 113ms (Views: 111.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/index" for 127.0.0.1 at 2018-09-04 23:14:45 -0500
+Processing by IndexController#index as HTML
+  Rendering index/index.html.erb within layouts/application
+  Rendered index/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 94ms (Views: 92.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/chat_rooms" for 127.0.0.1 at 2018-09-04 23:14:46 -0500
+Processing by ChatRoomsController#index as HTML
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-09-04 23:14:46 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.6ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 80ms (Views: 79.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/events" for 127.0.0.1 at 2018-09-04 23:14:46 -0500
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (1.7ms)[0m  [1m[34mSELECT `events`.* FROM `events`[0m
+  ↳ app/views/events/index.html.erb:16
+  Rendered /home/usr001/.rvm/gems/ruby-2.5.1/gems/simple_calendar-2.3.0/app/views/simple_calendar/_month_calendar.html.erb (4.0ms)
+  Rendered events/index.html.erb within layouts/application (14.5ms)
+Completed 200 OK in 116ms (Views: 113.3ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-09-04 23:15:05 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.8ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (9.9ms)
+Completed 200 OK in 113ms (Views: 112.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/events/1" for 127.0.0.1 at 2018-09-04 23:15:15 -0500
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT  `events`.* FROM `events` WHERE `events`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/events_controller.rb:68
+  Rendering events/show.html.erb within layouts/application
+  Rendered events/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 50ms (Views: 47.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/events/1/edit" for 127.0.0.1 at 2018-09-04 23:15:21 -0500
+Processing by EventsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT  `events`.* FROM `events` WHERE `events`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/events_controller.rb:68
+  Rendering events/edit.html.erb within layouts/application
+  Rendered events/_form.html.erb (11.9ms)
+  Rendered events/edit.html.erb within layouts/application (13.2ms)
+Completed 200 OK in 71ms (Views: 68.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-09-04 23:20:09 -0500
+Processing by IndexController#index as HTML
+  Rendering index/index.html.erb within layouts/application
+  Rendered index/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 112ms (Views: 111.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/chat_rooms" for 127.0.0.1 at 2018-09-04 23:20:14 -0500
+Processing by ChatRoomsController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-09-04 23:20:14 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.7ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 62ms (Views: 61.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/index" for 127.0.0.1 at 2018-09-04 23:20:16 -0500
+Processing by IndexController#index as HTML
+  Rendering index/index.html.erb within layouts/application
+  Rendered index/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 112ms (Views: 111.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/events" for 127.0.0.1 at 2018-09-04 23:20:17 -0500
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.9ms)[0m  [1m[34mSELECT `events`.* FROM `events`[0m
+  ↳ app/views/events/index.html.erb:16
+  Rendered /home/usr001/.rvm/gems/ruby-2.5.1/gems/simple_calendar-2.3.0/app/views/simple_calendar/_month_calendar.html.erb (5.2ms)
+  Rendered events/index.html.erb within layouts/application (15.7ms)
+Completed 200 OK in 74ms (Views: 71.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/events/1" for 127.0.0.1 at 2018-09-04 23:20:25 -0500
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT  `events`.* FROM `events` WHERE `events`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/events_controller.rb:68
+  Rendering events/show.html.erb within layouts/application
+  Rendered events/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 91ms (Views: 87.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/events/1" for 127.0.0.1 at 2018-09-04 23:22:50 -0500
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT  `events`.* FROM `events` WHERE `events`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/events_controller.rb:68
+  Rendering events/show.html.erb within layouts/application
+  Rendered events/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 67ms (Views: 65.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/forum" for 127.0.0.1 at 2018-09-04 23:22:54 -0500
+Processing by ForumController#index as HTML
+  Rendering forum/index.html.erb within layouts/application
+  Rendered forum/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 71ms (Views: 70.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/events" for 127.0.0.1 at 2018-09-04 23:22:55 -0500
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (1.6ms)[0m  [1m[34mSELECT `events`.* FROM `events`[0m
+  ↳ app/views/events/index.html.erb:16
+  Rendered /home/usr001/.rvm/gems/ruby-2.5.1/gems/simple_calendar-2.3.0/app/views/simple_calendar/_month_calendar.html.erb (4.6ms)
+  Rendered events/index.html.erb within layouts/application (20.0ms)
+Completed 200 OK in 97ms (Views: 94.5ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/index" for 127.0.0.1 at 2018-09-04 23:23:06 -0500
+Processing by IndexController#index as HTML
+  Rendering index/index.html.erb within layouts/application
+  Rendered index/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 85ms (Views: 84.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/chat_rooms" for 127.0.0.1 at 2018-09-04 23:23:07 -0500
+Processing by ChatRoomsController#index as HTML
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-09-04 23:23:07 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.7ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 56ms (Views: 52.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/events" for 127.0.0.1 at 2018-09-04 23:23:08 -0500
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT `events`.* FROM `events`[0m
+  ↳ app/views/events/index.html.erb:16
+  Rendered /home/usr001/.rvm/gems/ruby-2.5.1/gems/simple_calendar-2.3.0/app/views/simple_calendar/_month_calendar.html.erb (10.0ms)
+  Rendered events/index.html.erb within layouts/application (16.8ms)
+Completed 200 OK in 72ms (Views: 71.1ms | ActiveRecord: 0.3ms)
+
+

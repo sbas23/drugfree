@@ -1,7 +1,8 @@
-<div class="container py-5">
+<div class="container">
   <!-- Tabla de citas -->
   <div class="row">
-      <div class="col-md" >
+
+      <div class="col-md-11" >
         <table class="table">
           <thead class="thead-dark">
             <tr>
@@ -31,13 +32,17 @@
         </table>
         <a class= "btn btn-primary" onclick="loadModalNewEvent('#contentDetailEvent')" href="#contentModal" data-toggle="modal">Crear nueva cita</a>
       </div>
+      <div class="col-md-1" >
+          <!-- Boton Calendario -->
+        <a id="calendarModalEvent" href="#modalCalendar" class="btn btn-success btn-lg" data-toggle="modal">
+          <span class="fa fa-calendar"></span>
+        </a>
+      </div>
+
   </div>
 </div>
 
-  <!-- Boton Calendario -->
-<a id="calendarModalEvent" href="#modalCalendar" class="btn btn-success btn-lg" data-toggle="modal">
-  <span class="fa fa-calendar"></span>
-</a>
+
 
 <!-- Modal Calendario-->
 <div class="modal fade" id="modalCalendar" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">

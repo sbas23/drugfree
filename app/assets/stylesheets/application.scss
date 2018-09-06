@@ -2,20 +2,34 @@
  @import "simple_calendar";
  @import "bootstrap";
 
+/*******************
+	Style Events
+********************/
  #calendarModalEvent {
-  transition: 0.5s;
-  margin-left: 60px;
+  	transition: 0.5s;
+  	margin-left: 40px;
  }
 
  #calendarModalEvent:hover{
-  margin-left: 80px;
-  transition: 0.5px;
+	margin-left: 20px;
+	transition: 0.5px;
  }
 
  .calendar-heading{
-  visibility: collapse;
+  	visibility: collapse;
  }
 
  .table-striped{
  	font-size: 12px;
  }
+
+ /*******************
+	Style Top Menu
+********************/
+ #topMenu{
+ 	margin-top: 5px;
+ }
+
+ html {
+  font-size: 14px;
+}

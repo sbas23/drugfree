@@ -12,24 +12,24 @@
     <!-- MENU PRINCIPAL -->
 
       <div id="topMenu" class="container">
-        <div class="nav justify-content-end">
+        <div class="h6 nav justify-content-end shadow-lg p-3 mb-5 bg-white rounded ">
 
-              <ul class="nav justify-content-end">
+              <ul class="nav justify-content-end ">
                 <li class="nav-item">
-                  <a class="nav-link active" style="color: #A4A4A4" href="/index">Home</a>
+                  <a class="nav-link" href="/index">Home</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" style="color: #A4A4A4" href="/chat_rooms">Chat</a>
+                  <a class="nav-link" href="/chat_rooms">Chat</a>
                 </li>
                  <li class="nav-item">
-                  <a class="nav-link" style="color: #A4A4A4" href="/events">Citas</a>
+                  <a class="nav-link" href="/events">Citas</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" style="color: #A4A4A4" href="/forum">Foro</a>
+                  <a class="nav-link" href="/forum">Foro</a>
                 </li>
-                <li class="nav-item" style="color: #A4A4A4; margin-top: 10px;">
+                <li class="nav-item" >
                   <% if current_user %>
-                    <span class="current_user"> <%= current_user.name %></span>
+                    <span class="nav-link"> <%= current_user.name %></span>
                   <% end %>
                 </li>
                 <li>

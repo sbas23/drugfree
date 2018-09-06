@@ -1,17 +1,19 @@
+
+<% content_for :stylesheets do %>
+  #topMenu {display: none}
+<% end %>
+
 <p>
-  <strong>Title:</strong>
+  <strong>Cita:</strong>
   <%= @event.title %>
 </p>
 
 <p>
-  <strong>Start time:</strong>
+  <strong>Fecha inicio:</strong>
   <%= @event.start_time %>
 </p>
 
 <p>
-  <strong>End time:</strong>
+  <strong>Fecha finalizacion:</strong>
   <%= @event.end_time %>
 </p>
-
-<%= link_to 'Edit', edit_event_path(@event) %> |
-<%= link_to 'Back', events_path %>

@@ -21,6 +21,14 @@
 //= require popper 
 //= require bootstrap-sprockets
 
-function loadModal(event, idTag){
+function loadModalShowEvent(event, idTag){
 	$(idTag).load("./events/"+event);
+}
+
+function loadModalEditEvent(event, idTag){
+	$(idTag).load("./events/"+event+"/edit");
+}
+
+function loadModalNewEvent(idTag){
+	$(idTag).load("./events/new");
 }

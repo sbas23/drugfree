@@ -3,5 +3,19 @@
  @import "bootstrap";
 
  #calendarModalEvent {
+  transition: 0.5s;
+  margin-left: 60px;
+ }
 
+ #calendarModalEvent:hover{
+  margin-left: 80px;
+  transition: 0.5px;
+ }
+
+ .calendar-heading{
+  visibility: collapse;
+ }
+
+ .table-striped{
+ 	font-size: 12px;
  }

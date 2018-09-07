@@ -33,3 +33,38 @@
  html {
   font-size: 14px;
 }
+
+ /*******************
+	Chat
+********************/
+
+#messages {
+  overflow: scroll;;
+  max-height: 300px;
+  overflow-x: hidden;
+  background-image: url("chat2.jpg");
+  overflow-y: auto;
+  .avatar {
+    margin: 0.3rem;
+  }
+}
+
+#message_body{
+   background:#eee;
+   max-height: 40px;
+}
+
+.card-block{
+    padding: 10px 10px 10px 10px;
+}
+
+.card{
+    //opacity: 0.5;
+    //font-weight: bold;
+}
+
+.chatButtonSend{
+	background: transparent;
+	border: none;
+	margin-left: -18px;
+}

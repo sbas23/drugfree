@@ -47,3 +47,6 @@ redis:
 	redis-cli
 	sudo systemctl enable redis
 ********
+
+
+https://www.rubydoc.info/gems/thredded/0.15.4

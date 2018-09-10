@@ -19,9 +19,8 @@ jQuery(document).on 'turbolinks:load', ->
 
       received: (data) ->
         #messages.append data['message']
-
         messages_to_bottom()
-
+ 
       send_message: (message, chat_room_id) ->
         @perform 'send_message', message: message, chat_room_id: chat_room_id
 

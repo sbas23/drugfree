@@ -10,7 +10,7 @@ Chat
 https://www.sitepoint.com/create-a-chat-app-with-rails-5-actioncable-and-devise/
 ********
 foro
-https://github.com/thredded/thredded
+https://github.com/excid3/simple_discussion
 ********
 redis:
     sudo apt-get update
@@ -49,4 +49,3 @@ redis:
 ********
 
 
-https://www.rubydoc.info/gems/thredded/0.15.4

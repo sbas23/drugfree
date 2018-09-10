@@ -1,4 +1,6 @@
 class User < ApplicationRecord
+  include SimpleDiscussion::ForumUser
+
   has_many :chat_rooms, dependent: :destroy
   has_many :messages, dependent: :destroy
 

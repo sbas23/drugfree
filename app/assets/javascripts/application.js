@@ -32,3 +32,4 @@ function loadModalEditEvent(event, idTag){
 function loadModalNewEvent(idTag){
 	$(idTag).load("./events/new");
 }
+

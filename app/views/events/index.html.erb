@@ -2,13 +2,19 @@
   <!-- Tabla de citas -->
   <div class="row">
 
-      <div class="col-md-11" >
+      <div class="col-md-1" ></div>
+      <div class="col-md-10" >
         <table class="table">
           <thead class="thead-dark">
             <tr>
               <th scope="col" class="text-center">Evento</th>
               <th scope="col" class="text-center">Inicio</th>
               <th scope="col" class="text-center">Fin</th>
+               <th>
+                  <a id="calendarModalEvent" href="#modalCalendar" class="text-white" data-toggle="modal">
+                    <span class="fa fa-calendar"></span>
+                  </a>
+               </th>
               <th colspan="3"></th>
             </tr>
           </thead>
@@ -32,12 +38,7 @@
         </table>
         <a class= "btn btn-primary" onclick="loadModalNewEvent('#contentDetailEvent')" href="#contentModal" data-toggle="modal">Crear nueva cita</a>
       </div>
-      <div class="col-md-1" >
-          <!-- Boton Calendario -->
-        <a id="calendarModalEvent" href="#modalCalendar" class="btn btn-success btn-lg" data-toggle="modal">
-          <span class="fa fa-calendar"></span>
-        </a>
-      </div>
+      <div class="col-md-1" ></div>
 
   </div>
 </div>

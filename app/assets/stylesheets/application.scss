@@ -6,16 +6,6 @@
 /*******************
 	Style Events
 ********************/
- #calendarModalEvent {
-  	transition: 0.5s;
-  	margin-left: 40px;
- }
-
- #calendarModalEvent:hover{
-	margin-left: 20px;
-	transition: 0.5px;
- }
-
  .calendar-heading{
   	visibility: collapse;
  }
@@ -29,6 +19,7 @@
 ********************/
  #topMenu{
  	margin-top: 5px;
+  background-color: #3A3C42;
  }
 
  html {
@@ -68,4 +59,18 @@
 	background: transparent;
 	border: none;
 	margin-left: -18px;
+}
+
+#carouselFade{
+  margin-top: -45px
+}
+
+.carouselFadeImg{
+  height:350px; 
+  margin-bottom:20px;
+  background-color: #3A3C42;
+}
+
+.buttonHomeEfect:hover{
+  background-color: #FF9717;
 }

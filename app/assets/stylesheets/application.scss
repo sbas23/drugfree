@@ -19,7 +19,7 @@
 ********************/
  #topMenu{
  	margin-top: 5px;
-  background-color: #3A3C42;
+  background-color: #CF0210;
  }
 
  html {
@@ -72,5 +72,9 @@
 }
 
 .buttonHomeEfect:hover{
-  background-color: #FF9717;
+  background-color: #3A3C42;
+}
+
+#background_login{
+  background-image: url('background_login.png');
 }

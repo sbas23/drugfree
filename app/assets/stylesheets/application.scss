@@ -51,8 +51,6 @@
 }
 
 .card{
-    //opacity: 0.5;
-    //font-weight: bold;
 }
 
 .chatButtonSend{
@@ -77,4 +75,20 @@
 
 #background_login{
   background-image: url('background_login.png');
+}
+
+#alert_notification{
+  width: 13%;
+  position: absolute;
+  left: 1370px;
+  top: 100px;
+  opacity: 0.7;
+}
+
+#chat_salas{
+  background-image: url('background_index_chat.png');
+}
+
+#index_events{
+  width: 100%;
 }

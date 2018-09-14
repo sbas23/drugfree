@@ -2,103 +2,104 @@
 
 <div class="container">
 
-            <!-- Formulario --> 
-                <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-                  <%= devise_error_messages! %>
+<!-- Formulario --> 
+  <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+    <%= devise_error_messages! %>
 
-                  <div class="row">
-                  <div class="col-md-6">
-
-                  <div class="card rounded-0">
-                   <div class="card-header">
-                          <h4 class="mb-0"><B>Registrate</B></h4>
-                      </div>
-                       <div class="card-body">  
-
-
-                      <div class="form-group">
-                          <%= f.label :'Nombre' %><br />
-                          <%= f.text_field :name, autofocus: true, autocomplete: "name", class: "form-control form-control-sm rounded-0" %>
-                      </div>
-
-                      <div class="form-group">
-                          <%= f.label :'Apellido' %><br />
-                          <%= f.text_field :lastname, autofocus: true, autocomplete: "name", class: "form-control form-control-sm rounded-0" %>
-                      </div>
-
-                      <div class="form-group">
-                          <%= f.label :'Documento' %><br />
-                          <%= f.text_field :document, autofocus: true, autocomplete: "name", class: "form-control form-control-sm rounded-0" %>
-                      </div>
-
-                      <div class="form-group">
-                          <%= f.label :'Celular' %><br />
-                          <%= f.text_field :phone, autofocus: true, autocomplete: "name", class: "form-control form-control-sm rounded-0" %>
-                      </div>
-
-                      <div class="form-group">
-                          <%= f.label :'Profesion' %><br />
-                          <%= f.text_field :profession, autofocus: true, autocomplete: "name", class: "form-control form-control-sm rounded-0" %>
-                      </div>
-
-                      <div class="form-group">
-                        <%= f.label :'Fundacion' %><br />
-                        <%= f.select :fundation_id, Fundation.all.collect{|p| [p.fundation_name, p.id]}, {:include_blank => "Seleccione"}, class: "form-control form-control-sm rounded-0" %>
-                      </div>
-
-                </div>
-           </div>
-        </div>
-
-
-
-              <div class="col-md-6">
-
-                  <div class="card rounded-0">
-
-                       <div class="card-body">
-
-                      <div class="form-group">
-                        <%= f.label :'Rol' %><br />
-                        <%= f.select :role_id, Role.all.collect{|p| [p.description, p.id]}, {:include_blank => "Seleccione"}, class: "form-control form-control-sm rounded-0" %>
-                      </div>
-
-                      <div class="form-group">
-                        <%= f.label :'Estado' %><br />
-                        <%= f.select :state_id, State.all.collect{|p| [p.description, p.id]}, {:include_blank => "Seleccione"}, class: "form-control form-control-sm rounded-0" %>
-                      </div>
-
-                      <div class="form-group">
-                        <%= f.label :'Correo electronico' %><br />
-                        <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control form-control-sm rounded-0" %>
-                      </div>
-
-                      <div class="form-group">
-                        <%= f.label :'Clave' %>
-                        <% if @minimum_password_length %>
-                        <em>(<%= @minimum_password_length %> characters minimum)</em>
-                        <% end %><br />
-                        <%= f.password_field :password, autocomplete: "new-password", class: "form-control form-control-sm rounded-0" %>
-                      </div>
-
-                      <div class="form-group">
-                        <%= f.label :'Confirme su clave' %><br />
-                        <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "form-control form-control-sm rounded-0" %>
-                      </div>
-
-                      <div class="actions">
-                        <%= f.submit "Guardar", class: "btn btn-success btn-sm float-right" %>
-                      </div>
-                <%= render "devise/shared/links" %>
-
-              </div>
-           </div>
-        </div>
-
-
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card-header">
+        <h6 class="mb-0"><B>Registrate</B></h6>
+      </div>
     </div>
+  </div>
 
-    <% end %>
+  <br>
 
+  <div class="row">
+    <div class="col-md-6">
+      <div class="card rounded-0">
+
+          <div class="card-body">  
+          <div class="form-group">
+              <%= f.label :'Nombre' %><br />
+              <%= f.text_field :name, autofocus: true, autocomplete: "name", class: "form-control form-control-sm rounded-0" %>
+          </div>
+
+          <div class="form-group">
+              <%= f.label :'Apellido' %><br />
+              <%= f.text_field :lastname, autofocus: true, autocomplete: "name", class: "form-control form-control-sm rounded-0" %>
+          </div>
+
+          <div class="form-group">
+              <%= f.label :'Documento' %><br />
+              <%= f.text_field :document, autofocus: true, autocomplete: "name", class: "form-control form-control-sm rounded-0" %>
+          </div>
+
+          <div class="form-group">
+              <%= f.label :'Celular' %><br />
+              <%= f.text_field :phone, autofocus: true, autocomplete: "name", class: "form-control form-control-sm rounded-0" %>
+          </div>
+
+          <div class="form-group">
+              <%= f.label :'Profesion' %><br />
+              <%= f.text_field :profession, autofocus: true, autocomplete: "name", class: "form-control form-control-sm rounded-0" %>
+          </div>
+
+          <div class="form-group">
+            <%= f.label :'Fundacion' %><br />
+            <%= f.select :fundation_id, Fundation.all.collect{|p| [p.fundation_name, p.id]}, {:include_blank => "Seleccione"}, class: "form-control form-control-sm rounded-0" %>
+          </div>
+
+        </div>
+     </div>
+  </div>
+
+  <div class="col-md-6">
+      <div class="card rounded-0">
+           <div class="card-body">
+
+            <div class="form-group">
+              <%= f.label :'Rol' %><br />
+              <%= f.select :role_id, Role.all.collect{|p| [p.description, p.id]}, {:include_blank => "Seleccione"}, class: "form-control form-control-sm rounded-0" %>
+            </div>
+
+            <div class="form-group">
+              <%= f.label :'Estado' %><br />
+              <%= f.select :state_id, State.all.collect{|p| [p.description, p.id]}, {:include_blank => "Seleccione"}, class: "form-control form-control-sm rounded-0" %>
+            </div>
+
+            <br><br>
+
+            <div class="form-group">
+              <%= f.label :'Correo electronico' %><br />
+              <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control form-control-sm rounded-0" %>
+            </div>
+
+            <div class="form-group">
+              <%= f.label :'Clave' %>
+              <% if @minimum_password_length %>
+              <em>(<%= @minimum_password_length %> characters minimum)</em>
+              <% end %><br />
+              <%= f.password_field :password, autocomplete: "new-password", class: "form-control form-control-sm rounded-0" %>
+            </div>
+
+            <div class="form-group">
+              <%= f.label :'Confirme su clave' %><br />
+              <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "form-control form-control-sm rounded-0" %>
+            </div>
+
+            <div class="actions">
+              <%= f.submit "Guardar", class: "btn btn-success btn-sm float-right" %>
+            </div>
+
+            <%= render "devise/shared/links" %>
+
+          </div>
+       </div>
+    </div>
+</div>
+
+<% end %>
 </div>
 

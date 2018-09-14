@@ -50,18 +50,15 @@
   <br>
 
   <!-- Alertas -->
-  <div class="container">
     <% flash.each do |key, value| %>
       <% if key == "alert" %>
-        <div class="alert alert-danger"><%= value %></div>
+        <div id="alert_notification" class="alert alert-danger"><%= value %></div>
       <% elsif key == "notice" %>
-        <div class="alert alert-success"><%= value %></div>
+        <div id="alert_notification" class="alert alert-success"><%= value %></div>
       <% else %>
-        <div class="alert alert-secondary"><%= value %></div>
+        <div id="alert_notification" class="alert alert-secondary"><%= value %></div>
       <% end %>
     <% end %>
-  </div>  
-
   <br>
   <!-- Footer
 ================================================== -->

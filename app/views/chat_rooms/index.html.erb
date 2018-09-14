@@ -1,16 +1,26 @@
 <div class="container">
-    <div class="row" style="margin-top: 60px;">
-        <div class="col-md-5" style="padding: 0px 20px 0px 30px;">
-    		<h3>Salas disponibles</h3>
+    <div class="row">
+        <div class="col-md-4">
+            <p class="text-justify">
+                 Aqui podras encontrar varias salas de chat con temas que esperamos te interecen. 
+                 El objetivo principal de este sitio es permitir aclarar tus dudas sobre la problematica 
+                 de la drogadiccion para que tomes la mejor decision. </p>
+
+            <p class="text-justify">  En nuestra sala uno de nuestros profesionales te estara esperando. </p> 
+
+            <p class="font-weight-bold"> ¡Escoge tú sala y empieza a chatear!.</p>
+        </div>
+
+        <div id="chat_salas" class="col-md-8" style="padding: 0px 20px 0px 30px; height: 500px;">
+    		<h4>Salas</h4>
 
             <ul class="list-group">
                <%= render @chat_rooms %>
             </ul>
-
-    		<p class="lead"><%= link_to 'Nueva sala', new_chat_room_path, class: "btn btn-success" %></p>
+            <br>
+            <div class="actions">
+    		  <%= link_to 'Nueva sala', new_chat_room_path, class: "btn btn-success float-right" %>
+            </div>
  		</div>
-        <div class="col-md-7">
-            <h2>Info</h2>
-        </div>
     </div>
 </div>

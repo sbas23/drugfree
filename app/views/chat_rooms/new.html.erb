@@ -2,7 +2,7 @@
 <div class="container">
     <div class="row">
         <div class="col-md-12">
-             <div class="row" style="margin-top: 80px;">
+             <div class="row">
                 <div class="col-md-6 mx-auto">
 
 					<h1>Nueva Sala</h1>
@@ -12,16 +12,13 @@
 					    <%= f.label :'Nombre de la nueva sala' %>
 					    <%= f.text_field :title, autofocus: true, class: 'form-control' %>
 					  </div>
-
-					  <%= f.submit "Agregar!", class: "btn btn-success" %>
+                     <div class="actions">
+					    <%= f.submit "Agregar!", class: "btn btn-success float-right" %>
+                      </div>
 					<% end %>
 
  				</div>
             </div>
-            <!--/row-->
         </div>
-        <!--/col-->
     </div>
-    <!--/row-->
 </div>
-<!--/container-->

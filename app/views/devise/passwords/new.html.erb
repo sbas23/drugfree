@@ -1,42 +1,33 @@
 <!-- Olvido clave -->
 
-<div class="container py-5">
+<div class="container">
     <div class="row">
         <div class="col-md-12">
              <div class="row">
                 <div class="col-md-6 mx-auto">
-
-                    <!-- Formulario --> 
                     <div class="card rounded-0">
                      <div class="card-header">
-                            <h3 class="mb-0"><B>Olvidaste tu clave?</B></h3>
+                            <h4 class="mb-0"><B>Olvidaste tu clave?</B></h4>
                         </div>
                          <div class="card-body">
 
-							<%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
-							  <%= devise_error_messages! %>
-							  <div class="form-group">
-							    <%= f.label :'Ingrresa tu correo elctronico' %><br />
-							    <%= f.email_field :email, autofocus: true, autocomplete: "email" , class: "form-control form-control-lg rounded-0"%>
-							  </div>
+          							<%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
+          							  <%= devise_error_messages! %>
+          							  <div class="form-group">
+          							    <%= f.label :'Ingrresa tu correo elctronico' %><br />
+          							    <%= f.email_field :email, autofocus: true, autocomplete: "email" , class: "form-control form-control-sm rounded-0"%>
+          							  </div>
 
-							  <div class="actions">
-							    <%= f.submit "Enviar correo" , class: "btn btn-success btn-lg float-right" %>
-							  </div>
-							<% end %>
+          							  <div class="actions">
+          							    <%= f.submit "Enviar correo" , class: "btn btn-success btn-sm float-right" %>
+          							  </div>
+          							<% end %>
 
-							<%= render "devise/shared/links" %>
-
-  						</div>
-                        <!--/card-block-->
+          							<%= render "devise/shared/links" %>
+            						</div>
                    </div>
-                    <!-- /form card login -->
                 </div>
             </div>
-            <!--/row-->
         </div>
-        <!--/col-->
     </div>
-    <!--/row-->
 </div>
-<!--/container-->

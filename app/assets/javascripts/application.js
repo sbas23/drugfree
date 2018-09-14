@@ -33,3 +33,11 @@ function loadModalNewEvent(idTag){
 	$(idTag).load("./events/new");
 }
 
+
+$(document).ready(function(){
+	setTimeout(function(){
+		$('#alert_notification').fadeOut('slow', function(){
+			$(this).remove();
+		})
+	}, 2500);
+});

@@ -2,6 +2,7 @@
  @import "simple_calendar";
  @import "bootstrap";
  @import "simple_discussion";
+ @import "tempusdominus-bootstrap-4.css";
 
 /*******************
 	Style Events
@@ -12,6 +13,15 @@
 
  .table-striped{
  	font-size: 12px;
+ }
+
+ #calendarModalEvent{
+  padding: 11px;
+  font-size: 18px;
+ }
+
+ #calendarModalEvent:hover{
+  background-color: #CF0210;
  }
 
  /*******************
@@ -86,7 +96,7 @@
 }
 
 #chat_salas{
-  background-image: url('background_index_chat.png');
+  /*background-image: url('background_index_chat.png');*/
 }
 
 #index_events{

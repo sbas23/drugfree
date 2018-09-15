@@ -1,19 +1,21 @@
 
 <% content_for :stylesheets do %>
   #topMenu {display: none}
+  #footerHome {display: none}
 <% end %>
+<div class="container">
+	<p>
+	  <strong>Cita:</strong>
+	  <%= @event.title %>
+	</p>
 
-<p>
-  <strong>Cita:</strong>
-  <%= @event.title %>
-</p>
+	<p>
+	  <strong>Fecha inicio:</strong>
+	  <%= @event.start_time %>
+	</p>
 
-<p>
-  <strong>Fecha inicio:</strong>
-  <%= @event.start_time %>
-</p>
-
-<p>
-  <strong>Fecha finalizacion:</strong>
-  <%= @event.end_time %>
-</p>
+	<p>
+	  <strong>Fecha finalizacion:</strong>
+	  <%= @event.end_time %>
+	</p>
+</div>

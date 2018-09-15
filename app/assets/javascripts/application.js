@@ -20,7 +20,10 @@
 //= require jquery3 
 //= require popper 
 //= require bootstrap-sprockets
+//= require tempusdominus-bootstrap-4.js
+//= require moment
 
+/*Modales citas*/
 function loadModalShowEvent(event, idTag){
 	$(idTag).load("./events/"+event);
 }
@@ -33,11 +36,16 @@ function loadModalNewEvent(idTag){
 	$(idTag).load("./events/new");
 }
 
-
+/*Alertas*/
 $(document).ready(function(){
 	setTimeout(function(){
 		$('#alert_notification').fadeOut('slow', function(){
 			$(this).remove();
 		})
 	}, 2500);
+});
+
+/*Calendario*/
+$(function () {
+    $('#datetimepicker1').datetimepicker();
 });

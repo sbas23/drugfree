@@ -49,3 +49,11 @@ redis:
 ********
 
 
+Pendiente:
+- Definir permisos por rol
+- Vista creacion fundaciones
+- Vista creacion de servicios
+- Traduccion Foro
+- Primer mensaje chat
+- Definir Salas de Chat
+

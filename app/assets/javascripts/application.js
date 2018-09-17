@@ -20,8 +20,7 @@
 //= require jquery3 
 //= require popper 
 //= require bootstrap-sprockets
-//= require tempusdominus-bootstrap-4.js
-//= require moment
+
 
 /*Modales citas*/
 function loadModalShowEvent(event, idTag){
@@ -45,7 +44,15 @@ $(document).ready(function(){
 	}, 2500);
 });
 
-/*Calendario*/
-$(function () {
-    $('#datetimepicker1').datetimepicker();
-});
+/*
+$(document).ready(function () {
+    setInterval(function () {
+        $("#messages").load('http://localhost:3000/chat_rooms/2');
+    }, 1000);
+    console.log("b1");
+});*/
+
+function reFresh() {
+  location.reload(true)
+}
+//window.setInterval("reFresh()",1000);

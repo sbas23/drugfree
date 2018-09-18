@@ -31,7 +31,7 @@ jQuery(document).on 'turbolinks:load', ->
       textarea = $this.find('#message_body')
       if $.trim(textarea.val()).length > 1
         App.global_chat.send_message textarea.val(), messages.data('chat-room-id')
-        new_file= $(".card", "#messages").eq(0).clone()
+        new_file= $("#dataMessage").clone()
        
         today = new Date
         dd = today.getDate()

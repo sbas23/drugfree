@@ -5,30 +5,49 @@
 
 		    <div class="col-sm-2"></div>
 
-		    <div class="col-sm-8">
-		      	<h4><%= @chat_room.title %></h4>
+			    <div class="col-sm-8">
+			      	<h4><%= @chat_room.title %></h4>
 
-				<div id="messages" data-chat-room-id="<%= @chat_room.id %>">
-				  <%= render @chat_room.messages %>
-				</div>
-				<br>
-
-				<%= form_for @message, url: '#' do |f| %>
-				  <div class="row">
-				  	<div class="col-sm-11">
-				    	<%= f.text_area :body, class: 'form-control bodyChat' %>
-				    	<small class="text-muted">De 2 a 1000 caracteres</small>
+					<div id="messages" data-chat-room-id="<%= @chat_room.id %>">
+					  <%= render @chat_room.messages %>
 					</div>
-					<div class="col-sm-1">
-						<%= button_tag( class: "chatButtonSend") do %>
-						  <i class='fa fa-paper-plane btn btn-success' style="padding: 10px;"></i>
-						<% end %>			
-				    </div>
-				  </div>
-				<% end %>
-		    </div>
+					<br>
 
-		  <div class="col-sm-2"></div>
+					<%= form_for @message, url: '#' do |f| %>
+					  <div class="row">
+						  	<div class="col-sm-11">
+						    	<%= f.text_area :body, class: 'form-control bodyChat' %>
+						    	<small class="text-muted">De 2 a 1000 caracteres</small>
+							</div>
+							<div class="col-sm-1">
+								<%= button_tag( class: "chatButtonSend") do %>
+								  <i class='fa fa-paper-plane btn btn-success' style="padding: 10px;"></i>
+								<% end %>			
+						    </div>
+					  </div>
+					<% end %>
+			    </div>
+
+		  		<div class="col-sm-2"></div>
+			</div>
 		</div>
     </div>
+</div>
+
+<div style="display:none">	
+	<div class="card" id="dataMessage">
+		  <div class="card-block">
+		    <div class="row">
+		      <div class="col-md-1">
+		        <img alt="Edit Entry" src="/assets/user-chat-4453aab178a1c52f7a09ca1a811de1afd389c33a45f6d59fcd9b851e5402386c.png" width="40" height="40">
+		      </div>
+		      <div class="col-md-11">
+		        <p class="card-text">
+		          <span class="text-muted"></span><br>
+		          hola
+		        </p>
+		      </div>
+		    </div>
+		  </div>
+	</div>
 </div>

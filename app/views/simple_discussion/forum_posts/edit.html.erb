@@ -1,10 +1,10 @@
-<p><small><%= link_to "← Back to the thread", simple_discussion.forum_thread_path(@forum_thread) %></small></p>
+<p><small><%= link_to "← Volver", simple_discussion.forum_thread_path(@forum_thread) %></small></p>
 
-<h2><%= content_tag :span, "Pinned", class: "text-muted" if @forum_thread.pinned? %> <%= @forum_thread.title %></h2>
+<h2><%= content_tag :span, "Fijado", class: "text-muted" if @forum_thread.pinned? %> <%= @forum_thread.title %></h2>
 
 <p class="thread-details">
   <strong><%= category_link(@forum_thread.forum_category) %></strong>
-  • Asked <%= time_ago_in_words(@forum_thread.created_at) + ' ago' %> by <%= @forum_thread.user.name %>
+  • Preguntó <%= time_ago_in_words(@forum_thread.created_at) + ' hace' %> por <%= @forum_thread.user.name %>
 </p>
 
 <br />
@@ -14,7 +14,7 @@
     <div>
       <%= avatar_tag(@forum_post.user.email) %>
       <strong class="forum-post-user"><%= @forum_post.user.name %></strong>
-      <small> commented on <%= link_to @forum_post.created_at.strftime("%b %d, %Y"), simple_discussion.forum_thread_url(@forum_thread, anchor: "forum_post_#{@forum_post.id}") %>:</small>
+      <small> comentado <%= link_to @forum_post.created_at.strftime("%b %d, %Y"), simple_discussion.forum_thread_url(@forum_thread, anchor: "forum_post_#{@forum_post.id}") %>:</small>
     </div>
   </div>
 

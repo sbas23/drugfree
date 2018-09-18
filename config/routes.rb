@@ -5,8 +5,8 @@ Rails.application.routes.draw do
   devise_for :users
 
   resources :index, only: [:index]
-  resources :fundation
-  resources :service
+  resources :fundations
+  resources :services
   resources :calendar, only: [:index]
   resources :chat_rooms, only: [:new, :create, :show, :index]
 

@@ -1,32 +1,32 @@
 <div class="container">
 
   <div class="row col-md-12">
-    <h1>Comunidad</h1>
+    <h4>Comunidad</h4>
   </div>
 
   <div class="row simple_discussion">
     <div class="col-md-3 mb-3">
 
       <div class="card card-body">
-        <%= link_to 'Haz una pregunta', simple_discussion.new_forum_thread_path, class: "btn btn-outline-primary btn-block" %>
+        <%= link_to 'Haz una pregunta', simple_discussion.new_forum_thread_path, class: "btn btn-outline-primary btn-block btn-sm" %>
         <hr />
 
         <div class="forum-thread-filters">
           <h5><strong>Filtros</strong></h5>
-          <div><%= forum_link_to simple_discussion.forum_threads_path, exact: true do %><%= icon "bars" %> All Threads <% end %></div>
+          <div><%= forum_link_to simple_discussion.forum_threads_path, exact: true do %><%= icon "bars" %> Todos los temas <% end %></div>
           <% if user_signed_in? %>
-            <div><%= forum_link_to simple_discussion.mine_forum_threads_path do %><%= icon "user-circle-o" %> My Questions<% end %></div>
-            <div><%= forum_link_to simple_discussion.participating_forum_threads_path do %><%= icon "comments-o" %> Participating<% end %></div>
+            <div><%= forum_link_to simple_discussion.mine_forum_threads_path do %><%= icon "user-circle-o" %> Mis preguntas<% end %></div>
+            <div><%= forum_link_to simple_discussion.participating_forum_threads_path do %><%= icon "comments-o" %> Participando<% end %></div>
           <% end %>
-          <div><%= forum_link_to simple_discussion.answered_forum_threads_path do %><%= icon "check" %> Answered<% end %></div>
-          <div><%= forum_link_to simple_discussion.unanswered_forum_threads_path do %><%= icon "question" %> Unanswered<% end %></div>
+          <div><%= forum_link_to simple_discussion.answered_forum_threads_path do %><%= icon "check" %> Contestadas<% end %></div>
+          <div><%= forum_link_to simple_discussion.unanswered_forum_threads_path do %><%= icon "question" %> Sin respuesta<% end %></div>
         </div>
 
         <hr />
 
         <div class="forum-thread-filters">
-          <h6><strong>By Category</strong></h6>
-          <div><%= forum_link_to simple_discussion.forum_threads_path, exact: true do %><%= icon "circle" %> All<% end %></div>
+          <h6><strong>Por categoria</strong></h6>
+          <div><%= forum_link_to simple_discussion.forum_threads_path, exact: true do %><%= icon "circle" %> Todas<% end %></div>
           <% ForumCategory.sorted.each do |category| %>
             <div>
               <%= forum_link_to simple_discussion.forum_category_forum_threads_path(category) do %>
@@ -41,13 +41,13 @@
           <hr />
 
           <%# User has not posted in the thread or subscribed %>
-          <h5>Notifications</h5>
+          <h5>Notificaciones</h5>
 
           <%= link_to simple_discussion.forum_thread_notifications_path(@forum_thread), method: :post, class: "btn btn-secondary btn-sm btn-block mb-2" do %>
             <% if @forum_thread.subscribed? current_user %>
-              <%= icon "bell-slash" %> Unsubscribe
+              <%= icon "bell-slash" %> Darse de baja
             <% else %>
-              <%= icon "bell" %> Subscribe
+              <%= icon "bell" %> Suscribir
             <% end %>
           <% end %>
 
@@ -65,7 +65,6 @@
 
     </div>
   </div>
-
-  <% parent_layout("application") %>
-
 </div>
+<% parent_layout("application") %>
+

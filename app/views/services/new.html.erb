@@ -1,0 +1,24 @@
+<div class="container">
+<%= form_for @service do |f| %>
+
+	<div class="form-group">
+        <%= f.label :'Servicio:' %><br />
+        <%= f.text_field :service_name, class: "form-control form-control-sm rounded-0" %>
+    </div>
+
+    <div class="form-group">
+        <%= f.label :'Descripcion:' %><br />
+        <%= f.text_field :description, class: "form-control form-control-sm rounded-0" %>
+    </div>
+
+	<div class="form-group">
+        <%= f.label :'Costo:' %><br />
+        <%= f.text_field :cost, class: "form-control form-control-sm rounded-0" %>
+    </div>
+
+    <div class="actions">
+      <%= f.submit "Guardar", class: "btn btn-success btn-sm float-right" %>
+    </div>
+
+<% end %>
+</div>

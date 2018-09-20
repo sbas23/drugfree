@@ -19,7 +19,10 @@ Role.create([
 		description:'Desarrollador'
 	},{
 		role_name:'Profesional', 
-		description:'Colaborador'
+		description:'Profesional, aliado'
+	},{
+		role_name:'Usuario', 
+		description:'Usuario que consulta la WEB'
 	}
 ])
 
@@ -44,9 +47,40 @@ User.create([
 		lastname:'Ramos',              
 		document:1018433533,            
 		phone:3124327111,                 
-		profession:'Desarrollador',            
-		role_id:1,               
+		profession:'Profesional',            
+		role_id:2,               
 		state_id:1,               
 		fundation_id:1
+	},{
+		email:'invitado@gmail.com',                  
+		password: '123456',
+    	password_confirmation: '123456',        
+		name:'Invitado',                   
+		lastname:'Ramos',              
+		document:1018433533,            
+		phone:3124327111,                 
+		profession:'Usuario',            
+		role_id:3,               
+		state_id:1,               
+		fundation_id:1
+	}
+]) 
+
+ChatRoom.create([
+	{                   
+		title:'Preguntas Frecuentes',                  
+		user_id: '1'
+	},{
+		title:'Nutricionistas',                  
+		user_id: '1'
+	},{
+		title:'Psicologos',                  
+		user_id: '1'
+	},{
+		title:'Terapeutas',                  
+		user_id: '1'
+	},{
+		title:'Amigo',                  
+		user_id: '1'
 	}
 ]) 

@@ -16,14 +16,20 @@
         <a class="nav-link text-white buttonHomeEfect" href="/index">Inicio</a>
       </li>
       <li class="nav-item">
+        <a class="nav-link text-white buttonHomeEfect" href="/forum">Foro</a>
+      </li>
+      <li class="nav-item">
         <a class="nav-link text-white buttonHomeEfect" href="/chat_rooms">Chat</a>
       </li>
        <li class="nav-item">
         <a class="nav-link text-white buttonHomeEfect" href="/events">Citas</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link text-white buttonHomeEfect" href="/forum">Foro</a>
-      </li>
+      <% if !current_user %>
+        <li class="nav-item">
+          <a class="nav-link text-white buttonHomeEfect" href="/users/sign_up">Registrate</a>
+        </li>
+      <% end %>
+
       <li class="nav-item text-white" >
         <% if current_user %>
           <span class="current_user nav-link"> <%= current_user.name %></span>
@@ -42,16 +48,29 @@
         <% end %>
       </li>
       <% if current_user %>
-        <li class="nav-item dropdown">
-          <a class="nav-link text-white dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-bars " aria-hidden="true"></i></a>
-          <div class="dropdown-menu" style="margin-left: -90px;">
-            <a class="dropdown-item" href="/users/sign_up">Crear Usuario</a>
-            <a class="dropdown-item" href="/chat_rooms/new">Crear Sala</a>
-            <a class="dropdown-item" href="/events/new">Crear Cita</a>
-            <a class="dropdown-item" href="/fundations/new">Crear Fundacion</a>
-            <a class="dropdown-item" href="/services/new">Crear Servicio</a>
-          </div>
-        </li>
+
+          <% if current_user.role_id == 1 %>
+            <li class="nav-item dropdown">
+              <a class="nav-link text-white dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-bars " aria-hidden="true"></i></a>
+              <div class="dropdown-menu" style="margin-left: -90px;">
+                <a class="dropdown-item" href="/users/sign_up">Crear Usuario</a>
+                <a class="dropdown-item" href="/chat_rooms/new">Crear Sala</a>
+                <a class="dropdown-item" href="/events/new">Crear Cita</a>
+                <a class="dropdown-item" href="/fundations/new">Crear Fundacion</a>
+                <a class="dropdown-item" href="/services/new">Crear Servicio</a>
+              </div>
+            </li>
+          <% end %>
+
+          <% if current_user.role_id == 2 %>
+            <li class="nav-item dropdown">
+              <a class="nav-link text-white dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-bars " aria-hidden="true"></i></a>
+              <div class="dropdown-menu" style="margin-left: -90px;">
+                <a class="dropdown-item" href="/events/new">Crear Cita</a>
+              </div>
+            </li>
+          <% end %>
+
       <% end %>
     </ul>
   </div>
@@ -62,15 +81,15 @@
   <br>
 
   <!-- Alertas -->
-    <% flash.each do |key, value| %>
-      <% if key == "alert" %>
-        <div id="alert_notification" class="alert alert-danger"><%= value %></div>
-      <% elsif key == "notice" %>
-        <div id="alert_notification" class="alert alert-success"><%= value %></div>
-      <% else %>
-        <div id="alert_notification" class="alert alert-secondary"><%= value %></div>
-      <% end %>
+  <% flash.each do |key, value| %>
+    <% if key == "alert" %>
+      <div id="alert_notification" class="alert alert-danger"><%= value %></div>
+    <% elsif key == "notice" %>
+      <div id="alert_notification" class="alert alert-success"><%= value %></div>
+    <% else %>
+      <div id="alert_notification" class="alert alert-secondary"><%= value %></div>
     <% end %>
+  <% end %>
   <br>
   <!-- Footer
 ================================================== -->

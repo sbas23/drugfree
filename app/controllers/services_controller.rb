@@ -13,7 +13,7 @@ class ServicesController < ApplicationController
 
     respond_to do |format|
       if @service.save
-        format.html { redirect_to "/services/new", notice: 'Creacion exitosa' }
+        format.html { redirect_to "/services/new" }
       else
         format.html { render :new }
       end

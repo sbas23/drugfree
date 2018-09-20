@@ -13,7 +13,7 @@ class FundationsController < ApplicationController
 
     respond_to do |format|
       if @fundation.save
-        format.html { redirect_to "/fundations/new", notice: 'Creacion exitosa' }
+        format.html { redirect_to "/fundations/new" }
       else
         format.html { render :new }
       end

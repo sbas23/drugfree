@@ -30,10 +30,13 @@
                 <td>
                   <a onclick="loadModalShowEvent('<%= event.id %>','#contentDetailEvent')" href="#contentModal" data-toggle="modal">Detalle</a>
                 </td>
-                <td>
-                  <a onclick="loadModalEditEvent('<%= event.id %>','#contentDetailEvent')" href="#contentModal" data-toggle="modal">Editar</a>
-                </td>
-                <td><%= link_to 'Eliminar', event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+                <% if current_user.role_id != 3 %>
+                  <td>
+                    <a onclick="loadModalEditEvent('<%= event.id %>','#contentDetailEvent')" href="#contentModal" data-toggle="modal">Editar</a>
+                  </td>
+                  <td><%= link_to 'Eliminar', event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+                <% end %>
+
               </tr>
             <% end %>
           </tbody>

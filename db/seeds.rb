@@ -82,5 +82,8 @@ ChatRoom.create([
 	},{
 		title:'Amigo',                  
 		user_id: '1'
+	},{
+		title:'Denuncias',                  
+		user_id: '1'
 	}
 ]) 

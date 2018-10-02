@@ -4,7 +4,6 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '2.5.1'
 
 gem 'rails', '~> 5.2.1'
-gem 'sqlite3'
 gem 'puma', '~> 3.11'
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
@@ -23,6 +22,7 @@ gem "simple_calendar", "~> 2.0"
 gem 'bootstrap', '~> 4.1.3'
 gem 'mini_racer'
 gem 'simple_discussion'
+gem 'pg'
 
 
 group :development, :test do

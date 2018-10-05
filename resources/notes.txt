@@ -48,13 +48,14 @@ redis:
 	sudo systemctl enable redis
 ********
 
+https://www.youtube.com/watch?v=0Dc-eVNA8ZM
 
-Pendiente:
-*********** Definir permisos por rol
-*********** Vista creacion fundaciones
-*********** Vista creacion de servicios
-*********** Traduccion Foro
-*********** Primer mensaje chat
-*********** Definir Salas de Chat
-****** Envio de correo electronico
-- Modales Chat
+heroku login
+heroku keys:add
+heroku create
+bundle install --without production
+rails assets:precompile
+git push heroku master
+heroku run rails db:migrate
+heroku run rails db:seed
+heroku open

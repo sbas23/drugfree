@@ -62,3 +62,8 @@ git push heroku master
 heroku run rails db:migrate
 heroku run rails db:seed
 heroku open
+
+
+Error 
+heroku ps:scale web=0
+heroku ps:scale web=1
